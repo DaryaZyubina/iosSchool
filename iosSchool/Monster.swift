@@ -20,15 +20,14 @@ struct Monster {
             print("Атакой может быть целое число от 1 до 20. Пожалуйста, повторите попытку ввода.")
             return nil
         }
-        if let protection {
-            if protection < 0 || protection > 20 {
-                print("Защитой может быть целое число от 0 до 20. Пожалуйста, повторите попытку ввода.")
-                return nil
-            } else {
-                self.protection = protection
-            }
-        } else {
+
+        if let protection, protection >= 0 && protection <= 20 {
+            self.protection = protection
+        } else if protection == nil {
             self.protection = 0
+        } else {
+            print("Защитой может быть целое число от 0 до 20. Пожалуйста, повторите попытку ввода.")
+            return nil
         }
 
         self.attack = attack

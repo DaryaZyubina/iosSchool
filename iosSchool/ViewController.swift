@@ -12,12 +12,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        /*var generator: ColorGeneratorProtocol
-        generator = ColorGenerator(alpha: 1)
-
-        let red = generator.color.red
-        generator.color = Color(red: 0, green: 0, blue: 0, alpha: .dim)*/
-
         let player = Player(
             attack: 1,
             protection: 1,
@@ -29,7 +23,7 @@ class ViewController: UIViewController {
         )
         let monster = Monster(
             attack: 1,
-            protection: 1,
+            protection: nil,
             name: "Монстр",
             health: 2,
             lowDamage: 1,
