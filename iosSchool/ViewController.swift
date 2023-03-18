@@ -12,32 +12,40 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let player = Player(
-                        attack: 1,
-                        protection: 1,
-                        level: "Низкий",
-                        name: "Игрок",
-                        health: 3,
-                        lowDamage: 1,
-                        highDamage: 6)
-        let monster = Monster(
-                        attack: 1,
-                        protection: 1,
-                        name: "Монстр",
-                        health: 2,
-                        lowDamage: 1,
-                        highDamage: 6)
+        /*var generator: ColorGeneratorProtocol
+        generator = ColorGenerator(alpha: 1)
 
-        if monster != nil && player != nil {
+        let red = generator.color.red
+        generator.color = Color(red: 0, green: 0, blue: 0, alpha: .dim)*/
+
+        let player = Player(
+            attack: 1,
+            protection: 1,
+            level: "Низкий",
+            name: "Игрок",
+            health: 3,
+            lowDamage: 1,
+            highDamage: 6
+        )
+        let monster = Monster(
+            attack: 1,
+            protection: 1,
+            name: "Монстр",
+            health: 2,
+            lowDamage: 1,
+            highDamage: 6
+        )
+
+        if let monster, let player {
             while true {
-                if player!.health.isAlive && monster!.health.isAlive {
-                    attacking_full_scenario(player: player!, monster: monster!, isPlayerAttacking: false)
+                if player.health.isAlive && monster.health.isAlive {
+                    attackingFullScenario(player: player, monster: monster, isPlayerAttacking: false)
                 } else {
                     break
                 }
 
-                if player!.health.isAlive && monster!.health.isAlive {
-                    attacking_full_scenario(player: player!, monster: monster!, isPlayerAttacking: true)
+                if player.health.isAlive && monster.health.isAlive {
+                    attackingFullScenario(player: player, monster: monster, isPlayerAttacking: true)
                 } else {
                     break
                 }
@@ -47,15 +55,16 @@ class ViewController: UIViewController {
         }
     }
 
-    func attacking_full_scenario(player: Player, monster: Monster, isPlayerAttacking: Bool) {
+    func attackingFullScenario(player: Player, monster: Monster, isPlayerAttacking: Bool) {
 
         if isPlayerAttacking {
             print("\(player.name) нападает на \(monster.name)!")
 
-            let attackModif = Damage.attack_modificator(
-                                        attackersAttack: player.attack,
-                                        protectorsProtect: monster.protection)
-            if Damage.is_success(modif: attackModif) {
+            let attackModif = Damage.attackModificator(
+                attackersAttack: player.attack,
+                protectorsProtect: monster.protection ?? 0
+            )
+            if Damage.isSuccess(modif: attackModif) {
                 Damage.attacking(player: player, monster: monster, isPlayerAttacking: true)
                 if !monster.health.isAlive {
                     print("\(monster.name) побежден ура!")
@@ -64,10 +73,11 @@ class ViewController: UIViewController {
         } else {
             print("\(monster.name) нападает на \(player.name)!")
 
-            let attackModif = Damage.attack_modificator(
-                                        attackersAttack: monster.attack,
-                                        protectorsProtect: player.protection)
-            if Damage.is_success(modif: attackModif) {
+            let attackModif = Damage.attackModificator(
+                attackersAttack: monster.attack,
+                protectorsProtect: player.protection
+            )
+            if Damage.isSuccess(modif: attackModif) {
                 Damage.attacking(player: player, monster: monster, isPlayerAttacking: false)
                 if !player.health.isAlive {
                     print("\(player.name) побежден ура!")

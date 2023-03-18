@@ -26,12 +26,12 @@ enum Level: String {
 
 class Player {
     let attack, protection: Int
-    var level: Level?
+    var level: Level
     let name: String
     var health: Health
-    var damage: Damage?
+    var damage: Damage
 
-    init? (attack: Int, protection: Int, level: String, name: String, health: Int, lowDamage: Int, highDamage: Int) {
+    init?(attack: Int, protection: Int, level: String, name: String, health: Int, lowDamage: Int, highDamage: Int) {
         if attack < 1 || attack > 20 {
             print("Атакой может быть целое число от 1 до 20. Пожалуйста, повторите попытку ввода.")
             return nil
@@ -43,8 +43,9 @@ class Player {
         self.attack = attack
         self.protection = protection
 
-        self.level = Level(rawValue: level) ?? nil
-        if self.level == nil {
+        if let controlLevel = Level(rawValue: level) {
+            self.level = controlLevel
+        } else {
             print("Уровень игрока выбран неверно. Может быть: Низкий Средний и Высокий.")
             return nil
         }
@@ -53,7 +54,7 @@ class Player {
         self.health = Health(health: health, isPlayer: true)
 
         let controlDamage = Damage(lowDamage: lowDamage, highDamage: highDamage)
-        if controlDamage != nil {
+        if let controlDamage {
             self.damage = controlDamage
         } else {
             return nil

@@ -8,29 +8,35 @@
 import Foundation
 
 struct Monster {
-    let attack, protection: Int
+    let attack: Int
+    let protection: Int?
     let name: String
     var health: Health
-    var damage: Damage?
+    var damage: Damage
 
-    init?(attack: Int, protection: Int, name: String, health: Int, lowDamage: Int, highDamage: Int) {
+    init?(attack: Int, protection: Int?, name: String, health: Int, lowDamage: Int, highDamage: Int) {
 
         if attack < 1 || attack > 20 {
             print("Атакой может быть целое число от 1 до 20. Пожалуйста, повторите попытку ввода.")
             return nil
         }
-        if protection < 1 || protection > 20 {
-            print("Защитой может быть целое число от 1 до 20. Пожалуйста, повторите попытку ввода.")
-            return nil
+        if let protection {
+            if protection < 0 || protection > 20 {
+                print("Защитой может быть целое число от 0 до 20. Пожалуйста, повторите попытку ввода.")
+                return nil
+            } else {
+                self.protection = protection
+            }
+        } else {
+            self.protection = 0
         }
 
         self.attack = attack
-        self.protection = protection
         self.name = name
         self.health = Health(health: health, isPlayer: false)
 
         let controlDamage = Damage(lowDamage: lowDamage, highDamage: highDamage)
-        if controlDamage != nil {
+        if let controlDamage {
             self.damage = controlDamage
         } else {
             return nil

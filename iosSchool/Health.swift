@@ -24,20 +24,22 @@ public class Health {
         self.maxHealth = health
     }
 
-    static func check_health(health: Health, player: Player) {
+    static func checkHealth(health: Health, player: Player) {
         if health.health < 0 {
             if health.countHeal < 3 {           // ниже монстр не пройдет
-                let percent = player.level?.percent() ?? 0
-                    guard percent != 0 else {
-                        return print("Нет возможности подлечить персонажа т.к. его уровень задан не верно")
-                    }
-                var newHealth = Double(health.maxHealth) * percent
-                newHealth.round(.up)
-                health.health = Int(newHealth)
-                health.countHeal += 1
+                healing(player: player)
             } else {
                 health.isAlive = false
             }
         }
+    }
+
+    static func healing(player: Player) {
+        let health = player.health
+        let percent = player.level.percent()
+        var newHealth = Double(health.maxHealth) * percent
+        newHealth.round(.up)
+        health.health = Int(newHealth)
+        health.countHeal += 1
     }
 }
