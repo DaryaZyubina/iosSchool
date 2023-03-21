@@ -13,6 +13,7 @@
 		FCA10F1729C1D16B000241C4 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1629C1D16B000241C4 /* Monster.swift */; };
 		FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */; };
 		FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1C29C4A62A000241C4 /* Assembly.swift */; };
+		FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1E29C5F701000241C4 /* Creature.swift */; };
 		FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E729BF4D8B008D712C /* AppDelegate.swift */; };
 		FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */; };
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
@@ -28,6 +29,7 @@
 		FCA10F1629C1D16B000241C4 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
 		FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		FCA10F1C29C4A62A000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		FCA10F1E29C5F701000241C4 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		FCFA83E429BF4D8B008D712C /* iosSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA83E729BF4D8B008D712C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				FCA10F1629C1D16B000241C4 /* Monster.swift */,
 				FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */,
 				FCA10F1C29C4A62A000241C4 /* Assembly.swift */,
+				FCA10F1E29C5F701000241C4 /* Creature.swift */,
 			);
 			path = iosSchool;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				FCA10F1329C1AB46000241C4 /* Health.swift in Sources */,
 				FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */,
 				FCA10F1729C1D16B000241C4 /* Monster.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

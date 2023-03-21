@@ -7,30 +7,26 @@
 
 import Foundation
 
-struct Monster {
-    let attack: Int
-    let protection: Int?
+struct Monster: Creature {
+    let attack, protection: Int
     let name: String
     var health: Health
     var damage: Damage
 
-    init?(attack: Int, protection: Int?, name: String, health: Int, lowDamage: Int, highDamage: Int) {
+    init?(attack: Int, protection: Int, name: String, health: Int, lowDamage: Int, highDamage: Int) {
 
         if attack < 1 || attack > 20 {
             print("Атакой может быть целое число от 1 до 20. Пожалуйста, повторите попытку ввода.")
             return nil
         }
 
-        if let protection, protection >= 0 && protection <= 20 {
-            self.protection = protection
-        } else if protection == nil {
-            self.protection = 0
-        } else {
+        if protection < 1 || protection > 20 {
             print("Защитой может быть целое число от 0 до 20. Пожалуйста, повторите попытку ввода.")
             return nil
         }
 
         self.attack = attack
+        self.protection = protection
         self.name = name
         self.health = Health(health: health, isPlayer: false)
 

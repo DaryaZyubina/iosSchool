@@ -24,7 +24,7 @@ enum Level: String {
     }
 }
 
-class Player {
+class Player: Creature {
     let attack, protection: Int
     var level: Level
     let name: String

@@ -23,7 +23,7 @@ class ViewController: UIViewController {
         )
         let monster = Monster(
             attack: 1,
-            protection: nil,
+            protection: 5,
             name: "Монстр",
             health: 2,
             lowDamage: 1,
@@ -56,7 +56,7 @@ class ViewController: UIViewController {
 
             let attackModif = Damage.attackModificator(
                 attackersAttack: player.attack,
-                protectorsProtect: monster.protection ?? 0
+                protectorsProtect: monster.protection
             )
             if Damage.isSuccess(modif: attackModif) {
                 Damage.attacking(player: player, monster: monster, isPlayerAttacking: true)
