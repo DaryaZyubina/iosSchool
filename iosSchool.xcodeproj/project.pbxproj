@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */; };
+		FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2229C890D4000241C4 /* Assembly.swift */; };
+		FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2429C89182000241C4 /* AppCoordinator.swift */; };
+		FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */; };
+		FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2929C8983A000241C4 /* AuthViewController.swift */; };
+		FCA10F2C29C89904000241C4 /* AuthAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2B29C89904000241C4 /* AuthAssembly.swift */; };
+		FCA10F2E29C89A2D000241C4 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2D29C89A2D000241C4 /* AuthCoordinator.swift */; };
+		FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2F29C89C45000241C4 /* AuthView.swift */; };
+		FCA10F3229C89CA7000241C4 /* AuthViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3129C89CA7000241C4 /* AuthViewData.swift */; };
+		FCA10F3529C89E69000241C4 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3429C89E69000241C4 /* SplashViewController.swift */; };
+		FCA10F3729C89EB5000241C4 /* SplashDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */; };
+		FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */; };
+		FCA10F3B29C8A023000241C4 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */; };
 		FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E729BF4D8B008D712C /* AppDelegate.swift */; };
 		FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */; };
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
-		FCFA83EF29BF4D8B008D712C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFA83ED29BF4D8B008D712C /* Main.storyboard */; };
 		FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFA83F029BF4D8C008D712C /* Assets.xcassets */; };
 		FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */; };
 		FCFA83FC29BF58AC008D712C /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		FCA10F2229C890D4000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		FCA10F2429C89182000241C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
+		FCA10F2929C8983A000241C4 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		FCA10F2B29C89904000241C4 /* AuthAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthAssembly.swift; sourceTree = "<group>"; };
+		FCA10F2D29C89A2D000241C4 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		FCA10F2F29C89C45000241C4 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		FCA10F3129C89CA7000241C4 /* AuthViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewData.swift; sourceTree = "<group>"; };
+		FCA10F3429C89E69000241C4 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataProvider.swift; sourceTree = "<group>"; };
+		FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
+		FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
 		FCFA83E429BF4D8B008D712C /* iosSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA83E729BF4D8B008D712C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FCFA83EB29BF4D8B008D712C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FCFA83EE29BF4D8B008D712C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FCFA83F029BF4D8C008D712C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFA83F329BF4D8C008D712C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFA83F529BF4D8C008D712C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -39,6 +63,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FCA10F2629C89792000241C4 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */,
+				FCA10F2929C8983A000241C4 /* AuthViewController.swift */,
+				FCA10F2B29C89904000241C4 /* AuthAssembly.swift */,
+				FCA10F2D29C89A2D000241C4 /* AuthCoordinator.swift */,
+				FCA10F2F29C89C45000241C4 /* AuthView.swift */,
+				FCA10F3129C89CA7000241C4 /* AuthViewData.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		FCA10F3329C89E4A000241C4 /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				FCA10F3429C89E69000241C4 /* SplashViewController.swift */,
+				FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */,
+				FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */,
+				FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
 		FCFA83DB29BF4D8B008D712C = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +106,18 @@
 		FCFA83E629BF4D8B008D712C /* iosSchool */ = {
 			isa = PBXGroup;
 			children = (
+				FCA10F3329C89E4A000241C4 /* Splash */,
+				FCA10F2629C89792000241C4 /* Auth */,
 				FCFA83E729BF4D8B008D712C /* AppDelegate.swift */,
 				FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */,
 				FCFA83EB29BF4D8B008D712C /* ViewController.swift */,
-				FCFA83ED29BF4D8B008D712C /* Main.storyboard */,
 				FCFA83F029BF4D8C008D712C /* Assets.xcassets */,
 				FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */,
 				FCFA83F529BF4D8C008D712C /* Info.plist */,
 				FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */,
+				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
+				FCA10F2229C890D4000241C4 /* Assembly.swift */,
+				FCA10F2429C89182000241C4 /* AppCoordinator.swift */,
 			);
 			path = iosSchool;
 			sourceTree = "<group>";
@@ -131,7 +183,6 @@
 			files = (
 				FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */,
 				FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */,
-				FCFA83EF29BF4D8B008D712C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,24 +214,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */,
+				FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */,
+				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
+				FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */,
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
+				FCA10F3529C89E69000241C4 /* SplashViewController.swift in Sources */,
 				FCFA83FC29BF58AC008D712C /* ColorGenerator.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
+				FCA10F2E29C89A2D000241C4 /* AuthCoordinator.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */,
+				FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */,
+				FCA10F3229C89CA7000241C4 /* AuthViewData.swift in Sources */,
+				FCA10F3B29C8A023000241C4 /* SplashCoordinator.swift in Sources */,
+				FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */,
+				FCA10F2C29C89904000241C4 /* AuthAssembly.swift in Sources */,
+				FCA10F3729C89EB5000241C4 /* SplashDataProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FCFA83ED29BF4D8B008D712C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				FCFA83EE29BF4D8B008D712C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -317,7 +373,6 @@
 				INFOPLIST_FILE = iosSchool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -344,7 +399,6 @@
 				INFOPLIST_FILE = iosSchool/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
