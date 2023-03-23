@@ -42,22 +42,17 @@ public class Damage {
         return false
     }
 
-    static func attacking(player: Player, monster: Monster, isPlayerAttacking: Bool) {
+    static func attacking(attacker: Creature, protector: Creature) {
         var healthProtector: Health
         var damageAttacker: Damage
 
-        if isPlayerAttacking {              // определяем кто атакует и кто защищается
-            healthProtector = monster.health
-            damageAttacker = player.damage
-        } else {
-            healthProtector = player.health
-            damageAttacker = monster.damage
-        }
+        healthProtector = protector.health
+        damageAttacker = attacker.damage
 
         let attack = Int.random(in: damageAttacker.lowDamage..<(damageAttacker.highDamage + 1))
         print("Урон атаки = \(attack)")
 
         healthProtector.health -= attack
-        Health.checkHealth(health: healthProtector, player: player)    // проверяем здоровье жертвы
+        Health.checkHealth(health: healthProtector, player: protector)    // проверяем здоровье жертвы
     }
 }

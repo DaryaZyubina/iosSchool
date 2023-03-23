@@ -24,10 +24,12 @@ public class Health {
         self.maxHealth = health
     }
 
-    static func checkHealth(health: Health, player: Player) {
+    static func checkHealth(health: Health, player: Creature) {
         if health.health < 0 {
             if health.countHeal < 3 {           // ниже монстр не пройдет
-                healing(player: player)
+                if let healPlayer = player as? Player {
+                    healing(player: healPlayer)
+                }
             } else {
                 health.isAlive = false
             }

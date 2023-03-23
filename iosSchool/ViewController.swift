@@ -12,7 +12,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let player = Player(
+        let player, monster: Creature
+        guard let player = Player(
             attack: 1,
             protection: 1,
             level: "Низкий",
@@ -20,62 +21,45 @@ class ViewController: UIViewController {
             health: 3,
             lowDamage: 1,
             highDamage: 6
-        )
-        let monster = Monster(
+        ) else { return print("Исправьте вышеуказанные ошибки") }
+        guard let monster = Monster(
             attack: 1,
             protection: 5,
             name: "Монстр",
             health: 2,
             lowDamage: 1,
             highDamage: 6
-        )
+        ) else { return print("Исправьте вышеуказанные ошибки") }
 
-        if let monster, let player {
-            while true {
-                if player.health.isAlive && monster.health.isAlive {
-                    attackingFullScenario(player: player, monster: monster, isPlayerAttacking: false)
-                } else {
-                    break
-                }
-
-                if player.health.isAlive && monster.health.isAlive {
-                    attackingFullScenario(player: player, monster: monster, isPlayerAttacking: true)
-                } else {
-                    break
-                }
-
-                print("\n")
+        while true {
+            if player.health.isAlive && monster.health.isAlive {
+                attackingFullScenario(attacker: monster, protector: player)
+            } else {
+                break
             }
+
+            if player.health.isAlive && monster.health.isAlive {
+                attackingFullScenario(attacker: player, protector: monster)
+            } else {
+                break
+            }
+
+            print("\n")
         }
+
     }
 
-    func attackingFullScenario(player: Player, monster: Monster, isPlayerAttacking: Bool) {
+    func attackingFullScenario(attacker: Creature, protector: Creature) {
+        print("\(attacker.name) нападает на \(protector.name)!")
 
-        if isPlayerAttacking {
-            print("\(player.name) нападает на \(monster.name)!")
-
-            let attackModif = Damage.attackModificator(
-                attackersAttack: player.attack,
-                protectorsProtect: monster.protection
-            )
-            if Damage.isSuccess(modif: attackModif) {
-                Damage.attacking(player: player, monster: monster, isPlayerAttacking: true)
-                if !monster.health.isAlive {
-                    print("\(monster.name) побежден ура!")
-                }
-            }
-        } else {
-            print("\(monster.name) нападает на \(player.name)!")
-
-            let attackModif = Damage.attackModificator(
-                attackersAttack: monster.attack,
-                protectorsProtect: player.protection
-            )
-            if Damage.isSuccess(modif: attackModif) {
-                Damage.attacking(player: player, monster: monster, isPlayerAttacking: false)
-                if !player.health.isAlive {
-                    print("\(player.name) побежден ура!")
-                }
+        let attackModif = Damage.attackModificator(
+            attackersAttack: attacker.attack,
+            protectorsProtect: protector.protection
+        )
+        if Damage.isSuccess(modif: attackModif) {
+            Damage.attacking(attacker: attacker, protector: protector)
+            if !protector.health.isAlive {
+                print("\(protector.name) побежден ура!")
             }
         }
     }
