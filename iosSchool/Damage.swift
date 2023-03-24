@@ -43,16 +43,11 @@ public class Damage {
     }
 
     static func attacking(attacker: Creature, protector: Creature) {
-        var healthProtector: Health
-        var damageAttacker: Damage
 
-        healthProtector = protector.health
-        damageAttacker = attacker.damage
-
-        let attack = Int.random(in: damageAttacker.lowDamage..<(damageAttacker.highDamage + 1))
+        let attack = Int.random(in: attacker.damage.lowDamage..<(attacker.damage.highDamage + 1))
         print("Урон атаки = \(attack)")
 
-        healthProtector.health -= attack
-        Health.checkHealth(health: healthProtector, player: protector)    // проверяем здоровье жертвы
+        protector.health.health -= attack
+        Health.checkHealth(health: protector.health, player: protector)    // проверяем здоровье жертвы
     }
 }

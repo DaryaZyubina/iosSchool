@@ -21,7 +21,10 @@ class ViewController: UIViewController {
             health: 3,
             lowDamage: 1,
             highDamage: 6
-        ) else { return print("Исправьте вышеуказанные ошибки") }
+        ) else {
+            print("Исправьте вышеуказанные ошибки")
+            return
+        }
         guard let monster = Monster(
             attack: 1,
             protection: 5,
@@ -29,7 +32,10 @@ class ViewController: UIViewController {
             health: 2,
             lowDamage: 1,
             highDamage: 6
-        ) else { return print("Исправьте вышеуказанные ошибки") }
+        ) else {
+            print("Исправьте вышеуказанные ошибки")
+            return
+        }
 
         while true {
             if player.health.isAlive && monster.health.isAlive {
