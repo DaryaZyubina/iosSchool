@@ -10,10 +10,11 @@ import UIKit
 class SplashCoordinator: BaseCoordinator<SplashCoordinator.Context> {
 
     struct Context {
+        let onSuccess: (() -> Void)?
     }
 
     override func make() -> UIViewController {
-        let controller = asssembly.splashVC()
+        let controller = asssembly.splashVC(onSuccess: context.onSuccess)
         return controller
     }
 }
