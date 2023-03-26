@@ -26,6 +26,4 @@ extension Assembly: AuthAssembly {
     func authDataProvider() -> AuthDataProvider {
         AuthDataProviderImp()
     }
-
-
 }

@@ -1,17 +1,17 @@
 //
-//  AuthViewController.swift
+//  RegViewController.swift
 //  iosSchool
 //
-//  Created by Student 1 on 20.03.2023.
+//  Created by Student 1 on 26.03.2023.
 //
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class RegViewController: UIViewController {
 
-    private let dataProvider: AuthDataProvider
+    private let dataProvider: RegDataProvider
 
-    init(dataProvider: AuthDataProvider) {
+    init(dataProvider: RegDataProvider) {
         self.dataProvider = dataProvider
 
         super.init(nibName: nil, bundle: nil)
@@ -24,6 +24,6 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        //view.backgroundColor = .red
     }
 }
