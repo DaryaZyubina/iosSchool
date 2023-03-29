@@ -7,6 +7,6 @@
 
 import UIKit
 
-protocol RegView: UIView {}
+protocol RegistrationView: UIView {}
 
-class RegViewImp: UIView, RegView {}
+class RegistrationViewImp: UIView, RegistrationView {}

@@ -7,4 +7,4 @@
 
 import Foundation
 
-struct RegViewData {}
+struct RegistrationViewData {}

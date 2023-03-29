@@ -7,8 +7,7 @@
 
 import Foundation
 
-protocol RegDataProvider {}
+protocol RegistrationDataProvider {}
 
-class RegDataProviderImp: RegDataProvider {
-
+class RegistrationDataProviderImp: RegistrationDataProvider {
 }

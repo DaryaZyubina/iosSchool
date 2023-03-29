@@ -20,12 +20,12 @@
 		FCA10F3729C89EB5000241C4 /* SplashDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */; };
 		FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */; };
 		FCA10F3B29C8A023000241C4 /* SplashCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */; };
-		FCA10F3E29D08029000241C4 /* RegDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3D29D08029000241C4 /* RegDataProvider.swift */; };
-		FCA10F4029D08052000241C4 /* RegViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3F29D08052000241C4 /* RegViewController.swift */; };
-		FCA10F4229D080AA000241C4 /* RegAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4129D080AA000241C4 /* RegAssembly.swift */; };
-		FCA10F4429D08116000241C4 /* RegCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4329D08116000241C4 /* RegCoordinator.swift */; };
-		FCA10F4629D0814A000241C4 /* RegView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4529D0814A000241C4 /* RegView.swift */; };
-		FCA10F4829D08171000241C4 /* RegViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4729D08171000241C4 /* RegViewData.swift */; };
+		FCA10F3E29D08029000241C4 /* RegistrationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3D29D08029000241C4 /* RegistrationDataProvider.swift */; };
+		FCA10F4029D08052000241C4 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F3F29D08052000241C4 /* RegistrationViewController.swift */; };
+		FCA10F4229D080AA000241C4 /* RegistrationAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4129D080AA000241C4 /* RegistrationAssembly.swift */; };
+		FCA10F4429D08116000241C4 /* RegistrationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4329D08116000241C4 /* RegistrationCoordinator.swift */; };
+		FCA10F4629D0814A000241C4 /* RegistrtationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4529D0814A000241C4 /* RegistrtationView.swift */; };
+		FCA10F4829D08171000241C4 /* RegistrationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F4729D08171000241C4 /* RegistrationViewData.swift */; };
 		FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E729BF4D8B008D712C /* AppDelegate.swift */; };
 		FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */; };
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
@@ -48,12 +48,12 @@
 		FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashDataProvider.swift; sourceTree = "<group>"; };
 		FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashAssembly.swift; sourceTree = "<group>"; };
 		FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashCoordinator.swift; sourceTree = "<group>"; };
-		FCA10F3D29D08029000241C4 /* RegDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegDataProvider.swift; sourceTree = "<group>"; };
-		FCA10F3F29D08052000241C4 /* RegViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewController.swift; sourceTree = "<group>"; };
-		FCA10F4129D080AA000241C4 /* RegAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegAssembly.swift; sourceTree = "<group>"; };
-		FCA10F4329D08116000241C4 /* RegCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegCoordinator.swift; sourceTree = "<group>"; };
-		FCA10F4529D0814A000241C4 /* RegView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegView.swift; sourceTree = "<group>"; };
-		FCA10F4729D08171000241C4 /* RegViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegViewData.swift; sourceTree = "<group>"; };
+		FCA10F3D29D08029000241C4 /* RegistrationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationDataProvider.swift; sourceTree = "<group>"; };
+		FCA10F3F29D08052000241C4 /* RegistrationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		FCA10F4129D080AA000241C4 /* RegistrationAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationAssembly.swift; sourceTree = "<group>"; };
+		FCA10F4329D08116000241C4 /* RegistrationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationCoordinator.swift; sourceTree = "<group>"; };
+		FCA10F4529D0814A000241C4 /* RegistrtationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrtationView.swift; sourceTree = "<group>"; };
+		FCA10F4729D08171000241C4 /* RegistrationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistrationViewData.swift; sourceTree = "<group>"; };
 		FCFA83E429BF4D8B008D712C /* iosSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA83E729BF4D8B008D712C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,12 +102,12 @@
 		FCA10F3C29D08010000241C4 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
-				FCA10F3D29D08029000241C4 /* RegDataProvider.swift */,
-				FCA10F3F29D08052000241C4 /* RegViewController.swift */,
-				FCA10F4129D080AA000241C4 /* RegAssembly.swift */,
-				FCA10F4329D08116000241C4 /* RegCoordinator.swift */,
-				FCA10F4529D0814A000241C4 /* RegView.swift */,
-				FCA10F4729D08171000241C4 /* RegViewData.swift */,
+				FCA10F3D29D08029000241C4 /* RegistrationDataProvider.swift */,
+				FCA10F3F29D08052000241C4 /* RegistrationViewController.swift */,
+				FCA10F4129D080AA000241C4 /* RegistrationAssembly.swift */,
+				FCA10F4329D08116000241C4 /* RegistrationCoordinator.swift */,
+				FCA10F4529D0814A000241C4 /* RegistrtationView.swift */,
+				FCA10F4729D08171000241C4 /* RegistrationViewData.swift */,
 			);
 			path = Registration;
 			sourceTree = "<group>";
@@ -241,12 +241,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */,
-				FCA10F3E29D08029000241C4 /* RegDataProvider.swift in Sources */,
+				FCA10F3E29D08029000241C4 /* RegistrationDataProvider.swift in Sources */,
 				FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */,
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
 				FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */,
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
-				FCA10F4029D08052000241C4 /* RegViewController.swift in Sources */,
+				FCA10F4029D08052000241C4 /* RegistrationViewController.swift in Sources */,
 				FCA10F3529C89E69000241C4 /* SplashViewController.swift in Sources */,
 				FCFA83FC29BF58AC008D712C /* ColorGenerator.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
@@ -254,11 +254,11 @@
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
 				FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */,
 				FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */,
-				FCA10F4229D080AA000241C4 /* RegAssembly.swift in Sources */,
-				FCA10F4829D08171000241C4 /* RegViewData.swift in Sources */,
-				FCA10F4429D08116000241C4 /* RegCoordinator.swift in Sources */,
+				FCA10F4229D080AA000241C4 /* RegistrationAssembly.swift in Sources */,
+				FCA10F4829D08171000241C4 /* RegistrationViewData.swift in Sources */,
+				FCA10F4429D08116000241C4 /* RegistrationCoordinator.swift in Sources */,
 				FCA10F3229C89CA7000241C4 /* AuthViewData.swift in Sources */,
-				FCA10F4629D0814A000241C4 /* RegView.swift in Sources */,
+				FCA10F4629D0814A000241C4 /* RegistrtationView.swift in Sources */,
 				FCA10F3B29C8A023000241C4 /* SplashCoordinator.swift in Sources */,
 				FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */,
 				FCA10F2C29C89904000241C4 /* AuthAssembly.swift in Sources */,

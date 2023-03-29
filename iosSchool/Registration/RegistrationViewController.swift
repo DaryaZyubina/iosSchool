@@ -7,11 +7,11 @@
 
 import UIKit
 
-class RegViewController: UIViewController {
+class RegistrationViewController: UIViewController {
 
-    private let dataProvider: RegDataProvider
+    private let dataProvider: RegistrationDataProvider
 
-    init(dataProvider: RegDataProvider) {
+    init(dataProvider: RegistrationDataProvider) {
         self.dataProvider = dataProvider
 
         super.init(nibName: nil, bundle: nil)
@@ -23,7 +23,5 @@ class RegViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        //view.backgroundColor = .red
     }
 }
