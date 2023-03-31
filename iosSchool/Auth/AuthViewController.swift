@@ -24,12 +24,10 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //view.backgroundColor = .red
-
         rootView.update(with: AuthViewData())
-
         
-        dataProvider.authorization(username: "dasha", password: "1111") { [weak self] result in
+        dataProvider.authorization(username: "dasha", password: "1111") {
+            [weak self] result in
             switch result {
             case .success(let success):
                 print("Success!")

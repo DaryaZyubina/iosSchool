@@ -16,15 +16,19 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     func start(window: UIWindow) {
         self.window = window
         let coordinator = asssembly.splashCoordinator { [weak self] in
-            self?.startAuth()
+           //  self?.startAuth()
+            self?.startRegistration()
         }
         setRoot(viewController: coordinator.make())
-        // let coordinator = asssembly.authCoordinator()
-        // setRoot(viewController: coordinator.make())     // make our viewcontroller
     }
 
     private func startAuth() {
         let coordinator = asssembly.authCoordinator()
+        setRoot(viewController: coordinator.make())
+    }
+
+    private func startRegistration() {
+        let coordinator = asssembly.registrationCoordinator()
         setRoot(viewController: coordinator.make())
     }
 
