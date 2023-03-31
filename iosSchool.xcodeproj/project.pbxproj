@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0E794729D7078D00293D66 /* AuthViewImp.xib */; };
+		FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616329D718CB009177B5 /* BaseViewController.swift */; };
+		FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616529D71EF1009177B5 /* CustomButton.swift */; };
 		FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1029C1AA0F000241C4 /* Player.swift */; };
 		FCA10F1329C1AB46000241C4 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1229C1AB46000241C4 /* Health.swift */; };
 		FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1429C1BC55000241C4 /* Damage.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC0E794729D7078D00293D66 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
+		FC58616329D718CB009177B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FC58616529D71EF1009177B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FCA10F1029C1AA0F000241C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCA10F1229C1AB46000241C4 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		FCA10F1429C1BC55000241C4 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
@@ -99,9 +105,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FC0E794629D7075600293D66 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FC0E794729D7078D00293D66 /* AuthViewImp.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
+		FC58616229D718A8009177B5 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
+				FC58616329D718CB009177B5 /* BaseViewController.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		FCA10F2629C89792000241C4 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				FC0E794629D7075600293D66 /* Subviews */,
 				FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */,
 				FCA10F2929C8983A000241C4 /* AuthViewController.swift */,
 				FCA10F2B29C89904000241C4 /* AuthAssembly.swift */,
@@ -123,7 +147,6 @@
 			path = Splash;
 			sourceTree = "<group>";
 		};
-
 		FCA10F3C29D08010000241C4 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
@@ -135,8 +158,8 @@
 				FCA10F4729D08171000241C4 /* RegistrationViewData.swift */,
 			);
 			path = Registration;
-            sourceTree = "<group>";
-        };
+			sourceTree = "<group>";
+		};
 		FCA10F4929D1BE9A000241C4 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
@@ -163,7 +186,6 @@
 				FCA10F5629D1D3A2000241C4 /* ApiError.swift */,
 			);
 			path = ApiClient;
-
 			sourceTree = "<group>";
 		};
 		FCFA83DB29BF4D8B008D712C = {
@@ -185,7 +207,7 @@
 		FCFA83E629BF4D8B008D712C /* iosSchool */ = {
 			isa = PBXGroup;
 			children = (
-
+				FC58616229D718A8009177B5 /* Common */,
 				FCA10F3C29D08010000241C4 /* Registration */,
 				FCA10F4F29D1C4ED000241C4 /* ApiClient */,
 				FCA10F4929D1BE9A000241C4 /* Responses */,
@@ -204,10 +226,9 @@
 				FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */,
 				FCA10F1C29C4A62A000241C4 /* Assembly.swift */,
 				FCA10F1E29C5F701000241C4 /* Creature.swift */,
-				FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */,
-				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
 				FCA10F2229C890D4000241C4 /* Assembly.swift */,
 				FCA10F2429C89182000241C4 /* AppCoordinator.swift */,
+				FC58616529D71EF1009177B5 /* CustomButton.swift */,
 			);
 			path = iosSchool;
 			sourceTree = "<group>";
@@ -273,6 +294,7 @@
 			files = (
 				FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */,
 				FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */,
+				FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +330,7 @@
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
 				FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
+				FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */,
 				FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */,
 				FCA10F1329C1AB46000241C4 /* Health.swift in Sources */,
 				FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */,
@@ -327,10 +350,10 @@
 				FCA10F4029D08052000241C4 /* RegistrationViewController.swift in Sources */,
 				FCA10F3529C89E69000241C4 /* SplashViewController.swift in Sources */,
 				FCA10F4E29D1C300000241C4 /* TokenResponse.swift in Sources */,
-				FCFA83FC29BF58AC008D712C /* ColorGenerator.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
 				FCA10F2E29C89A2D000241C4 /* AuthCoordinator.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */,
 				FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */,
 				FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */,
 				FCA10F4229D080AA000241C4 /* RegistrationAssembly.swift in Sources */,
