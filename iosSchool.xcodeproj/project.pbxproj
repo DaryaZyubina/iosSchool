@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1029C1AA0F000241C4 /* Player.swift */; };
+		FCA10F1329C1AB46000241C4 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1229C1AB46000241C4 /* Health.swift */; };
+		FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1429C1BC55000241C4 /* Damage.swift */; };
+		FCA10F1729C1D16B000241C4 /* Monster.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1629C1D16B000241C4 /* Monster.swift */; };
+		FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */; };
+		FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1C29C4A62A000241C4 /* Assembly.swift */; };
+		FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1E29C5F701000241C4 /* Creature.swift */; };
 		FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */; };
 		FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2229C890D4000241C4 /* Assembly.swift */; };
 		FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2429C89182000241C4 /* AppCoordinator.swift */; };
@@ -31,10 +38,16 @@
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
 		FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FCFA83F029BF4D8C008D712C /* Assets.xcassets */; };
 		FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */; };
-		FCFA83FC29BF58AC008D712C /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FCA10F1029C1AA0F000241C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		FCA10F1229C1AB46000241C4 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
+		FCA10F1429C1BC55000241C4 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
+		FCA10F1629C1D16B000241C4 /* Monster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monster.swift; sourceTree = "<group>"; };
+		FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
+		FCA10F1C29C4A62A000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
+		FCA10F1E29C5F701000241C4 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
 		FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FCA10F2229C890D4000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FCA10F2429C89182000241C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
@@ -61,7 +74,6 @@
 		FCFA83F029BF4D8C008D712C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FCFA83F329BF4D8C008D712C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FCFA83F529BF4D8C008D712C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +168,13 @@
 				FCFA83F029BF4D8C008D712C /* Assets.xcassets */,
 				FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */,
 				FCFA83F529BF4D8C008D712C /* Info.plist */,
+				FCA10F1029C1AA0F000241C4 /* Player.swift */,
+				FCA10F1229C1AB46000241C4 /* Health.swift */,
+				FCA10F1429C1BC55000241C4 /* Damage.swift */,
+				FCA10F1629C1D16B000241C4 /* Monster.swift */,
+				FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */,
+				FCA10F1C29C4A62A000241C4 /* Assembly.swift */,
+				FCA10F1E29C5F701000241C4 /* Creature.swift */,
 				FCFA83FB29BF58AC008D712C /* ColorGenerator.swift */,
 				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
 				FCA10F2229C890D4000241C4 /* Assembly.swift */,
@@ -256,6 +275,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */,
+				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
+				FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */,
+				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
+				FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */,
+				FCA10F1329C1AB46000241C4 /* Health.swift in Sources */,
+				FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */,
+				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */,
+				FCA10F1729C1D16B000241C4 /* Monster.swift in Sources */,
 				FCA10F5329D1C583000241C4 /* NetworkConstants.swift in Sources */,
 				FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */,
 				FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */,
