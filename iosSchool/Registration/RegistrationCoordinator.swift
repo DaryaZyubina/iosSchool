@@ -13,7 +13,7 @@ class RegistrationCoordinator: BaseCoordinator<RegistrationCoordinator.Context> 
     }
 
     override func make() -> UIViewController {
-        let controller = asssembly.regVC()
+        let controller = asssembly.registrationVC()
         return controller
     }
 }
