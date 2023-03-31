@@ -135,7 +135,8 @@
 				FCA10F4729D08171000241C4 /* RegistrationViewData.swift */,
 			);
 			path = Registration;
-
+            sourceTree = "<group>";
+        };
 		FCA10F4929D1BE9A000241C4 /* Responses */ = {
 			isa = PBXGroup;
 			children = (
