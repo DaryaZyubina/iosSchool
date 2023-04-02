@@ -23,5 +23,14 @@ class RegistrationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        dataProvider.registration(username: "dashad", password: "1111") { [weak self] result in
+            switch result {
+            case .success(let success):
+                print("Registration was successful!")
+            case .failure(let failure):
+                print(failure.rawValue)
+            }
+        }
     }
 }
