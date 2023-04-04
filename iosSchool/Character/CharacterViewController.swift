@@ -24,10 +24,7 @@ class CharacterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // allCharacters()
-        // singleCharacter(id: 2)
-         getCharacterFromLocation(url: "https://rickandmortyapi.com/api/character/1")
-
+        singleCharacter(id: 2)
     }
 
     func allCharacters() {

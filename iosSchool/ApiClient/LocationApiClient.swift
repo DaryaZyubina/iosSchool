@@ -8,15 +8,11 @@
 import Foundation
 
 protocol LocationApiClient {
-    func allLocations(
-        onRequestCompleted: @escaping (Result<LocationsList, ApiError>) -> Void
-    )
+    func allLocations(onRequestCompleted: @escaping (Result<LocationsList, ApiError>) -> Void)
 }
 
 extension ApiClient: LocationApiClient {
-    func allLocations(
-        onRequestCompleted: @escaping (Result<LocationsList, ApiError>) -> Void
-    ) {
+    func allLocations(onRequestCompleted: @escaping (Result<LocationsList, ApiError>) -> Void) {
         let url = NetworkConstants.URLStrings.locationURL
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }

@@ -8,13 +8,11 @@
 import Foundation
 
 protocol CharacterDataProvider {
-    func allCharacters(
-        completion: @escaping (Result<CharactersList, ApiError>) -> Void
-    )
+    func allCharacters(completion: @escaping (Result<CharactersList, ApiError>) -> Void)
 
     func singleCharacter(
         id: Int,
-        completion: @escaping (Result<CharactersList, ApiError>) -> Void
+        completion: @escaping (Result<Character, ApiError>) -> Void
     )
 
     func getCharacterFromLocation(
@@ -30,9 +28,7 @@ class CharacterDataProviderImp: CharacterDataProvider {
         self.apiClient = apiClient
     }
 
-    func allCharacters(
-        completion: @escaping (Result<CharactersList, ApiError>) -> Void
-    ) {
+    func allCharacters(completion: @escaping (Result<CharactersList, ApiError>) -> Void) {
         apiClient.allCharacters() { result in
             switch result {
             case .success(let data):
@@ -45,7 +41,7 @@ class CharacterDataProviderImp: CharacterDataProvider {
 
     func singleCharacter(
         id: Int,
-        completion: @escaping (Result<CharactersList, ApiError>) -> Void
+        completion: @escaping (Result<Character, ApiError>) -> Void
     ) {
         apiClient.singleCharacter(id: id) { result in
             switch result {
@@ -70,5 +66,4 @@ class CharacterDataProviderImp: CharacterDataProvider {
             }
         }
     }
-
 }

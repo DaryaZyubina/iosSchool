@@ -20,7 +20,6 @@ enum ApiError: Error {
             return "Ошибка получения данных"
         case let .default(error):
             if let error {
-                print(error)
                 return String(decoding: error, as: UTF8.self)
             } else {
                 return "Неизвестная ошибка"

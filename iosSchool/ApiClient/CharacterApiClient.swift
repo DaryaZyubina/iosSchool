@@ -8,13 +8,11 @@
 import Foundation
 
 protocol CharacterApiClient {
-    func allCharacters(
-        onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void
-    )
+    func allCharacters(onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void)
 
     func singleCharacter(
         id: Int,
-        onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void
+        onRequestCompleted: @escaping (Result<Character, ApiError>) -> Void
     )
 
     func getCharacterFromLocation(
@@ -25,16 +23,14 @@ protocol CharacterApiClient {
 
 extension ApiClient: CharacterApiClient {
 
-    func allCharacters(
-        onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void
-    ) {
+    func allCharacters(onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void) {
         let url = NetworkConstants.URLStrings.characterURL
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }
 
     func singleCharacter(
         id: Int,
-        onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void
+        onRequestCompleted: @escaping (Result<Character, ApiError>) -> Void
     ) {
         let url = NetworkConstants.URLStrings.characterURL + "/\(id)"
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
@@ -44,8 +40,7 @@ extension ApiClient: CharacterApiClient {
         url: String,
         onRequestCompleted: @escaping (Result<CharactersList, ApiError>) -> Void
     ) {
-        let link = url
-        performRequest(url: link, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
+        performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }
 
 }
