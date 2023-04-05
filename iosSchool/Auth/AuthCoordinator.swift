@@ -14,6 +14,12 @@ class AuthCoordinator: BaseCoordinator<AuthCoordinator.Context> {
 
     override func make() -> UIViewController {
         let controller = asssembly.authVC()
+        controller.onOpenRegistratioon = { [weak controller] in
+            let coordinator = self.asssembly.registrationCoordinator()
+            let registrationVC = coordinator.make()
+            registrationVC.modalPresentationStyle = .fullScreen
+            controller?.present(registrationVC, animated: true)
+        }
         return controller
     }
 }

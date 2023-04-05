@@ -7,7 +7,9 @@
 
 import UIKit
 
-class AuthViewController: UIViewController {
+class AuthViewController<View: AuthView>: BaseViewController<View> {
+
+    var onOpenRegistratioon: (() -> Void)?
 
     private let dataProvider: AuthDataProvider
 
@@ -24,10 +26,12 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .red
+        //view.backgroundColor = .red
 
-        dataProvider.authorization(username: "dasha", password: "1111") {
-            [weak self] result in
+        rootView.update(with: AuthViewData())
+        rootView.registrationAction = onOpenRegistratioon
+        
+        dataProvider.authorization(username: "dasha", password: "1111") { [weak self] result in
             switch result {
             case .success(let success):
                 print("Success!")

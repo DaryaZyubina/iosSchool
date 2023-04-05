@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="AuthViewImp" customModule="iosSchool" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Wew-dG-Zbb">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fki-f4-JNJ">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-lw-cDI">
+                            <rect key="frame" x="20" y="150" width="353" height="166.33333333333337"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-LD-lGF">
+                                    <rect key="frame" x="43" y="19.999999999999993" width="267" height="124.33333333333331"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwc-yr-Ppi">
+                                            <rect key="frame" x="0.0" y="0.0" width="267" height="26.333333333333332"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизуйтесь, чтобы получить доступ к полному функционалу приложения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxw-UK-Ezl">
+                                            <rect key="frame" x="0.0" y="38.333333333333343" width="267" height="86"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="Lilac80"/>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="McZ-LD-lGF" secondAttribute="bottom" constant="22" id="IGs-zD-zEv"/>
+                                <constraint firstItem="McZ-LD-lGF" firstAttribute="leading" secondItem="Tmt-lw-cDI" secondAttribute="leading" constant="43" id="OY8-4w-p3S"/>
+                                <constraint firstItem="McZ-LD-lGF" firstAttribute="top" secondItem="Tmt-lw-cDI" secondAttribute="top" constant="20" id="eIg-oS-lkL"/>
+                                <constraint firstAttribute="trailing" secondItem="McZ-LD-lGF" secondAttribute="trailing" constant="43" id="hQu-R7-g0A"/>
+                            </constraints>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-C5-QvJ">
+                            <rect key="frame" x="58" y="489.33333333333326" width="277" height="86"/>
+                            <subviews>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-e6-jty">
+                                    <rect key="frame" x="0.0" y="0.0" width="277" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-Oc-eB4">
+                                    <rect key="frame" x="0.0" y="52.000000000000057" width="277" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Sy-gX-Apw">
+                            <rect key="frame" x="0.0" y="725.33333333333337" width="393" height="80.666666666666629"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-cc-YOx" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                    <color key="backgroundColor" name="VelvetBlue"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                        <backgroundConfiguration key="background">
+                                            <color key="strokeColor" name="DarkBlue"/>
+                                        </backgroundConfiguration>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="loginButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="OTf-Us-bWL"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-Q3-ZKD" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="46.333333333333258" width="393" height="34.333333333333343"/>
+                                    <color key="backgroundColor" name="VelvetBlue"/>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
+                                        <backgroundConfiguration key="background">
+                                            <color key="strokeColor" name="DarkBlue"/>
+                                        </backgroundConfiguration>
+                                    </buttonConfiguration>
+                                    <connections>
+                                        <action selector="registrationButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Sf-rk-xVz"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" name="Lilac50"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="T1Z-C5-QvJ" secondAttribute="trailing" constant="58" id="J4o-H6-F1X"/>
+                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="top" secondItem="fki-f4-JNJ" secondAttribute="top" constant="150" id="OVm-9S-1rZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Tmt-lw-cDI" secondAttribute="trailing" constant="20" id="T73-Pr-svC"/>
+                        <constraint firstItem="T1Z-C5-QvJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tmt-lw-cDI" secondAttribute="bottom" constant="30" id="Xs2-n6-FIo"/>
+                        <constraint firstAttribute="trailing" secondItem="1Sy-gX-Apw" secondAttribute="trailing" id="ajw-4l-tS7"/>
+                        <constraint firstItem="1Sy-gX-Apw" firstAttribute="top" secondItem="T1Z-C5-QvJ" secondAttribute="bottom" priority="250" constant="150" id="aso-L4-1kR"/>
+                        <constraint firstItem="T1Z-C5-QvJ" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" constant="58" id="d2w-MQ-tH3"/>
+                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" constant="20" id="hth-Dz-OvD"/>
+                        <constraint firstItem="1Sy-gX-Apw" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" id="kFr-gN-9od"/>
+                        <constraint firstAttribute="bottom" secondItem="1Sy-gX-Apw" secondAttribute="bottom" constant="46" id="rJE-l8-CNK"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="fki-f4-JNJ" secondAttribute="trailing" id="0ni-T2-7Jm"/>
+                <constraint firstItem="Wew-dG-Zbb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="8kV-GH-nG3"/>
+                <constraint firstAttribute="bottom" secondItem="fki-f4-JNJ" secondAttribute="bottom" id="GOx-X9-c9i"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Wew-dG-Zbb" secondAttribute="trailing" id="Izn-W9-iMD"/>
+                <constraint firstItem="fki-f4-JNJ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="K8l-7f-RYH"/>
+                <constraint firstItem="Wew-dG-Zbb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="dSR-nr-Fdo"/>
+                <constraint firstItem="fki-f4-JNJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f9R-15-ghZ"/>
+                <constraint firstAttribute="bottom" secondItem="Wew-dG-Zbb" secondAttribute="bottom" id="tZD-Bo-Jb7"/>
+            </constraints>
+            <connections>
+                <outlet property="helloLabel" destination="zwc-yr-Ppi" id="86O-3U-bTg"/>
+                <outlet property="helloView" destination="Tmt-lw-cDI" id="hUC-PT-WZR"/>
+                <outlet property="loginButton" destination="kOx-cc-YOx" id="632-Ns-6OZ"/>
+                <outlet property="loginTextField" destination="QAB-e6-jty" id="t87-3f-pin"/>
+                <outlet property="passwordTextField" destination="2c4-Oc-eB4" id="0km-aw-Il5"/>
+                <outlet property="registrationButton" destination="JmJ-Q3-ZKD" id="TqW-FZ-u8l"/>
+            </connections>
+            <point key="canvasLocation" x="58" y="21"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="background" width="390" height="844"/>
+        <namedColor name="DarkBlue">
+            <color red="0.046999998390674591" green="0.28799998760223389" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Lilac50">
+            <color red="0.68235294117647061" green="0.55294117647058827" blue="0.72941176470588232" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Lilac80">
+            <color red="0.68235294117647061" green="0.55294117647058827" blue="0.72941176470588232" alpha="0.80000001192092896" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="VelvetBlue">
+            <color red="0.32899999618530273" green="0.50599998235702515" blue="0.70599997043609619" alpha="0.69999998807907104" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
