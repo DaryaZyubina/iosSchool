@@ -1,17 +1,17 @@
 //
-//  RegViewController.swift
+//  LocationViewController.swift
 //  iosSchool
 //
-//  Created by Student 1 on 26.03.2023.
+//  Created by Student 1 on 02.04.2023.
 //
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class LocationViewController: UIViewController {
 
-    private let dataProvider: RegistrationDataProvider
+    private let dataProvider: LocationDataProvider
 
-    init(dataProvider: RegistrationDataProvider) {
+    init(dataProvider: LocationDataProvider) {
         self.dataProvider = dataProvider
 
         super.init(nibName: nil, bundle: nil)
@@ -24,10 +24,10 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataProvider.registration(username: "dashad", password: "1111") { [weak self] result in
+        dataProvider.allLocations() { [weak self] result in
             switch result {
             case .success(let success):
-                print("Registration was successful!")
+                print(result)
             case .failure(let failure):
                 print(failure.rawValue)
             }
