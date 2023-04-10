@@ -17,6 +17,7 @@ class AuthViewImp: UIView, AuthView {
 
     var registrationAction: (() -> Void)?
 
+    @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var helloView: UIView!
     @IBOutlet private weak var helloLabel: UILabel!
     @IBOutlet private weak var loginTextField: UITextField!
@@ -24,7 +25,15 @@ class AuthViewImp: UIView, AuthView {
     @IBOutlet private weak var loginButton: CustomButton!
     @IBOutlet private weak var registrationButton: CustomButton!
 
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+
     func update(with data: AuthViewData) {
+        let recogniser = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        addGestureRecognizer(recogniser)
+        // scrollView.keyboardDismissMode = .onDrag
+
         helloLabel.text = data.loginTextFieldPlaceHolder
 
         helloView.layer.cornerRadius = 25
@@ -33,6 +42,7 @@ class AuthViewImp: UIView, AuthView {
         helloView.layer.shadowOffset = CGSize(width: 0, height: 8)
         helloView.layer.shadowRadius = 10
 
+        loginTextField.becomeFirstResponder()
         loginTextField.backgroundColor = .white.withAlphaComponent(0.6)
         loginTextField.layer.cornerRadius = 15
         loginTextField.layer.masksToBounds = true
@@ -43,12 +53,51 @@ class AuthViewImp: UIView, AuthView {
 
         makeButton(button: loginButton)
         makeButton(button: registrationButton)
+
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillShow),
+            name: UIResponder.keyboardWillShowNotification,
+            object: nil
+        )
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(keyboardWillHide),
+            name: UIResponder.keyboardWillHideNotification,
+            object: nil
+        )
     }
 
     // MARK: - Actions
 
     @IBAction func loginButtonDidTap(sender: UIButton) {
+        loginTextField.resignFirstResponder()
+        passwordTextField.resignFirstResponder()
 
+        // endEditing(true)
+    }
+
+    @objc
+    private func closeKeyboard() {
+        endEditing(true)
+    }
+
+    @objc
+    private func keyboardWillShow(notification: Notification) {
+        guard let userInfo = notification.userInfo else {
+            return
+        }
+        guard let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else {
+            return
+        }
+        let keyboardHeight = keyboardFrame.cgRectValue.height
+        scrollView.contentInset.bottom = keyboardHeight + 15
+        scrollView.verticalScrollIndicatorInsets.bottom = keyboardHeight
+    }
+
+    @objc
+    private func keyboardWillHide(notification: Notification) {
+        scrollView.contentInset = .zero
     }
 
     @IBAction func registrationButtonDidTap(sender: UIButton) {

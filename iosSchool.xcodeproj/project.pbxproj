@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		FC0E794329D6EBB200293D66 /* LocationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0E794229D6EBB200293D66 /* LocationDataProvider.swift */; };
 		FC0E794529D6EC8400293D66 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0E794429D6EC8400293D66 /* Character.swift */; };
+		FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0E794729D7078D00293D66 /* AuthViewImp.xib */; };
+		FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616329D718CB009177B5 /* BaseViewController.swift */; };
+		FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616529D71EF1009177B5 /* CustomButton.swift */; };
 		FC692AD129D95AEA0047D3E2 /* LocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD029D95AEA0047D3E2 /* LocationsList.swift */; };
 		FC692AD329D95C200047D3E2 /* LocationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD229D95C200047D3E2 /* LocationApiClient.swift */; };
 		FC692AD529D95FE80047D3E2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD429D95FE80047D3E2 /* LocationViewController.swift */; };
@@ -21,9 +24,7 @@
 		FC692AE629D973FC0047D3E2 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AE529D973FC0047D3E2 /* CharacterViewController.swift */; };
 		FC692AE829D974E80047D3E2 /* CharacterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */; };
 		FC692AEA29D975670047D3E2 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */; };
-		FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0E794729D7078D00293D66 /* AuthViewImp.xib */; };
-		FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616329D718CB009177B5 /* BaseViewController.swift */; };
-		FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616529D71EF1009177B5 /* CustomButton.swift */; };
+		FC692AEC29DDC2290047D3E2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */; };
 		FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1029C1AA0F000241C4 /* Player.swift */; };
 		FCA10F1329C1AB46000241C4 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1229C1AB46000241C4 /* Health.swift */; };
 		FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1429C1BC55000241C4 /* Damage.swift */; };
@@ -31,7 +32,6 @@
 		FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */; };
 		FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1C29C4A62A000241C4 /* Assembly.swift */; };
 		FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1E29C5F701000241C4 /* Creature.swift */; };
-		FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */; };
 		FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2229C890D4000241C4 /* Assembly.swift */; };
 		FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2429C89182000241C4 /* AppCoordinator.swift */; };
 		FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */; };
@@ -66,6 +66,9 @@
 /* Begin PBXFileReference section */
 		FC0E794229D6EBB200293D66 /* LocationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataProvider.swift; sourceTree = "<group>"; };
 		FC0E794429D6EC8400293D66 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
+		FC0E794729D7078D00293D66 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
+		FC58616329D718CB009177B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		FC58616529D71EF1009177B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FC692AD029D95AEA0047D3E2 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsList.swift; sourceTree = "<group>"; };
 		FC692AD229D95C200047D3E2 /* LocationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationApiClient.swift; sourceTree = "<group>"; };
 		FC692AD429D95FE80047D3E2 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -78,9 +81,7 @@
 		FC692AE529D973FC0047D3E2 /* CharacterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewController.swift; sourceTree = "<group>"; };
 		FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAssembly.swift; sourceTree = "<group>"; };
 		FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
-		FC0E794729D7078D00293D66 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
-		FC58616329D718CB009177B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		FC58616529D71EF1009177B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FCA10F1029C1AA0F000241C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCA10F1229C1AB46000241C4 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		FCA10F1429C1BC55000241C4 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
@@ -88,7 +89,6 @@
 		FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		FCA10F1C29C4A62A000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FCA10F1E29C5F701000241C4 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
-		FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		FCA10F2229C890D4000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FCA10F2429C89182000241C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
@@ -144,17 +144,6 @@
 			path = Location;
 			sourceTree = "<group>";
 		};
-		FC692AE029D96EC00047D3E2 /* Character */ = {
-			isa = PBXGroup;
-			children = (
-				FC692AE129D96ED10047D3E2 /* CharacterDataProvider.swift */,
-				FC692AE529D973FC0047D3E2 /* CharacterViewController.swift */,
-				FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */,
-				FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */,
-			);
-			path = Character;
-	    sourceTree = "<group>";
-		};
 		FC0E794629D7075600293D66 /* Subviews */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,10 +155,21 @@
 		FC58616229D718A8009177B5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
+				FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */,
 				FC58616329D718CB009177B5 /* BaseViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FC692AE029D96EC00047D3E2 /* Character */ = {
+			isa = PBXGroup;
+			children = (
+				FC692AE129D96ED10047D3E2 /* CharacterDataProvider.swift */,
+				FC692AE529D973FC0047D3E2 /* CharacterViewController.swift */,
+				FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */,
+				FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */,
+			);
+			path = Character;
 			sourceTree = "<group>";
 		};
 		FCA10F2629C89792000241C4 /* Auth */ = {
@@ -284,7 +284,6 @@
 				FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */,
 				FCA10F1C29C4A62A000241C4 /* Assembly.swift */,
 				FCA10F1E29C5F701000241C4 /* Creature.swift */,
-				FCA10F2029C8908C000241C4 /* BaseCoordinator.swift */,
 				FCA10F2229C890D4000241C4 /* Assembly.swift */,
 				FCA10F2429C89182000241C4 /* AppCoordinator.swift */,
 				FC58616529D71EF1009177B5 /* CustomButton.swift */,
@@ -405,8 +404,8 @@
 				FCA10F5329D1C583000241C4 /* NetworkConstants.swift in Sources */,
 				FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */,
 				FC692AE429D970050047D3E2 /* CharacterApiClient.swift in Sources */,
+				FC692AEC29DDC2290047D3E2 /* BaseCoordinator.swift in Sources */,
 				FCA10F3E29D08029000241C4 /* RegistrationDataProvider.swift in Sources */,
-				FCA10F2129C8908C000241C4 /* BaseCoordinator.swift in Sources */,
 				FCA10F5529D1CC32000241C4 /* AuthApiClient.swift in Sources */,
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
 				FCA10F5729D1D3A2000241C4 /* ApiError.swift in Sources */,
