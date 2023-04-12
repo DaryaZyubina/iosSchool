@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -22,18 +23,23 @@
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-hw-3Tm">
-                            <rect key="frame" x="160" y="218" width="142" height="35"/>
+                            <rect key="frame" x="160" y="218" width="142" height="26.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="person.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-7f-XDh">
-                            <rect key="frame" x="84" y="205" width="56" height="62.666666666666686"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="5tk-7f-XDh">
+                            <rect key="frame" x="84" y="205" width="56" height="54.666666666666686"/>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="56" id="aIy-38-xkF"/>
+                                <constraint firstAttribute="width" constant="56" id="gCv-2g-BYw"/>
+                            </constraints>
+                            <imageReference key="image" image="person.circle" catalog="system" symbolScale="default"/>
                             <preferredSymbolConfiguration key="preferredSymbolConfiguration" weight="thin"/>
                         </imageView>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TDf-I8-bRx">
-                            <rect key="frame" x="58" y="414" width="277" height="40"/>
+                            <rect key="frame" x="58" y="404" width="277" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="na2-yT-KDH"/>
                             </constraints>
@@ -41,7 +47,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Введите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jnr-SD-uOp">
-                            <rect key="frame" x="58" y="472" width="277" height="40"/>
+                            <rect key="frame" x="58" y="462" width="277" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="MeX-P9-rEw"/>
                             </constraints>
@@ -49,7 +55,7 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Повторите пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fwk-2J-HtM">
-                            <rect key="frame" x="58" y="530" width="277" height="40"/>
+                            <rect key="frame" x="58" y="520" width="277" height="40"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="40" id="VgM-x6-fuJ"/>
                             </constraints>
@@ -57,15 +63,21 @@
                             <textInputTraits key="textInputTraits"/>
                         </textField>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVq-5P-wiz" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="771" width="393" height="35"/>
+                            <rect key="frame" x="0.0" y="766" width="393" height="40"/>
                             <color key="backgroundColor" name="VelvetBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="1GE-0g-edT"/>
+                            </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Назад"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EhG-Xl-1IL" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="724" width="393" height="35"/>
+                            <rect key="frame" x="0.0" y="714" width="393" height="40"/>
                             <color key="backgroundColor" name="VelvetBlue"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="hSe-2U-dHT"/>
+                            </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain" title="Готово"/>
@@ -76,24 +88,19 @@
                         <constraint firstAttribute="trailing" secondItem="TDf-I8-bRx" secondAttribute="trailing" constant="58" id="3xI-Ge-tMd"/>
                         <constraint firstAttribute="trailing" secondItem="Jnr-SD-uOp" secondAttribute="trailing" constant="58" id="8QJ-QN-tby"/>
                         <constraint firstItem="TDf-I8-bRx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="5tk-7f-XDh" secondAttribute="bottom" constant="15" id="9gf-Pd-rtj"/>
-                        <constraint firstAttribute="trailing" secondItem="EhG-Xl-1IL" secondAttribute="trailing" id="B6u-3n-R1P"/>
                         <constraint firstItem="5tk-7f-XDh" firstAttribute="top" secondItem="q1W-We-Zy1" secondAttribute="top" constant="204" id="Dve-7z-azU"/>
                         <constraint firstItem="Jnr-SD-uOp" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" constant="58" id="HDX-0x-nOg"/>
                         <constraint firstItem="wVq-5P-wiz" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" id="Igq-ie-QSR"/>
-                        <constraint firstItem="bcP-hw-3Tm" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" constant="160" id="Jp1-bX-dLh"/>
                         <constraint firstAttribute="bottom" secondItem="wVq-5P-wiz" secondAttribute="bottom" constant="46" id="L3p-PH-Ae1"/>
                         <constraint firstAttribute="trailing" secondItem="Fwk-2J-HtM" secondAttribute="trailing" constant="58" id="LP7-WT-R8i"/>
+                        <constraint firstItem="TDf-I8-bRx" firstAttribute="top" relation="greaterThanOrEqual" secondItem="bcP-hw-3Tm" secondAttribute="bottom" constant="15" id="M6X-Op-WGO"/>
                         <constraint firstItem="Fwk-2J-HtM" firstAttribute="top" secondItem="Jnr-SD-uOp" secondAttribute="bottom" constant="18" id="SwA-cq-AUL"/>
                         <constraint firstItem="bcP-hw-3Tm" firstAttribute="leading" secondItem="5tk-7f-XDh" secondAttribute="trailing" constant="20" id="TF0-5w-5wu"/>
-                        <constraint firstAttribute="bottom" secondItem="bcP-hw-3Tm" secondAttribute="bottom" constant="599" id="Udw-Cx-Fpb"/>
-                        <constraint firstAttribute="bottom" secondItem="5tk-7f-XDh" secondAttribute="bottom" constant="584" id="V5C-dd-xib"/>
-                        <constraint firstItem="EhG-Xl-1IL" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" id="X3D-t9-caT"/>
                         <constraint firstAttribute="trailing" secondItem="wVq-5P-wiz" secondAttribute="trailing" id="Ya5-J5-NRn"/>
                         <constraint firstItem="TDf-I8-bRx" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" constant="58" id="cYA-zL-O3k"/>
-                        <constraint firstItem="EhG-Xl-1IL" firstAttribute="top" secondItem="Fwk-2J-HtM" secondAttribute="bottom" constant="154" id="cnN-To-Z9N"/>
                         <constraint firstAttribute="trailing" secondItem="EhG-Xl-1IL" secondAttribute="trailing" id="eaq-Sh-khE"/>
                         <constraint firstAttribute="trailing" secondItem="bcP-hw-3Tm" secondAttribute="trailing" constant="91" id="fQV-40-2RU"/>
-                        <constraint firstItem="EhG-Xl-1IL" firstAttribute="top" secondItem="Fwk-2J-HtM" secondAttribute="bottom" constant="154" id="kBp-i4-hxc"/>
+                        <constraint firstItem="EhG-Xl-1IL" firstAttribute="top" secondItem="Fwk-2J-HtM" secondAttribute="bottom" priority="250" constant="154" id="kBp-i4-hxc"/>
                         <constraint firstItem="wVq-5P-wiz" firstAttribute="top" secondItem="EhG-Xl-1IL" secondAttribute="bottom" constant="12" id="lhx-DP-lxx"/>
                         <constraint firstItem="EhG-Xl-1IL" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" id="mx0-D3-rPX"/>
                         <constraint firstItem="5tk-7f-XDh" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" constant="84" id="sX5-V5-SuC"/>
