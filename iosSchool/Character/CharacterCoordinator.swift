@@ -13,7 +13,7 @@ class CharacterCoordinator: BaseCoordinator<CharacterCoordinator.Context> {
     }
 
     override func make() -> UIViewController {
-        let controller = asssembly.characterVC()
+        let controller = assembly.characterVC()
         return controller
     }
 }

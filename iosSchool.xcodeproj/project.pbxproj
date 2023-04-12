@@ -25,6 +25,12 @@
 		FC692AE829D974E80047D3E2 /* CharacterAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */; };
 		FC692AEA29D975670047D3E2 /* CharacterCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */; };
 		FC692AEC29DDC2290047D3E2 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */; };
+		FC692AEE29E440460047D3E2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AED29E440460047D3E2 /* TabBarController.swift */; };
+		FC692AF029E4410A0047D3E2 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AEF29E4410A0047D3E2 /* BaseNavigationController.swift */; };
+		FC692AF329E446420047D3E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AF229E446420047D3E2 /* ProfileViewController.swift */; };
+		FC692AF529E446540047D3E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */; };
+		FC692AF929E446FA0047D3E2 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */; };
+		FC692AFB29E449950047D3E2 /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AFA29E449950047D3E2 /* RootTab.swift */; };
 		FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1029C1AA0F000241C4 /* Player.swift */; };
 		FCA10F1329C1AB46000241C4 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1229C1AB46000241C4 /* Health.swift */; };
 		FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1429C1BC55000241C4 /* Damage.swift */; };
@@ -32,7 +38,6 @@
 		FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */; };
 		FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1C29C4A62A000241C4 /* Assembly.swift */; };
 		FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1E29C5F701000241C4 /* Creature.swift */; };
-		FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2229C890D4000241C4 /* Assembly.swift */; };
 		FCA10F2529C89182000241C4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2429C89182000241C4 /* AppCoordinator.swift */; };
 		FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */; };
 		FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F2929C8983A000241C4 /* AuthViewController.swift */; };
@@ -82,6 +87,12 @@
 		FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterAssembly.swift; sourceTree = "<group>"; };
 		FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCoordinator.swift; sourceTree = "<group>"; };
 		FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		FC692AED29E440460047D3E2 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		FC692AEF29E4410A0047D3E2 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		FC692AF229E446420047D3E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
+		FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
+		FC692AFA29E449950047D3E2 /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
 		FCA10F1029C1AA0F000241C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCA10F1229C1AB46000241C4 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		FCA10F1429C1BC55000241C4 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
@@ -89,7 +100,6 @@
 		FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorGenerator.swift; sourceTree = "<group>"; };
 		FCA10F1C29C4A62A000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FCA10F1E29C5F701000241C4 /* Creature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Creature.swift; sourceTree = "<group>"; };
-		FCA10F2229C890D4000241C4 /* Assembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assembly.swift; sourceTree = "<group>"; };
 		FCA10F2429C89182000241C4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		FCA10F2729C897B5000241C4 /* AuthDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataProvider.swift; sourceTree = "<group>"; };
 		FCA10F2929C8983A000241C4 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
@@ -157,6 +167,9 @@
 			children = (
 				FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */,
 				FC58616329D718CB009177B5 /* BaseViewController.swift */,
+				FC692AED29E440460047D3E2 /* TabBarController.swift */,
+				FC692AEF29E4410A0047D3E2 /* BaseNavigationController.swift */,
+				FC692AFA29E449950047D3E2 /* RootTab.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -170,6 +183,16 @@
 				FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */,
 			);
 			path = Character;
+			sourceTree = "<group>";
+		};
+		FC692AF129E4461D0047D3E2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				FC692AF229E446420047D3E2 /* ProfileViewController.swift */,
+				FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */,
+				FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 		FCA10F2629C89792000241C4 /* Auth */ = {
@@ -263,6 +286,7 @@
 		FCFA83E629BF4D8B008D712C /* iosSchool */ = {
 			isa = PBXGroup;
 			children = (
+				FC692AF129E4461D0047D3E2 /* Profile */,
 				FC692AE029D96EC00047D3E2 /* Character */,
 				FC0E794129D6EB7E00293D66 /* Location */,
 				FC58616229D718A8009177B5 /* Common */,
@@ -284,7 +308,6 @@
 				FCA10F1A29C490DC000241C4 /* ColorGenerator.swift */,
 				FCA10F1C29C4A62A000241C4 /* Assembly.swift */,
 				FCA10F1E29C5F701000241C4 /* Creature.swift */,
-				FCA10F2229C890D4000241C4 /* Assembly.swift */,
 				FCA10F2429C89182000241C4 /* AppCoordinator.swift */,
 				FC58616529D71EF1009177B5 /* CustomButton.swift */,
 			);
@@ -389,15 +412,21 @@
 				FC692AEA29D975670047D3E2 /* CharacterCoordinator.swift in Sources */,
 				FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
+				FC692AF929E446FA0047D3E2 /* ProfileAssembly.swift in Sources */,
 				FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */,
 				FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */,
 				FC692AD929D9618B0047D3E2 /* LocationCoordinator.swift in Sources */,
+				FC692AF529E446540047D3E2 /* ProfileCoordinator.swift in Sources */,
+				FC692AF029E4410A0047D3E2 /* BaseNavigationController.swift in Sources */,
+				FC692AF329E446420047D3E2 /* ProfileViewController.swift in Sources */,
 				FCA10F1329C1AB46000241C4 /* Health.swift in Sources */,
 				FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */,
 				FC0E794529D6EC8400293D66 /* Character.swift in Sources */,
 				FC692AE829D974E80047D3E2 /* CharacterAssembly.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FC692AEE29E440460047D3E2 /* TabBarController.swift in Sources */,
 				FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */,
+				FC692AFB29E449950047D3E2 /* RootTab.swift in Sources */,
 				FC692AD729D960680047D3E2 /* LocationAssembly.swift in Sources */,
 				FCA10F1729C1D16B000241C4 /* Monster.swift in Sources */,
 				FC692AD529D95FE80047D3E2 /* LocationViewController.swift in Sources */,
@@ -409,7 +438,6 @@
 				FCA10F5529D1CC32000241C4 /* AuthApiClient.swift in Sources */,
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
 				FCA10F5729D1D3A2000241C4 /* ApiError.swift in Sources */,
-				FCA10F2329C890D4000241C4 /* Assembly.swift in Sources */,
 				FCA10F4C29D1BFBF000241C4 /* Location.swift in Sources */,
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
 				FC692AE229D96ED10047D3E2 /* CharacterDataProvider.swift in Sources */,

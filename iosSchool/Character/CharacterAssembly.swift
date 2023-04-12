@@ -16,7 +16,7 @@ protocol CharacterAssembly {
 extension Assembly: CharacterAssembly {
 
     func characterCoordinator() -> CharacterCoordinator {
-        CharacterCoordinator(asssembly: self, context: .init())
+        CharacterCoordinator(assembly: self, context: .init())
     }
 
     func characterVC() -> CharacterViewController {

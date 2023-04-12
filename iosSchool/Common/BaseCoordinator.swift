@@ -9,11 +9,11 @@ import UIKit
 
 class BaseCoordinator<Context> {
 
-    let asssembly: Assembly
+    let assembly: Assembly
     let context: Context
 
-    init(asssembly: Assembly, context: Context) {
-        self.asssembly = asssembly
+    init(assembly: Assembly, context: Context) {
+        self.assembly = assembly
         self.context = context
     }
 

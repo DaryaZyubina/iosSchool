@@ -13,7 +13,7 @@ class LocationCoordinator: BaseCoordinator<LocationCoordinator.Context> {
     }
 
     override func make() -> UIViewController {
-        let controller = asssembly.locationVC()
+        let controller = assembly.locationVC()
         return controller
     }
 }

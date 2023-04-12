@@ -5,7 +5,7 @@
 //  Created by Student 1 on 17.03.2023.
 //
 
-import Foundation
+import UIKit
 
 class Assembly {
 
@@ -18,6 +18,16 @@ class Assembly {
     }
 
     func appCoordinator() -> AppCoordinator {
-        AppCoordinator(asssembly: self, context: CoordinatorContext())
+        AppCoordinator(assembly: self, context: CoordinatorContext())
+    }
+
+    func rootTabBarController() -> UITabBarController {
+        TabBarController()
+    }
+
+    func rootNavigationController() -> UINavigationController {
+        let controller = BaseNavigationController()
+        controller.modalPresentationStyle = .fullScreen
+        return controller
     }
 }

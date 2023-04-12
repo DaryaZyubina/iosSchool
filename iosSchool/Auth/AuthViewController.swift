@@ -9,12 +9,14 @@ import UIKit
 
 class AuthViewController<View: AuthView>: BaseViewController<View> {
 
+    var onLoginSucceess: (() -> Void)?
     var onOpenRegistratioon: (() -> Void)?
 
     private let dataProvider: AuthDataProvider
 
-    init(dataProvider: AuthDataProvider) {
+    init(dataProvider: AuthDataProvider, onLoginSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
+        self.onLoginSucceess = onLoginSuccess
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -26,15 +28,22 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        //view.backgroundColor = .red
-
         rootView.update(with: AuthViewData())
         rootView.registrationAction = onOpenRegistratioon
-        
-        dataProvider.authorization(username: "dasha", password: "1111") { [weak self] result in
+        rootView.delegate = self
+
+    }
+}
+
+// MARK: - AuthViewDelegate
+
+extension AuthViewController: AuthViewDelegate {
+    func loginButtonDidTap(login: String, password: String) {
+        dataProvider.authorization(username: login, password: password) { [weak self] result in
             switch result {
             case .success(let success):
                 print("Success!")
+                self?.onLoginSucceess?()
             case .failure(let failure):
                 print(failure.rawValue)
             }
