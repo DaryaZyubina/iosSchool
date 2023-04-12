@@ -16,14 +16,14 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hT2-tI-erX">
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="hT2-tI-erX">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                 </imageView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q1W-We-Zy1">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-hw-3Tm">
-                            <rect key="frame" x="160" y="218" width="142" height="26.333333333333343"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bcP-hw-3Tm">
+                            <rect key="frame" x="160" y="218" width="128.33333333333337" height="26.333333333333343"/>
                             <fontDescription key="fontDescription" type="system" pointSize="22"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
@@ -99,7 +99,7 @@
                         <constraint firstAttribute="trailing" secondItem="wVq-5P-wiz" secondAttribute="trailing" id="Ya5-J5-NRn"/>
                         <constraint firstItem="TDf-I8-bRx" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" constant="58" id="cYA-zL-O3k"/>
                         <constraint firstAttribute="trailing" secondItem="EhG-Xl-1IL" secondAttribute="trailing" id="eaq-Sh-khE"/>
-                        <constraint firstAttribute="trailing" secondItem="bcP-hw-3Tm" secondAttribute="trailing" constant="91" id="fQV-40-2RU"/>
+                        <constraint firstAttribute="trailing" secondItem="bcP-hw-3Tm" secondAttribute="trailing" priority="250" constant="91" id="fQV-40-2RU"/>
                         <constraint firstItem="EhG-Xl-1IL" firstAttribute="top" secondItem="Fwk-2J-HtM" secondAttribute="bottom" priority="250" constant="154" id="kBp-i4-hxc"/>
                         <constraint firstItem="wVq-5P-wiz" firstAttribute="top" secondItem="EhG-Xl-1IL" secondAttribute="bottom" constant="12" id="lhx-DP-lxx"/>
                         <constraint firstItem="EhG-Xl-1IL" firstAttribute="leading" secondItem="q1W-We-Zy1" secondAttribute="leading" id="mx0-D3-rPX"/>
