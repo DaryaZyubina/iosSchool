@@ -21,96 +21,122 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fki-f4-JNJ">
                     <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                     <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-lw-cDI">
-                            <rect key="frame" x="20" y="150" width="353" height="166.33333333333337"/>
+                        <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kLe-Ne-fcH">
+                            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwc-yr-Ppi">
-                                    <rect key="frame" x="43" y="20" width="267" height="26.333333333333329"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизуйтесь, чтобы получить доступ к полному функционалу приложения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxw-UK-Ezl">
-                                    <rect key="frame" x="43" y="58.333333333333343" width="267" height="86"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ADh-Hh-LhM" userLabel="ContentView">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tmt-lw-cDI">
+                                            <rect key="frame" x="20" y="150" width="353" height="166.33333333333337"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="McZ-LD-lGF">
+                                                    <rect key="frame" x="43" y="19.999999999999993" width="267" height="124.33333333333331"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwc-yr-Ppi">
+                                                            <rect key="frame" x="0.0" y="0.0" width="267" height="26.333333333333332"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизуйтесь, чтобы получить доступ к полному функционалу приложения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yxw-UK-Ezl">
+                                                            <rect key="frame" x="0.0" y="38.333333333333343" width="267" height="86"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" name="Lilac80"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="McZ-LD-lGF" secondAttribute="bottom" constant="22" id="IGs-zD-zEv"/>
+                                                <constraint firstItem="McZ-LD-lGF" firstAttribute="leading" secondItem="Tmt-lw-cDI" secondAttribute="leading" constant="43" id="OY8-4w-p3S"/>
+                                                <constraint firstItem="McZ-LD-lGF" firstAttribute="top" secondItem="Tmt-lw-cDI" secondAttribute="top" constant="20" id="eIg-oS-lkL"/>
+                                                <constraint firstAttribute="trailing" secondItem="McZ-LD-lGF" secondAttribute="trailing" constant="43" id="hQu-R7-g0A"/>
+                                            </constraints>
+                                        </view>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Sy-gX-Apw">
+                                            <rect key="frame" x="0.0" y="725.33333333333337" width="393" height="80.666666666666629"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-cc-YOx" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                                    <color key="backgroundColor" name="VelvetBlue"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Войти">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="strokeColor" name="DarkBlue"/>
+                                                        </backgroundConfiguration>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="loginButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="OTf-Us-bWL"/>
+                                                    </connections>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-Q3-ZKD" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="46.333333333333258" width="393" height="34.333333333333343"/>
+                                                    <color key="backgroundColor" name="VelvetBlue"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
+                                                        <backgroundConfiguration key="background">
+                                                            <color key="strokeColor" name="DarkBlue"/>
+                                                        </backgroundConfiguration>
+                                                    </buttonConfiguration>
+                                                    <connections>
+                                                        <action selector="registrationButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Sf-rk-xVz"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-C5-QvJ">
+                                            <rect key="frame" x="58" y="489.33333333333326" width="277" height="86"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-e6-jty">
+                                                    <rect key="frame" x="0.0" y="0.0" width="277" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-Oc-eB4">
+                                                    <rect key="frame" x="0.0" y="52.000000000000057" width="277" height="34"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="1Sy-gX-Apw" firstAttribute="leading" secondItem="ADh-Hh-LhM" secondAttribute="leading" id="12d-Da-a9E"/>
+                                        <constraint firstItem="T1Z-C5-QvJ" firstAttribute="leading" secondItem="ADh-Hh-LhM" secondAttribute="leading" constant="58" id="2nO-D3-pZ7"/>
+                                        <constraint firstAttribute="trailing" secondItem="Tmt-lw-cDI" secondAttribute="trailing" constant="20" id="4uX-a1-8eQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="1Sy-gX-Apw" secondAttribute="bottom" constant="46" id="Kvv-Zx-AHs"/>
+                                        <constraint firstAttribute="trailing" secondItem="1Sy-gX-Apw" secondAttribute="trailing" id="igb-nX-BF8"/>
+                                        <constraint firstItem="1Sy-gX-Apw" firstAttribute="top" secondItem="T1Z-C5-QvJ" secondAttribute="bottom" priority="250" constant="150" id="nqt-ch-sZi"/>
+                                        <constraint firstItem="T1Z-C5-QvJ" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tmt-lw-cDI" secondAttribute="bottom" constant="15" id="qV5-TL-KQu"/>
+                                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="top" secondItem="ADh-Hh-LhM" secondAttribute="top" constant="150" id="sF3-Vi-Jwq"/>
+                                        <constraint firstAttribute="trailing" secondItem="T1Z-C5-QvJ" secondAttribute="trailing" constant="58" id="tgA-Tf-bWn"/>
+                                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="leading" secondItem="ADh-Hh-LhM" secondAttribute="leading" constant="20" id="v51-fi-y2l"/>
+                                    </constraints>
+                                </view>
                             </subviews>
-                            <color key="backgroundColor" name="Lilac80"/>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="Yxw-UK-Ezl" secondAttribute="trailing" constant="43" id="GHR-q2-ese"/>
-                                <constraint firstItem="Yxw-UK-Ezl" firstAttribute="top" secondItem="zwc-yr-Ppi" secondAttribute="bottom" constant="12" id="QXk-k9-iBj"/>
-                                <constraint firstItem="Yxw-UK-Ezl" firstAttribute="leading" secondItem="Tmt-lw-cDI" secondAttribute="leading" constant="43" id="Z64-P9-sCI"/>
-                                <constraint firstAttribute="bottom" secondItem="Yxw-UK-Ezl" secondAttribute="bottom" constant="22" id="a8s-Hl-7He"/>
-                                <constraint firstItem="zwc-yr-Ppi" firstAttribute="top" secondItem="Tmt-lw-cDI" secondAttribute="top" constant="20" id="mNK-ub-ndc"/>
-                                <constraint firstItem="zwc-yr-Ppi" firstAttribute="leading" secondItem="Tmt-lw-cDI" secondAttribute="leading" constant="43" id="nGu-DF-Wpt"/>
-                                <constraint firstAttribute="trailing" secondItem="zwc-yr-Ppi" secondAttribute="trailing" constant="43" id="p1s-6u-SGD"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="leading" secondItem="OY2-TF-1gQ" secondAttribute="leading" id="8Al-Av-Fa4"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="trailing" secondItem="OY2-TF-1gQ" secondAttribute="trailing" id="IxM-Di-b5U"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="height" secondItem="6vR-L9-FxB" secondAttribute="height" id="Z5k-hf-adQ"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="top" secondItem="OY2-TF-1gQ" secondAttribute="top" id="fyI-PR-vzr"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="bottom" secondItem="OY2-TF-1gQ" secondAttribute="bottom" id="jDC-mD-LgE"/>
+                                <constraint firstItem="ADh-Hh-LhM" firstAttribute="width" secondItem="6vR-L9-FxB" secondAttribute="width" id="pGe-7f-bLX"/>
                             </constraints>
-                        </view>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-e6-jty">
-                            <rect key="frame" x="58" y="466" width="277" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="xeB-dk-hFa"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-Oc-eB4">
-                            <rect key="frame" x="58" y="524" width="277" height="40"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="i4A-tL-5Ev"/>
-                            </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-Q3-ZKD" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="766" width="393" height="40"/>
-                            <color key="backgroundColor" name="VelvetBlue"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="HtI-pv-KGe"/>
-                            </constraints>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
-                                <backgroundConfiguration key="background">
-                                    <color key="strokeColor" name="DarkBlue"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-cc-YOx" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                            <rect key="frame" x="0.0" y="714" width="393" height="40"/>
-                            <color key="backgroundColor" name="VelvetBlue"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="40" id="8f2-UY-vYT"/>
-                            </constraints>
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                <backgroundConfiguration key="background">
-                                    <color key="strokeColor" name="DarkBlue"/>
-                                </backgroundConfiguration>
-                            </buttonConfiguration>
-                        </button>
+                            <viewLayoutGuide key="contentLayoutGuide" id="OY2-TF-1gQ"/>
+                            <viewLayoutGuide key="frameLayoutGuide" id="6vR-L9-FxB"/>
+                        </scrollView>
                     </subviews>
                     <color key="backgroundColor" name="Lilac50"/>
                     <constraints>
-                        <constraint firstItem="QAB-e6-jty" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" constant="58" id="E1p-6I-8IQ"/>
-                        <constraint firstAttribute="trailing" secondItem="2c4-Oc-eB4" secondAttribute="trailing" constant="58" id="JOs-0I-2Wk"/>
-                        <constraint firstItem="kOx-cc-YOx" firstAttribute="top" secondItem="2c4-Oc-eB4" secondAttribute="bottom" constant="150" id="NSN-wi-MqA"/>
-                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="top" secondItem="fki-f4-JNJ" secondAttribute="top" constant="150" id="OVm-9S-1rZ"/>
-                        <constraint firstItem="2c4-Oc-eB4" firstAttribute="top" secondItem="QAB-e6-jty" secondAttribute="bottom" constant="18" id="SeS-Zp-71h"/>
-                        <constraint firstAttribute="trailing" secondItem="Tmt-lw-cDI" secondAttribute="trailing" constant="20" id="T73-Pr-svC"/>
-                        <constraint firstAttribute="bottom" secondItem="JmJ-Q3-ZKD" secondAttribute="bottom" constant="46" id="aUg-yk-zv2"/>
-                        <constraint firstItem="JmJ-Q3-ZKD" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" id="eVz-Xs-oTj"/>
-                        <constraint firstAttribute="trailing" secondItem="kOx-cc-YOx" secondAttribute="trailing" id="fU5-7a-dXr"/>
-                        <constraint firstItem="Tmt-lw-cDI" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" constant="20" id="hth-Dz-OvD"/>
-                        <constraint firstItem="QAB-e6-jty" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Tmt-lw-cDI" secondAttribute="bottom" constant="15" id="jNf-p3-RsQ"/>
-                        <constraint firstItem="2c4-Oc-eB4" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" constant="58" id="jRM-pN-7fg"/>
-                        <constraint firstAttribute="trailing" secondItem="QAB-e6-jty" secondAttribute="trailing" constant="58" id="pZ8-wk-Smn"/>
-                        <constraint firstItem="JmJ-Q3-ZKD" firstAttribute="top" secondItem="kOx-cc-YOx" secondAttribute="bottom" constant="12" id="pkq-Al-eWa"/>
-                        <constraint firstAttribute="trailing" secondItem="JmJ-Q3-ZKD" secondAttribute="trailing" id="sMW-85-gfk"/>
-                        <constraint firstItem="kOx-cc-YOx" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" id="yZv-43-68e"/>
+                        <constraint firstItem="kLe-Ne-fcH" firstAttribute="leading" secondItem="fki-f4-JNJ" secondAttribute="leading" id="ZF2-Rr-itx"/>
+                        <constraint firstAttribute="bottom" secondItem="kLe-Ne-fcH" secondAttribute="bottom" id="efU-nh-gFm"/>
+                        <constraint firstAttribute="trailing" secondItem="kLe-Ne-fcH" secondAttribute="trailing" id="qXp-TZ-xzt"/>
+                        <constraint firstItem="kLe-Ne-fcH" firstAttribute="top" secondItem="fki-f4-JNJ" secondAttribute="top" id="seR-yH-OBg"/>
                     </constraints>
                 </view>
             </subviews>
@@ -133,6 +159,7 @@
                 <outlet property="loginTextField" destination="QAB-e6-jty" id="t87-3f-pin"/>
                 <outlet property="passwordTextField" destination="2c4-Oc-eB4" id="0km-aw-Il5"/>
                 <outlet property="registrationButton" destination="JmJ-Q3-ZKD" id="TqW-FZ-u8l"/>
+                <outlet property="scrollView" destination="kLe-Ne-fcH" id="egV-3E-ghe"/>
             </connections>
             <point key="canvasLocation" x="58" y="21"/>
         </view>

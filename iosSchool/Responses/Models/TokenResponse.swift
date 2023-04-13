@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TokenResonse: Decodable {
+struct TokenResponse: Decodable {
     let token: String
     //let userId: String
 }

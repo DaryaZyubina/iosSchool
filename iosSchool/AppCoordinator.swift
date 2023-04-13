@@ -15,15 +15,51 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
 
     func start(window: UIWindow) {
         self.window = window
-        let coordinator = asssembly.splashCoordinator { [weak self] in
-           //  self?.startAuth()
-            self?.startRegistration()
+        let coordinator = assembly.splashCoordinator { [weak self] in
+             self?.startAuth()
         }
         setRoot(viewController: coordinator.make())
     }
 
     private func startAuth() {
-        let coordinator = asssembly.authCoordinator()
+        let coordinator = assembly.authCoordinator { [weak self] in
+            DispatchQueue.main.async {
+                self?.setTabVC()
+            }
+        }
+        setRoot(viewController: coordinator.make())
+    }
+
+    private func setTabVC() {
+        let tabVC = assembly.rootTabBarController()
+        let locationCoordinator = assembly.locationCoordinator()
+        let profileCoordinator = assembly.profileCoodrinator()
+
+        let locationVC = locationCoordinator.make()
+        let profieVC = profileCoordinator.make()
+
+        let navVC = assembly.rootNavigationController()
+        navVC.setViewControllers([locationVC], animated: false)
+
+        navVC.tabBarItem = RootTab.locations.tabBarItem
+        profieVC.tabBarItem = RootTab.profile.tabBarItem
+
+        tabVC.setViewControllers([navVC, profieVC], animated: false)
+        setRoot(viewController: tabVC)
+    }
+
+    private func startRegistration() {
+        let coordinator = assembly.registrationCoordinator()
+        setRoot(viewController: coordinator.make())
+    }
+
+    private func startLocation() {
+        let coordinator = assembly.locationCoordinator()
+        setRoot(viewController: coordinator.make())
+    }
+
+    private func startCharacter() {
+        let coordinator = assembly.characterCoordinator()
         setRoot(viewController: coordinator.make())
     }
 

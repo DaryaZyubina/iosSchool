@@ -25,6 +25,5 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
         super.viewDidLoad()
 
         rootView.update(with: RegistrationViewData())
-
     }
 }
