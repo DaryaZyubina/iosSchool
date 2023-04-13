@@ -12,6 +12,7 @@
 		FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0E794729D7078D00293D66 /* AuthViewImp.xib */; };
 		FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616329D718CB009177B5 /* BaseViewController.swift */; };
 		FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616529D71EF1009177B5 /* CustomButton.swift */; };
+		FC692ACF29D747090047D3E2 /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC692ACE29D747090047D3E2 /* RegistrationViewImp.xib */; };
 		FC692AD129D95AEA0047D3E2 /* LocationsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD029D95AEA0047D3E2 /* LocationsList.swift */; };
 		FC692AD329D95C200047D3E2 /* LocationApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD229D95C200047D3E2 /* LocationApiClient.swift */; };
 		FC692AD529D95FE80047D3E2 /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AD429D95FE80047D3E2 /* LocationViewController.swift */; };
@@ -74,6 +75,7 @@
 		FC0E794729D7078D00293D66 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
 		FC58616329D718CB009177B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FC58616529D71EF1009177B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		FC692ACE29D747090047D3E2 /* RegistrationViewImp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
 		FC692AD029D95AEA0047D3E2 /* LocationsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsList.swift; sourceTree = "<group>"; };
 		FC692AD229D95C200047D3E2 /* LocationApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationApiClient.swift; sourceTree = "<group>"; };
 		FC692AD429D95FE80047D3E2 /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +176,16 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
+
+		FC62DAD129D7465400ABA9A4 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FC692ACE29D747090047D3E2 /* RegistrationViewImp.xib */,
+			);
+			path = Subviews;
+      sourceTree = "<group>";
+		};
+
 		FC692AE029D96EC00047D3E2 /* Character */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +235,7 @@
 		FCA10F3C29D08010000241C4 /* Registration */ = {
 			isa = PBXGroup;
 			children = (
+				FC62DAD129D7465400ABA9A4 /* Subviews */,
 				FCA10F3D29D08029000241C4 /* RegistrationDataProvider.swift */,
 				FCA10F3F29D08052000241C4 /* RegistrationViewController.swift */,
 				FCA10F4129D080AA000241C4 /* RegistrationAssembly.swift */,
@@ -373,6 +386,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC692ACF29D747090047D3E2 /* RegistrationViewImp.xib in Resources */,
 				FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */,
 				FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */,
 				FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */,

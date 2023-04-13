@@ -7,7 +7,7 @@
 
 import UIKit
 
-class RegistrationViewController: UIViewController {
+class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
 
     private let dataProvider: RegistrationDataProvider
 
@@ -24,13 +24,6 @@ class RegistrationViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        dataProvider.registration(username: "dashad", password: "1111") { [weak self] result in
-            switch result {
-            case .success(let success):
-                print("Registration was successful!")
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
+        rootView.update(with: RegistrationViewData())
     }
 }
