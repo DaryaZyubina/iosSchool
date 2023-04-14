@@ -63,11 +63,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         setRoot(viewController: coordinator.make())
     }
 
-    private func startRegistration() {
-        let coordinator = asssembly.registrationCoordinator()
-        setRoot(viewController: coordinator.make())
-    }
-
     private func setRoot(viewController: UIViewController?) {
         guard let window, let viewController else {
             return
