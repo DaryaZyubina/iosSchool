@@ -68,6 +68,7 @@
 		FCEFC07429E98ADB007091F2 /* LocationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC07229E98ADB007091F2 /* LocationCell.xib */; };
 		FCEFC07629E98B1D007091F2 /* LocationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07529E98B1D007091F2 /* LocationCellData.swift */; };
 		FCEFC07929E98E80007091F2 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07829E98E80007091F2 /* NSObject+ClassName.swift */; };
+		FCEFC07C29ED85E1007091F2 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07B29ED85E1007091F2 /* ImageService.swift */; };
 		FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E729BF4D8B008D712C /* AppDelegate.swift */; };
 		FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */; };
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
@@ -137,6 +138,7 @@
 		FCEFC07229E98ADB007091F2 /* LocationCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LocationCell.xib; sourceTree = "<group>"; };
 		FCEFC07529E98B1D007091F2 /* LocationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellData.swift; sourceTree = "<group>"; };
 		FCEFC07829E98E80007091F2 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
+		FCEFC07B29ED85E1007091F2 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		FCFA83E429BF4D8B008D712C /* iosSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA83E729BF4D8B008D712C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -311,6 +313,14 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		FCEFC07A29ED85B4007091F2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				FCEFC07B29ED85E1007091F2 /* ImageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		FCFA83DB29BF4D8B008D712C = {
 			isa = PBXGroup;
 			children = (
@@ -330,6 +340,7 @@
 		FCFA83E629BF4D8B008D712C /* iosSchool */ = {
 			isa = PBXGroup;
 			children = (
+				FCEFC07A29ED85B4007091F2 /* Services */,
 				FCEFC07729E98E51007091F2 /* Extension */,
 				FC692AF129E4461D0047D3E2 /* Profile */,
 				FC692AE029D96EC00047D3E2 /* Character */,
@@ -462,6 +473,7 @@
 				FC692AF929E446FA0047D3E2 /* ProfileAssembly.swift in Sources */,
 				FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */,
 				FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */,
+				FCEFC07C29ED85E1007091F2 /* ImageService.swift in Sources */,
 				FC692AD929D9618B0047D3E2 /* LocationCoordinator.swift in Sources */,
 				FC692AF529E446540047D3E2 /* ProfileCoordinator.swift in Sources */,
 				FC692AF029E4410A0047D3E2 /* BaseNavigationController.swift in Sources */,

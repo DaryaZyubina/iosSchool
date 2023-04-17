@@ -13,6 +13,8 @@ class Assembly {
         ApiClient()
     }
 
+    lazy var imageService: ImageService = ImageServiceImp(apiClient: apiClient)
+
     func colorGenerator(alpha: Double) -> ColorGenerator {
         colorGenerator(alpha: alpha)        // если одна строчка - ретурн не нужен
     }
