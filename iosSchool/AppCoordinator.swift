@@ -59,8 +59,8 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func startCharacter() {
-        let coordinator = assembly.characterCoordinator()
-        setRoot(viewController: coordinator.make())
+       // let coordinator = assembly.characterCoordinator()
+       // setRoot(viewController: coordinator.make())
     }
 
     private func setRoot(viewController: UIViewController?) {

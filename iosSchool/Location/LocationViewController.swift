@@ -7,7 +7,9 @@
 
 import UIKit
 
-class LocationViewController: UIViewController {
+class LocationViewController<View: LocationView>: BaseViewController<View> {
+
+    var selectLocation: ((LocationCellData) -> Void)?
 
     private let dataProvider: LocationDataProvider
 
@@ -25,11 +27,15 @@ class LocationViewController: UIViewController {
         super.viewDidLoad()
 
         setupBar()
-        view.backgroundColor = .blue
+        // view.backgroundColor = .blue
+
+        rootView.makeView()
+        rootView.selectLocation = selectLocation
+
         dataProvider.allLocations() { [weak self] result in
             switch result {
             case .success(let success):
-                print(result)
+                self?.rootView.update(data: LocationViewData(location: success))
             case .failure(let failure):
                 print(failure.rawValue)
             }

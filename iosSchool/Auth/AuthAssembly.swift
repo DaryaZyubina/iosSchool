@@ -16,7 +16,7 @@ protocol AuthAssembly {
 extension Assembly: AuthAssembly {
 
     func authCoordinator(onLoginSuccess: (() -> Void)?) -> AuthCoordinator {
-        AuthCoordinator(assembly: self, context: .init(onLoginSuccess: onLoginSuccess))
+        AuthCoordinator(assembly: self, context: .init(onLoginSuccess: onLoginSuccess)) 
     }
 
     func authVC(onLoginSuccess: (() -> Void)?) -> AuthViewController<AuthViewImp> {

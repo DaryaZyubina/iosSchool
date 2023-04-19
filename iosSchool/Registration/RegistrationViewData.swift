@@ -7,4 +7,10 @@
 
 import Foundation
 
-struct RegistrationViewData {}
+struct RegistrationViewData {
+
+    let registrationTextFieldPlaceHolder: String
+
+    init() {
+        registrationTextFieldPlaceHolder = "Регистрация"
+    }}

@@ -11,7 +11,7 @@ protocol CharacterDataProvider {
     func allCharacters(completion: @escaping (Result<CharactersList, ApiError>) -> Void)
 
     func singleCharacter(
-        id: Int,
+        url: String,
         completion: @escaping (Result<Character, ApiError>) -> Void
     )
 
@@ -40,10 +40,10 @@ class CharacterDataProviderImp: CharacterDataProvider {
     }
 
     func singleCharacter(
-        id: Int,
+        url: String,
         completion: @escaping (Result<Character, ApiError>) -> Void
     ) {
-        apiClient.singleCharacter(id: id) { result in
+        apiClient.singleCharacter(url: url) { result in
             switch result {
             case .success(let data):
                 completion(.success(data))
