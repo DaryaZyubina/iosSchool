@@ -32,6 +32,9 @@
 		FC692AF529E446540047D3E2 /* ProfileCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */; };
 		FC692AF929E446FA0047D3E2 /* ProfileAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */; };
 		FC692AFB29E449950047D3E2 /* RootTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC692AFA29E449950047D3E2 /* RootTab.swift */; };
+		FC79C35529E6D38B0015E62F /* SplashViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC79C35429E6D38B0015E62F /* SplashViewImp.xib */; };
+		FC79C35729E6D6550015E62F /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79C35629E6D6550015E62F /* SplashView.swift */; };
+		FC79C35929E6D70E0015E62F /* SplashViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC79C35829E6D70E0015E62F /* SplashViewData.swift */; };
 		FCA10F1129C1AA0F000241C4 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1029C1AA0F000241C4 /* Player.swift */; };
 		FCA10F1329C1AB46000241C4 /* Health.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1229C1AB46000241C4 /* Health.swift */; };
 		FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F1429C1BC55000241C4 /* Damage.swift */; };
@@ -102,6 +105,9 @@
 		FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCoordinator.swift; sourceTree = "<group>"; };
 		FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileAssembly.swift; sourceTree = "<group>"; };
 		FC692AFA29E449950047D3E2 /* RootTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTab.swift; sourceTree = "<group>"; };
+		FC79C35429E6D38B0015E62F /* SplashViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SplashViewImp.xib; sourceTree = "<group>"; };
+		FC79C35629E6D6550015E62F /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		FC79C35829E6D70E0015E62F /* SplashViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewData.swift; sourceTree = "<group>"; };
 		FCA10F1029C1AA0F000241C4 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		FCA10F1229C1AB46000241C4 /* Health.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Health.swift; sourceTree = "<group>"; };
 		FCA10F1429C1BC55000241C4 /* Damage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Damage.swift; sourceTree = "<group>"; };
@@ -222,6 +228,14 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		FC79C35329E6D3740015E62F /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FC79C35429E6D38B0015E62F /* SplashViewImp.xib */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		FCA10F2629C89792000241C4 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,10 +253,13 @@
 		FCA10F3329C89E4A000241C4 /* Splash */ = {
 			isa = PBXGroup;
 			children = (
+				FC79C35329E6D3740015E62F /* Subviews */,
 				FCA10F3429C89E69000241C4 /* SplashViewController.swift */,
 				FCA10F3629C89EB5000241C4 /* SplashDataProvider.swift */,
 				FCA10F3829C89F0D000241C4 /* SplashAssembly.swift */,
 				FCA10F3A29C8A023000241C4 /* SplashCoordinator.swift */,
+				FC79C35629E6D6550015E62F /* SplashView.swift */,
+				FC79C35829E6D70E0015E62F /* SplashViewData.swift */,
 			);
 			path = Splash;
 			sourceTree = "<group>";
@@ -433,6 +450,7 @@
 				FC692ACF29D747090047D3E2 /* RegistrationViewImp.xib in Resources */,
 				FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */,
 				FCFA83F129BF4D8C008D712C /* Assets.xcassets in Resources */,
+				FC79C35529E6D38B0015E62F /* SplashViewImp.xib in Resources */,
 				FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,6 +502,7 @@
 				FC0E794529D6EC8400293D66 /* Character.swift in Sources */,
 				FC692AE829D974E80047D3E2 /* CharacterAssembly.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
+				FC79C35729E6D6550015E62F /* SplashView.swift in Sources */,
 				FC692AEE29E440460047D3E2 /* TabBarController.swift in Sources */,
 				FCA10F1F29C5F701000241C4 /* Creature.swift in Sources */,
 				FC692AFB29E449950047D3E2 /* RootTab.swift in Sources */,
@@ -496,6 +515,7 @@
 				FCA10F2829C897B5000241C4 /* AuthDataProvider.swift in Sources */,
 				FC692AE429D970050047D3E2 /* CharacterApiClient.swift in Sources */,
 				FC692AEC29DDC2290047D3E2 /* BaseCoordinator.swift in Sources */,
+				FC79C35929E6D70E0015E62F /* SplashViewData.swift in Sources */,
 				FCA10F3E29D08029000241C4 /* RegistrationDataProvider.swift in Sources */,
 				FCA10F5529D1CC32000241C4 /* AuthApiClient.swift in Sources */,
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
