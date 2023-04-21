@@ -72,6 +72,11 @@
 		FCEFC07629E98B1D007091F2 /* LocationCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07529E98B1D007091F2 /* LocationCellData.swift */; };
 		FCEFC07929E98E80007091F2 /* NSObject+ClassName.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07829E98E80007091F2 /* NSObject+ClassName.swift */; };
 		FCEFC07C29ED85E1007091F2 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07B29ED85E1007091F2 /* ImageService.swift */; };
+		FCEFC09729F2BA28007091F2 /* CharacterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC09629F2BA28007091F2 /* CharacterView.swift */; };
+		FCEFC09B29F2BC5F007091F2 /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC09929F2BC5F007091F2 /* CharacterCell.swift */; };
+		FCEFC09C29F2BC5F007091F2 /* CharacterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCEFC09A29F2BC5F007091F2 /* CharacterCell.xib */; };
+		FCEFC09E29F2BDE2007091F2 /* CharacterCellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC09D29F2BDE2007091F2 /* CharacterCellData.swift */; };
+		FCEFC0A029F2C822007091F2 /* CharacterViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC09F29F2C822007091F2 /* CharacterViewData.swift */; };
 		FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E729BF4D8B008D712C /* AppDelegate.swift */; };
 		FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */; };
 		FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCFA83EB29BF4D8B008D712C /* ViewController.swift */; };
@@ -145,6 +150,11 @@
 		FCEFC07529E98B1D007091F2 /* LocationCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCellData.swift; sourceTree = "<group>"; };
 		FCEFC07829E98E80007091F2 /* NSObject+ClassName.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSObject+ClassName.swift"; sourceTree = "<group>"; };
 		FCEFC07B29ED85E1007091F2 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
+		FCEFC09629F2BA28007091F2 /* CharacterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterView.swift; sourceTree = "<group>"; };
+		FCEFC09929F2BC5F007091F2 /* CharacterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
+		FCEFC09A29F2BC5F007091F2 /* CharacterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CharacterCell.xib; sourceTree = "<group>"; };
+		FCEFC09D29F2BDE2007091F2 /* CharacterCellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterCellData.swift; sourceTree = "<group>"; };
+		FCEFC09F29F2C822007091F2 /* CharacterViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewData.swift; sourceTree = "<group>"; };
 		FCFA83E429BF4D8B008D712C /* iosSchool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosSchool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCFA83E729BF4D8B008D712C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,10 +220,13 @@
 		FC692AE029D96EC00047D3E2 /* Character */ = {
 			isa = PBXGroup;
 			children = (
+				FCEFC09829F2BC2F007091F2 /* Subviews */,
 				FC692AE129D96ED10047D3E2 /* CharacterDataProvider.swift */,
 				FC692AE529D973FC0047D3E2 /* CharacterViewController.swift */,
 				FC692AE729D974E80047D3E2 /* CharacterAssembly.swift */,
 				FC692AE929D975670047D3E2 /* CharacterCoordinator.swift */,
+				FCEFC09629F2BA28007091F2 /* CharacterView.swift */,
+				FCEFC09F29F2C822007091F2 /* CharacterViewData.swift */,
 			);
 			path = Character;
 			sourceTree = "<group>";
@@ -338,6 +351,16 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		FCEFC09829F2BC2F007091F2 /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				FCEFC09929F2BC5F007091F2 /* CharacterCell.swift */,
+				FCEFC09A29F2BC5F007091F2 /* CharacterCell.xib */,
+				FCEFC09D29F2BDE2007091F2 /* CharacterCellData.swift */,
+			);
+			path = Subviews;
+			sourceTree = "<group>";
+		};
 		FCFA83DB29BF4D8B008D712C = {
 			isa = PBXGroup;
 			children = (
@@ -446,6 +469,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCEFC09C29F2BC5F007091F2 /* CharacterCell.xib in Resources */,
 				FCEFC07429E98ADB007091F2 /* LocationCell.xib in Resources */,
 				FC692ACF29D747090047D3E2 /* RegistrationViewImp.xib in Resources */,
 				FCFA83F429BF4D8C008D712C /* LaunchScreen.storyboard in Resources */,
@@ -489,6 +513,7 @@
 				FCA10F1529C1BC55000241C4 /* Damage.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
 				FC692AF929E446FA0047D3E2 /* ProfileAssembly.swift in Sources */,
+				FCEFC09B29F2BC5F007091F2 /* CharacterCell.swift in Sources */,
 				FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */,
 				FCA10F1D29C4A62A000241C4 /* Assembly.swift in Sources */,
 				FCEFC07C29ED85E1007091F2 /* ImageService.swift in Sources */,
@@ -521,6 +546,7 @@
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
 				FCA10F5729D1D3A2000241C4 /* ApiError.swift in Sources */,
 				FCA10F4C29D1BFBF000241C4 /* Location.swift in Sources */,
+				FCEFC09729F2BA28007091F2 /* CharacterView.swift in Sources */,
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
 				FC692AE229D96ED10047D3E2 /* CharacterDataProvider.swift in Sources */,
 				FC0E794329D6EBB200293D66 /* LocationDataProvider.swift in Sources */,
@@ -530,9 +556,11 @@
 				FCA10F4E29D1C300000241C4 /* TokenResponse.swift in Sources */,
 				FCFA83E829BF4D8B008D712C /* AppDelegate.swift in Sources */,
 				FCEFC06F29E98A81007091F2 /* LocationViewData.swift in Sources */,
+				FCEFC09E29F2BDE2007091F2 /* CharacterCellData.swift in Sources */,
 				FCA10F2E29C89A2D000241C4 /* AuthCoordinator.swift in Sources */,
 				FCFA83EA29BF4D8B008D712C /* SceneDelegate.swift in Sources */,
 				FC692AD329D95C200047D3E2 /* LocationApiClient.swift in Sources */,
+				FCEFC0A029F2C822007091F2 /* CharacterViewData.swift in Sources */,
 				FC692ADB29D964000047D3E2 /* RegistrationApiClient.swift in Sources */,
 				FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */,
 				FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */,
