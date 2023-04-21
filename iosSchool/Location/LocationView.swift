@@ -12,6 +12,7 @@ protocol LocationView: UIView {
 
     func makeView()
     func update(data: LocationViewData)
+    func updateTable()
 }
 
 class LocationViewImp: UIView, LocationView {
@@ -50,10 +51,16 @@ class LocationViewImp: UIView, LocationView {
     func update(data: LocationViewData) {
         locationData = data
 
+        updateTable()
+    }
+
+    func updateTable() {
+        print("Updating...")
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
     }
+
 }
 
 extension LocationViewImp: UITableViewDataSource {

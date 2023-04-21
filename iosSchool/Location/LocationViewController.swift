@@ -27,7 +27,6 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
         super.viewDidLoad()
 
         setupBar()
-        // view.backgroundColor = .blue
 
         rootView.makeView()
         rootView.selectLocation = selectLocation
@@ -46,7 +45,9 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
 
     @objc
     private func reload() {
-
+        DispatchQueue.main.async { [weak self] in
+            self?.rootView.updateTable()
+        }
     }
 
     // MARK: - Private
@@ -60,9 +61,9 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
                 barButtonSystemItem: .refresh,
                 target: self,
                 action: #selector(reload)
-            ) */
+            )*/
             navigationItem.rightBarButtonItem = UIBarButtonItem(
-                image: UIImage(named: "reload"),
+                image: UIImage(named: "refresh"),
                 style: .done,
                 target: self,
                 action: #selector(reload)
