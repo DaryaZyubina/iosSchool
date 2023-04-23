@@ -14,10 +14,6 @@ protocol CharacterView: UIView {
 }
 
 class CharacterViewImp: UIView, CharacterView {
-    var screenSize:  CGRect = UIScreen.main.bounds
-    var screenWidth: CGFloat!
-    var widthInset: CGFloat!
-    let itemSpacing: CGFloat = 16
 
     private var data: [CharacterCellData] = []
 
@@ -26,8 +22,6 @@ class CharacterViewImp: UIView, CharacterView {
     }()
 
     func makeView() {
-
-        screenWidth = screenSize.width
 
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
@@ -68,7 +62,7 @@ class CharacterViewImp: UIView, CharacterView {
     private func provider() -> UICollectionViewCompositionalLayoutSectionProvider {
         { _, _ in
             let itemSize = NSCollectionLayoutSize(
-                widthDimension: .estimated(167),
+                widthDimension: .fractionalWidth(0.5),
                 heightDimension: .estimated(167)
             )
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
@@ -82,21 +76,11 @@ class CharacterViewImp: UIView, CharacterView {
                 count: 2
             )
 
-            group.interItemSpacing = .fixed(self.itemSpacing)
+            group.interItemSpacing = .fixed(16)
 
             let section = NSCollectionLayoutSection(group: group)
             section.interGroupSpacing = 30
-            self.widthInset = (self.screenWidth - 167 * 2 - self.itemSpacing) / 2
-            if self.widthInset < 20 {
-                section.contentInsets = NSDirectionalEdgeInsets(
-                    top: 59,
-                    leading: self.widthInset,
-                    bottom: 77,
-                    trailing: self.widthInset
-                )
-            } else {
-                section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 20, bottom: 77, trailing: 20)
-            }
+            section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 20, bottom: 77, trailing: 20)
 
             return section
         }
