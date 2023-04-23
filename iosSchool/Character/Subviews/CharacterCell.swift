@@ -17,6 +17,7 @@ class CharacterCell: UICollectionViewCell {
 
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
 
     private func update(viewModel: CharacterCellData?) {
         guard let viewModel else {
@@ -24,5 +25,6 @@ class CharacterCell: UICollectionViewCell {
         }
         imageView.image = viewModel.isLoading ? UIImage(named: "placeholderCharacter") : viewModel.image
         nameLabel.text = viewModel.name
+        typeLabel.text = viewModel.type
     }
 }
