@@ -11,6 +11,10 @@ protocol RegistrationView: UIView {
     func update(with data: RegistrationViewData)
 }
 
+protocol RegistrationViewDelegate: AnyObject {
+    func lregisterButtonDidTap(login: String, passwordFirst: String, passwordSecond: String)
+}
+
 class RegistrationViewImp: UIView, RegistrationView {
 
     @IBOutlet private weak var registrationLabel: UILabel!

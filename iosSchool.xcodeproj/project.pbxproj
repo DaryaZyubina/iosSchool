@@ -10,6 +10,10 @@
 		FC0E794329D6EBB200293D66 /* LocationDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0E794229D6EBB200293D66 /* LocationDataProvider.swift */; };
 		FC0E794529D6EC8400293D66 /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0E794429D6EC8400293D66 /* Character.swift */; };
 		FC0E794829D7078D00293D66 /* AuthViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC0E794729D7078D00293D66 /* AuthViewImp.xib */; };
+		FC15F6D929F6B00600833AC1 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = FC15F6D829F6B00600833AC1 /* KeychainAccess */; };
+		FC15F6DB29F6B04900833AC1 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC15F6DA29F6B04900833AC1 /* StorageManager.swift */; };
+		FC15F6DE29F6BCD200833AC1 /* SPIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = FC15F6DD29F6BCD200833AC1 /* SPIndicator */; };
+		FC15F6E129F6C10E00833AC1 /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = FC15F6E029F6C10E00833AC1 /* PKHUD */; };
 		FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616329D718CB009177B5 /* BaseViewController.swift */; };
 		FC58616629D71EF1009177B5 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC58616529D71EF1009177B5 /* CustomButton.swift */; };
 		FC692ACF29D747090047D3E2 /* RegistrationViewImp.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC692ACE29D747090047D3E2 /* RegistrationViewImp.xib */; };
@@ -88,6 +92,7 @@
 		FC0E794229D6EBB200293D66 /* LocationDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataProvider.swift; sourceTree = "<group>"; };
 		FC0E794429D6EC8400293D66 /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 		FC0E794729D7078D00293D66 /* AuthViewImp.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AuthViewImp.xib; sourceTree = "<group>"; };
+		FC15F6DA29F6B04900833AC1 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 		FC58616329D718CB009177B5 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		FC58616529D71EF1009177B5 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		FC692ACE29D747090047D3E2 /* RegistrationViewImp.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewImp.xib; sourceTree = "<group>"; };
@@ -169,6 +174,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC15F6E129F6C10E00833AC1 /* PKHUD in Frameworks */,
+				FC15F6D929F6B00600833AC1 /* KeychainAccess in Frameworks */,
+				FC15F6DE29F6BCD200833AC1 /* SPIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				FCEFC07B29ED85E1007091F2 /* ImageService.swift */,
+				FC15F6DA29F6B04900833AC1 /* StorageManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -427,6 +436,11 @@
 			dependencies = (
 			);
 			name = iosSchool;
+			packageProductDependencies = (
+				FC15F6D829F6B00600833AC1 /* KeychainAccess */,
+				FC15F6DD29F6BCD200833AC1 /* SPIndicator */,
+				FC15F6E029F6C10E00833AC1 /* PKHUD */,
+			);
 			productName = iosSchool;
 			productReference = FCFA83E429BF4D8B008D712C /* iosSchool.app */;
 			productType = "com.apple.product-type.application";
@@ -455,6 +469,11 @@
 				Base,
 			);
 			mainGroup = FCFA83DB29BF4D8B008D712C;
+			packageReferences = (
+				FC15F6D729F6B00600833AC1 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				FC15F6DC29F6BCD200833AC1 /* XCRemoteSwiftPackageReference "SPIndicator" */,
+				FC15F6DF29F6C10E00833AC1 /* XCRemoteSwiftPackageReference "PKHUD" */,
+			);
 			productRefGroup = FCFA83E529BF4D8B008D712C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -546,6 +565,7 @@
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
 				FCA10F5729D1D3A2000241C4 /* ApiError.swift in Sources */,
 				FCA10F4C29D1BFBF000241C4 /* Location.swift in Sources */,
+				FC15F6DB29F6B04900833AC1 /* StorageManager.swift in Sources */,
 				FCEFC09729F2BA28007091F2 /* CharacterView.swift in Sources */,
 				FCFA83EC29BF4D8B008D712C /* ViewController.swift in Sources */,
 				FC692AE229D96ED10047D3E2 /* CharacterDataProvider.swift in Sources */,
@@ -783,6 +803,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FC15F6D729F6B00600833AC1 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		FC15F6DC29F6BCD200833AC1 /* XCRemoteSwiftPackageReference "SPIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ivanvorobei/SPIndicator";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		FC15F6DF29F6C10E00833AC1 /* XCRemoteSwiftPackageReference "PKHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pkluz/PKHUD";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FC15F6D829F6B00600833AC1 /* KeychainAccess */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC15F6D729F6B00600833AC1 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			productName = KeychainAccess;
+		};
+		FC15F6DD29F6BCD200833AC1 /* SPIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC15F6DC29F6BCD200833AC1 /* XCRemoteSwiftPackageReference "SPIndicator" */;
+			productName = SPIndicator;
+		};
+		FC15F6E029F6C10E00833AC1 /* PKHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FC15F6DF29F6C10E00833AC1 /* XCRemoteSwiftPackageReference "PKHUD" */;
+			productName = PKHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FCFA83DC29BF4D8B008D712C /* Project object */;
 }

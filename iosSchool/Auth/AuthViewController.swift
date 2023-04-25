@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SPIndicator
+import PKHUD
 
 class AuthViewController<View: AuthView>: BaseViewController<View> {
 
@@ -13,9 +15,11 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     var onOpenRegistratioon: (() -> Void)?
 
     private let dataProvider: AuthDataProvider
+    private let storageManager: StorageManager
 
-    init(dataProvider: AuthDataProvider, onLoginSuccess: (() -> Void)?) {
+    init(dataProvider: AuthDataProvider, storageManager: StorageManager, onLoginSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
+        self.storageManager = storageManager
         self.onLoginSucceess = onLoginSuccess
 
         super.init(nibName: nil, bundle: nil)
@@ -39,13 +43,19 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
 
 extension AuthViewController: AuthViewDelegate {
     func loginButtonDidTap(login: String, password: String) {
+        HUD.show(.progress)
         dataProvider.authorization(username: login, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                HUD.hide()
+            }
             switch result {
-            case .success(let success):
-                print("Success!")
+            case .success(let token):
+                self?.storageManager.safeToken(token: token)
                 self?.onLoginSucceess?()
-            case .failure(let failure):
-                print(failure.rawValue)
+            case .failure:
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: "Ошибка авторизации", preset: .error, haptic: .error)
+                }
             }
         }
     }
