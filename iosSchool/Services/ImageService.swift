@@ -36,12 +36,13 @@ class ImageServiceImp: ImageService {
         DispatchQueue.global().async {
             self.apiClient.requestImageData(url: url) { [weak self] result in
                 guard let result else {
-                    return print("image load fall")
+                    print("image load fall")
+                    return
                 }
 
                 guard let image = UIImage(data: result) else {
-                    return print("Error while making UIImage from Data")
-
+                    print("Error while making UIImage from Data")
+                    return
                 }
                 self?.updateQueue.async {
                     self?.imageDict.updateValue(image, forKey: url)
