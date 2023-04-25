@@ -22,6 +22,7 @@ class CharacterViewImp: UIView, CharacterView {
     }()
 
     func makeView() {
+
         collectionView.backgroundColor = .clear
         collectionView.dataSource = self
 
@@ -74,9 +75,13 @@ class CharacterViewImp: UIView, CharacterView {
                 repeatingSubitem: item,
                 count: 2
             )
+
             group.interItemSpacing = .fixed(16)
+
             let section = NSCollectionLayoutSection(group: group)
             section.interGroupSpacing = 30
+            section.contentInsets = NSDirectionalEdgeInsets(top: 59, leading: 20, bottom: 77, trailing: 20)
+
             return section
         }
     }
@@ -102,6 +107,10 @@ extension CharacterViewImp: UICollectionViewDataSource {
         ) as? CharacterCell else {
             return UICollectionViewCell()
         }
+
+        cell.backgroundColor = .white.withAlphaComponent(0.5)
+        cell.layer.masksToBounds = true
+        cell.layer.cornerRadius = 15
 
         guard data.count > indexPath.row else {
             return cell
