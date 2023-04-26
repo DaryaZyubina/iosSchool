@@ -9,6 +9,7 @@ import UIKit
 
 protocol LocationView: UIView {
     var selectLocation: ((LocationCellData) -> Void)? { get set }
+    var willDisplayCell: ((IndexPath) -> Void)? { get set }
 
     func makeView()
     func update(data: LocationViewData)
@@ -17,6 +18,7 @@ protocol LocationView: UIView {
 class LocationViewImp: UIView, LocationView {
 
     var selectLocation: ((LocationCellData) -> Void)?
+    var willDisplayCell: ((IndexPath) -> Void)?
 
     private var locationData: LocationViewData?
 
@@ -80,5 +82,9 @@ extension LocationViewImp: UITableViewDelegate {
             return
         }
         selectLocation?(locationData.cellVM[indexPath.row])
+    }
+
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        willDisplayCell?(indexPath)
     }
 }
