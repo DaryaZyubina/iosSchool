@@ -31,7 +31,7 @@ class StorageManagerImp: StorageManager {
         }
     }
 
-    func safeToken(token: TokenResponse?){
+    func safeToken(token: TokenResponse?) {
         guard let token else {
             return
         }
@@ -60,6 +60,7 @@ class StorageManagerImp: StorageManager {
         do {
             try keychain.remove(StorageManagerKey.token.rawValue)
             try keychain.remove(StorageManagerKey.userId.rawValue)
+            UserDefaults.standard.removeObject(forKey: StorageManagerKey.userId.rawValue)
         } catch {
             print(error as Any)
         }
@@ -86,4 +87,3 @@ private extension StorageManagerImp {
         UserDefaults.standard.set(true, forKey: StorageManagerKey.notFirstLaunch.rawValue)
     }
 }
-

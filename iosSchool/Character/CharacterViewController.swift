@@ -62,7 +62,6 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                             image: image
                         ))
                     }
-                    // continue HW9, upload image for character (or take existed one)
                 }
             }
         }
