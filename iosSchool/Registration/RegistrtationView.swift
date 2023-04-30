@@ -8,10 +8,19 @@
 import UIKit
 
 protocol RegistrationView: UIView {
+    var delegate: RegistrationViewDelegate? { get set }
+
     func update(with data: RegistrationViewData)
 }
 
+protocol RegistrationViewDelegate: AnyObject {
+    func doneButtonDidTap(login: String, passwordFirst: String, passwordSecond: String)
+    func cancelButtonDidTap()
+}
+
 class RegistrationViewImp: UIView, RegistrationView {
+
+    weak var delegate: RegistrationViewDelegate?
 
     @IBOutlet private weak var scrollView: UIScrollView!
     @IBOutlet private weak var registrationLabel: UILabel!
@@ -26,19 +35,25 @@ class RegistrationViewImp: UIView, RegistrationView {
     }
 
     func update(with data: RegistrationViewData) {
+        let recogniser = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
+        addGestureRecognizer(recogniser)
+        
         registrationLabel.text = data.registrationTextFieldPlaceHolder
 
         loginTextField.backgroundColor = .white.withAlphaComponent(0.6)
         loginTextField.layer.cornerRadius = 15
         loginTextField.layer.masksToBounds = true
+        loginTextField.delegate = self
 
         passwordFirstTextField.backgroundColor = .white.withAlphaComponent(0.6)
         passwordFirstTextField.layer.cornerRadius = 15
         passwordFirstTextField.layer.masksToBounds = true
+        passwordFirstTextField.delegate = self
 
         passwordSecondTextField.backgroundColor = .white.withAlphaComponent(0.6)
         passwordSecondTextField.layer.cornerRadius = 15
         passwordSecondTextField.layer.masksToBounds = true
+        passwordSecondTextField.delegate = self
 
         makeButton(button: doneButton)
         makeButton(button: cancelButton)
@@ -61,6 +76,19 @@ class RegistrationViewImp: UIView, RegistrationView {
 
     @IBAction func doneButtonDidTap(sender: UIButton) {
         endEditing(true)
+
+        delegate?.doneButtonDidTap(
+            login: loginTextField.text ?? "",
+            passwordFirst: passwordFirstTextField.text ?? "",
+            passwordSecond: passwordSecondTextField.text ?? ""
+        )
+
+    }
+
+    @IBAction func cancelButtonDidTap(sender: UIButton) {
+        endEditing(true)
+
+        delegate?.cancelButtonDidTap()
     }
 
     @objc
@@ -84,11 +112,6 @@ class RegistrationViewImp: UIView, RegistrationView {
     @objc
     private func keyboardWillHide(notification: Notification) {
         scrollView.contentInset = .zero
-    }
-
-    @IBAction func cancelButtonDidTap(sender: UIButton) {
-        endEditing(true)
-        // осуществить переход обратно на авторизацию?
     }
 
     // MARK: - Private methods
