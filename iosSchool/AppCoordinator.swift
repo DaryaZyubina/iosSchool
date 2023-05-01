@@ -52,11 +52,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         setRoot(viewController: tabVC)
     }
 
-    private func startRegistration() {
-        let coordinator = assembly.registrationCoordinator()
-        setRoot(viewController: coordinator.make())
-    }
-
     private func startLocation() {
         let coordinator = assembly.locationCoordinator()
         setRoot(viewController: coordinator.make())
