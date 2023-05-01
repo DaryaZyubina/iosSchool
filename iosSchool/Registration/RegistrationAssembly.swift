@@ -20,7 +20,11 @@ extension Assembly: RegistrationAssembly {
     }
 
     func registrationVC() -> RegistrationViewController<RegistrationViewImp> {
-        .init(dataProvider: registrationDataProvider())
+        .init(
+            dataProvider: registrationDataProvider(),
+            profileDataProvider: profileDataProvider(),
+            storageManager: storageManager
+        )
     }
 
     func registrationDataProvider() -> RegistrationDataProvider {

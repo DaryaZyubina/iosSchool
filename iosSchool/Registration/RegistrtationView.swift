@@ -12,39 +12,39 @@ protocol RegistrationView: UIView {
 }
 
 protocol RegistrationViewDelegate: AnyObject {
-    func lregisterButtonDidTap(login: String, passwordFirst: String, passwordSecond: String)
+    func doneButtonDidTap(login: String, passwordFirst: String, passwordSecond: String)
 }
 
 class RegistrationViewImp: UIView, RegistrationView {
-
+    
     @IBOutlet private weak var registrationLabel: UILabel!
     @IBOutlet private weak var loginTextField: UITextField!
     @IBOutlet private weak var passwordFirstTextField: UITextField!
     @IBOutlet private weak var passwordSecondTextField: UITextField!
     @IBOutlet private weak var doneButton: CustomButton!
     @IBOutlet private weak var cancelButton: CustomButton!
-
+    
     func update(with data: RegistrationViewData) {
         registrationLabel.text = data.registrationTextFieldPlaceHolder
-
+        
         loginTextField.backgroundColor = .white.withAlphaComponent(0.6)
         loginTextField.layer.cornerRadius = 15
         loginTextField.layer.masksToBounds = true
-
+        
         passwordFirstTextField.backgroundColor = .white.withAlphaComponent(0.6)
         passwordFirstTextField.layer.cornerRadius = 15
         passwordFirstTextField.layer.masksToBounds = true
-
+        
         passwordSecondTextField.backgroundColor = .white.withAlphaComponent(0.6)
         passwordSecondTextField.layer.cornerRadius = 15
         passwordSecondTextField.layer.masksToBounds = true
-
+        
         makeButton(button: doneButton)
         makeButton(button: cancelButton)
     }
-
+    
     // MARK: - Private methods
-
+    
     private func makeButton(button: CustomButton) {
         button.normalColor = UIColor(named: "VelvetBlue") ?? .white
         button.highlightColor = .white

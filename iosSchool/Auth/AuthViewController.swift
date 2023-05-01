@@ -62,12 +62,10 @@ extension AuthViewController: AuthViewDelegate {
                 self?.profileDataProvider.getProfile(profileId: token.userId) { [weak self] profileResult in
                     switch profileResult {
                     case .success(let profile):
-                        self?.storageManager.setUsernameToProfile(profile: profile, defaultName: "Bob")
+                        self?.storageManager.setUsernameToProfileFromNano(profile: profile)
 
-                    case .failure:
-                        DispatchQueue.main.async {
-                            SPIndicator.present(title: "Ошибка нахождения профиля", preset: .error, haptic: .error)
-                        }
+                    case .failure(let failure):
+                        print(failure.rawValue)
                     }
                 }
                 
