@@ -22,6 +22,10 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func startAuth() {
+        guard assembly.storageManager.getToken() == nil else {
+            setTabVC()
+            return
+        }
         let coordinator = assembly.authCoordinator { [weak self] in
             DispatchQueue.main.async {
                 self?.setTabVC()
@@ -54,8 +58,8 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func startCharacter() {
-        let coordinator = assembly.characterCoordinator()
-        setRoot(viewController: coordinator.make())
+       // let coordinator = assembly.characterCoordinator()
+       // setRoot(viewController: coordinator.make())
     }
 
     private func setRoot(viewController: UIViewController?) {
