@@ -9,10 +9,13 @@ import UIKit
 
 class RegistrationViewController<View: RegistrationView>: BaseViewController<View> {
 
+    var onRegistrationSuccess: (() -> Void)?
+
     private let dataProvider: RegistrationDataProvider
 
-    init(dataProvider: RegistrationDataProvider) {
+    init(dataProvider: RegistrationDataProvider, onRegistrationSuccess: (() -> Void)?) {
         self.dataProvider = dataProvider
+        self.onRegistrationSuccess = onRegistrationSuccess
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -53,8 +56,7 @@ extension RegistrationViewController: RegistrationViewDelegate {
         dataProvider.registration(username: login, password: passwordFirst) { [weak self] result in
             switch result {
             case .success(let success):
-                print("Success!")
-                //self?.onLoginSucceess?()
+                self?.onRegistrationSuccess?()
             case .failure(let failure):
                 print(failure.rawValue)
             }
