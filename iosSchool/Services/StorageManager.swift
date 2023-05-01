@@ -13,6 +13,8 @@ protocol StorageManager {
     func safeToken(token: TokenResponse?)
     func getToken() -> TokenResponse?
     func removeToken()
+    func setDateToProfile()
+    func setUsernameToProfile(profile: Profile, defaultName: String)
 }
 
 class StorageManagerImp: StorageManager {
@@ -63,6 +65,27 @@ class StorageManagerImp: StorageManager {
             UserDefaults.standard.removeObject(forKey: StorageManagerKey.userId.rawValue)
         } catch {
             print(error as Any)
+        }
+    }
+
+    func setDateToProfile() {
+        UserDefaults.standard.set(
+            Date(),
+            forKey: "ProfileTime:\(StorageManagerKey.userId.rawValue)"
+        )
+    }
+
+    func setUsernameToProfile(profile: Profile, defaultName: String) {
+        if profile.username != "" {
+            UserDefaults.standard.set(
+                profile.username,
+                forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
+            )
+        } else {
+            UserDefaults.standard.set(
+                defaultName,
+                forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
+            )
         }
     }
 }

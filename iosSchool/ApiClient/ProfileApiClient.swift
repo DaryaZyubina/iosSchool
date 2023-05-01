@@ -19,7 +19,9 @@ extension ApiClient: ProfileApiClient {
         profileId: String?,
         onRequestCompleted: @escaping (Result<Profile, ApiError>) -> Void
     ) {
-        let id = profileId ?? ""
+        guard let id = profileId else {
+            return
+        }
         let url = NetworkConstants.URLStrings.nanoPost + "/v1/profile/\(id)"
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }

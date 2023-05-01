@@ -18,7 +18,12 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     private let profileDataProvider: ProfileDataProvider
     private let storageManager: StorageManager
 
-    init(dataProvider: AuthDataProvider, profileDataProvider: ProfileDataProvider, storageManager: StorageManager, onLoginSuccess: (() -> Void)?) {
+    init(
+        dataProvider: AuthDataProvider,
+        profileDataProvider: ProfileDataProvider,
+        storageManager: StorageManager,
+        onLoginSuccess: (() -> Void)?
+    ) {
         self.dataProvider = dataProvider
         self.profileDataProvider = profileDataProvider
         self.storageManager = storageManager
@@ -52,18 +57,12 @@ extension AuthViewController: AuthViewDelegate {
             }
             switch result {
             case .success(let token):
-                let userId = token.userId
-                UserDefaults.standard.set(Date(), forKey: "TimeWithToken:\(userId)")
+                self?.storageManager.setDateToProfile()
 
-                self?.profileDataProvider.getProfile(profileId: userId) { profileResult in
-                    print(profileResult)
+                self?.profileDataProvider.getProfile(profileId: token.userId) { [weak self] profileResult in
                     switch profileResult {
                     case .success(let profile):
-                        if profile.username != "" {
-                            UserDefaults.standard.set(profile.username, forKey: "Profile:\(userId)")
-                        } else {
-                            UserDefaults.standard.set("Bob", forKey: "NameWithProfile:\(userId)")
-                        }
+                        self?.storageManager.setUsernameToProfile(profile: profile, defaultName: "Bob")
 
                     case .failure:
                         DispatchQueue.main.async {

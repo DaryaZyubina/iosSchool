@@ -22,15 +22,9 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func startAuth() {
-        let token = assembly.storageManager.getToken()
-        guard token == nil else {
+        guard assembly.storageManager.getToken() == nil else {
             setTabVC()
-
-            let userId = token?.userId ?? ""
-            print(Date())
-            UserDefaults.standard.set(Date(), forKey: userId)
-            print(userId)
-
+            assembly.storageManager.setDateToProfile()
             return
         }
         let coordinator = assembly.authCoordinator { [weak self] in
