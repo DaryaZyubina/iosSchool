@@ -9,14 +9,20 @@ import UIKit
 
 class LoginLabelCell: UITableViewCell {
 
+    var viewModel: ProfileCellData? {
+        didSet {
+            update(viewModel)
+        }
+    }
+
     @IBOutlet private weak var loginLabel: UILabel!
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
+    private func update(_ viewModel: ProfileCellData?) {
+        print("view \(viewModel)")
+        guard let viewModel else {
+            return
+        }
+        print("Name \(viewModel.username)")
+        loginLabel.text = viewModel.username
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-    }
-    
 }
