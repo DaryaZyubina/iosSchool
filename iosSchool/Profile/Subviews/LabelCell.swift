@@ -37,7 +37,8 @@ class LabelCell: UITableViewCell {
         switch cell {
         case 3:
             print("Im here")
-            maintextLabel.text = "Дата регистрации"
+            // maintextLabel.text = "Дата регистрации" -- по фигме, но суть другая
+            maintextLabel.text = "Время последнего входа"
             dateLabel.isHidden = false
             colorLabel.isHidden = true
         case 4:
