@@ -19,11 +19,11 @@ extension Assembly: ProfileAssembly {
     }
 
     func profileVC() -> ProfileViewController<ProfileViewImp> {
-        .init(profile: ProfileCellData(
+        .init(profile: ProfileViewData(cell: ProfileCellData(
             username: nil,
             photoProfile: nil,
             photoHeader: nil,
             lastTimeVisited: nil
-        ))
+        )))
     }
 }

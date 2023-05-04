@@ -18,11 +18,9 @@ class LoginLabelCell: UITableViewCell {
     @IBOutlet private weak var loginLabel: UILabel!
 
     private func update(_ viewModel: ProfileCellData?) {
-        print("view \(viewModel)")
         guard let viewModel else {
             return
         }
-        print("Name \(viewModel.username)")
         loginLabel.text = viewModel.username
     }
 }

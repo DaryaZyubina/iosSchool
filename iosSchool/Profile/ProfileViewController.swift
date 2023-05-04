@@ -9,9 +9,10 @@ import UIKit
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
-    private var profile: ProfileCellData
+    //private var profile: ProfileCellData
+    private var profile: ProfileViewData
 
-    init(profile: ProfileCellData) {
+    init(profile: ProfileViewData) {
         self.profile = profile
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,6 +25,6 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         super.viewDidLoad()
 
         rootView.makeView()
-        rootView.update(data: ProfileViewData(cell: profile))
+        rootView.update(data: profile)
     }
 }

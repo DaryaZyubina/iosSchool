@@ -31,14 +31,7 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
         rootView.makeView()
         rootView.selectLocation = selectLocation
 
-        dataProvider.allLocations() { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.rootView.update(data: LocationViewData(location: success))
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
+        dataProviderAllLocations()
     }
 
     // MARK: - Actions
@@ -46,14 +39,7 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
     @objc
     private func reload() {
         DispatchQueue.main.async { [weak self] in
-            self?.dataProvider.allLocations() { [weak self] result in
-                switch result {
-                case .success(let success):
-                    self?.rootView.update(data: LocationViewData(location: success))
-                case .failure(let failure):
-                    print(failure.rawValue)
-                }
-            }
+            self?.dataProviderAllLocations()
         }
     }
 
@@ -76,4 +62,15 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
                 action: #selector(reload)
             )
         }
+
+    private func dataProviderAllLocations() {
+        self.dataProvider.allLocations() { [weak self] result in
+            switch result {
+            case .success(let success):
+                self?.rootView.update(data: LocationViewData(location: success))
+            case .failure(let failure):
+                print(failure.rawValue)
+            }
+        }
+    }
 }
