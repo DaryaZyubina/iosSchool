@@ -19,5 +19,4 @@ class ProfileCellData {
         self.photoHeader = photoHeader ?? UIImage(named: "header")
         self.lastTimeVisited = lastTimeVisited ?? ".. .. ...."
     }
-
 }

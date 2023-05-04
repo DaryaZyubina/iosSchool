@@ -16,8 +16,6 @@ class BaseNavigationController: UINavigationController {
         navigationBar.isTranslucent = false
         navigationBar.backgroundColor = .white
         view.backgroundColor = .white
-
-        // navigationBar.topItem?.rightBarButtonItem = UIImage(named: "refresh")
     }
 
     override var childForStatusBarStyle: UIViewController? {

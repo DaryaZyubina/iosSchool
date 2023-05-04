@@ -12,15 +12,15 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="356" id="KGk-i7-Jjw" customClass="HeaderCell" customModule="iosSchool" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="443" height="395"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="443" height="395"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="aCW-mn-snQ">
-                        <rect key="frame" x="0.0" y="0.0" width="443" height="319"/>
+                        <rect key="frame" x="0.0" y="0.0" width="443" height="347"/>
                     </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="profileHeader" translatesAutoresizingMaskIntoConstraints="NO" id="cDH-em-XDi" userLabel="Profile Image">
-                        <rect key="frame" x="166.66666666666666" y="257" width="109.99999999999997" height="110"/>
+                        <rect key="frame" x="166.66666666666666" y="285" width="109.99999999999997" height="110"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="110" id="2xi-OB-AYp"/>
                             <constraint firstAttribute="height" constant="110" id="pzL-hm-czV"/>
@@ -32,8 +32,7 @@
                     <constraint firstItem="aCW-mn-snQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="PdG-UR-cu1"/>
                     <constraint firstItem="aCW-mn-snQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="e47-rh-mum"/>
                     <constraint firstAttribute="bottom" secondItem="cDH-em-XDi" secondAttribute="bottom" id="f0o-Qb-A97"/>
-                    <constraint firstItem="aCW-mn-snQ" firstAttribute="bottomMargin" secondItem="cDH-em-XDi" secondAttribute="bottom" constant="-56" id="h1Q-sH-XKG"/>
-                    <constraint firstItem="cDH-em-XDi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="246" id="pHK-Zy-6bM"/>
+                    <constraint firstItem="cDH-em-XDi" firstAttribute="top" secondItem="aCW-mn-snQ" secondAttribute="bottomMargin" constant="-54" id="pHK-Zy-6bM"/>
                     <constraint firstAttribute="trailing" secondItem="aCW-mn-snQ" secondAttribute="trailing" id="uhA-vI-4vu"/>
                 </constraints>
             </tableViewCellContentView>

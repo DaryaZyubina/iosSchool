@@ -27,5 +27,4 @@ class LocationCell: UITableViewCell {
         typeLabel.text = viewModel.type
         populationLabel.text = viewModel.population
     }
-    
 }

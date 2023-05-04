@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,49 +18,53 @@
                 <rect key="frame" x="0.0" y="0.0" width="436" height="136"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundLabel" translatesAutoresizingMaskIntoConstraints="NO" id="Idl-Ko-duu">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ygI-vc-a36" userLabel="Label View">
                         <rect key="frame" x="32" y="9" width="372" height="40"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-j8-rbf" userLabel="Text Label">
+                                <rect key="frame" x="16" y="10" width="189" height="20"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" systemColor="tintColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="onQ-9O-Wwq">
+                                <rect key="frame" x="315" y="10" width="41" height="20"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1E-nq-mXk" userLabel="Date Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="0.0"/>
+                                        <color key="tintColor" systemColor="tintColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUW-cB-RxK" userLabel="Color Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="41" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" name="LabelLightGrey"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="40" id="w0L-I3-b8Z"/>
+                            <constraint firstItem="pqf-j8-rbf" firstAttribute="top" secondItem="ygI-vc-a36" secondAttribute="top" constant="10" id="3Qt-RW-yyu"/>
+                            <constraint firstItem="onQ-9O-Wwq" firstAttribute="leading" secondItem="pqf-j8-rbf" secondAttribute="trailing" constant="110" id="3vJ-pv-dQQ"/>
+                            <constraint firstAttribute="bottom" secondItem="onQ-9O-Wwq" secondAttribute="bottom" constant="10" id="6Mf-MV-W3V"/>
+                            <constraint firstAttribute="bottom" secondItem="pqf-j8-rbf" secondAttribute="bottom" constant="10" id="BVK-qo-oIy"/>
+                            <constraint firstItem="onQ-9O-Wwq" firstAttribute="top" secondItem="ygI-vc-a36" secondAttribute="top" constant="10" id="QkT-Z7-VJc"/>
+                            <constraint firstAttribute="height" constant="40" id="VfB-WP-eWg"/>
+                            <constraint firstAttribute="trailing" secondItem="onQ-9O-Wwq" secondAttribute="trailing" constant="16" id="XXL-5b-LmB"/>
+                            <constraint firstItem="pqf-j8-rbf" firstAttribute="leading" secondItem="ygI-vc-a36" secondAttribute="leading" constant="16" id="rZR-7o-Gjq"/>
                         </constraints>
-                    </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqf-j8-rbf" userLabel="Text Label">
-                        <rect key="frame" x="48" y="19" width="39.666666666666657" height="20"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" systemColor="tintColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1E-nq-mXk" userLabel="Date Label">
-                        <rect key="frame" x="352" y="19" width="36" height="20"/>
-                        <color key="tintColor" systemColor="tintColor"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUW-cB-RxK" userLabel="Color Label">
-                        <rect key="frame" x="347" y="19" width="41" height="20"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="bottom" secondItem="c1E-nq-mXk" secondAttribute="bottom" constant="10" id="03O-0c-kMj"/>
-                    <constraint firstItem="rUW-cB-RxK" firstAttribute="top" secondItem="Idl-Ko-duu" secondAttribute="top" constant="10" id="09d-Oq-hTd"/>
-                    <constraint firstItem="pqf-j8-rbf" firstAttribute="leading" secondItem="Idl-Ko-duu" secondAttribute="leading" constant="16" id="C4t-h7-w5e"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="DBH-AL-WdQ"/>
-                    <constraint firstAttribute="bottom" secondItem="Idl-Ko-duu" secondAttribute="bottom" constant="9" id="DJA-JJ-gii"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="trailing" secondItem="c1E-nq-mXk" secondAttribute="trailing" constant="16" id="JkB-Wy-z6V"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="LSq-8N-49h"/>
-                    <constraint firstItem="pqf-j8-rbf" firstAttribute="top" secondItem="Idl-Ko-duu" secondAttribute="top" constant="10" id="NH6-Ki-AtW"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="bottom" secondItem="rUW-cB-RxK" secondAttribute="bottom" constant="10" id="Ux3-Sr-Xsp"/>
-                    <constraint firstItem="c1E-nq-mXk" firstAttribute="top" secondItem="Idl-Ko-duu" secondAttribute="top" constant="10" id="Yi8-BN-OkB"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="trailing" secondItem="rUW-cB-RxK" secondAttribute="trailing" constant="16" id="hjm-uF-d3c"/>
-                    <constraint firstAttribute="trailing" secondItem="Idl-Ko-duu" secondAttribute="trailing" constant="32" id="ruC-hd-XAo"/>
-                    <constraint firstItem="Idl-Ko-duu" firstAttribute="bottom" secondItem="pqf-j8-rbf" secondAttribute="bottom" constant="10" id="tIt-pi-JMY"/>
-                    <constraint firstItem="c1E-nq-mXk" firstAttribute="leading" secondItem="pqf-j8-rbf" secondAttribute="trailing" priority="250" constant="110" id="wT4-lJ-ExZ"/>
-                    <constraint firstItem="rUW-cB-RxK" firstAttribute="leading" secondItem="pqf-j8-rbf" secondAttribute="trailing" priority="250" constant="110" id="xAo-2z-yoX"/>
+                    <constraint firstItem="ygI-vc-a36" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="9" id="Dg0-nL-Bpd"/>
+                    <constraint firstAttribute="trailing" secondItem="ygI-vc-a36" secondAttribute="trailing" constant="32" id="fRV-al-zmf"/>
+                    <constraint firstItem="ygI-vc-a36" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="32" id="gPV-P3-JY8"/>
+                    <constraint firstAttribute="bottom" secondItem="ygI-vc-a36" secondAttribute="bottom" constant="9" id="mep-tP-ek3"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -67,13 +72,16 @@
             <connections>
                 <outlet property="colorLabel" destination="rUW-cB-RxK" id="FaG-T5-kmK"/>
                 <outlet property="dateLabel" destination="c1E-nq-mXk" id="EW6-en-3Xy"/>
+                <outlet property="labelView" destination="ygI-vc-a36" id="TjE-ZG-gD0"/>
                 <outlet property="maintextLabel" destination="pqf-j8-rbf" id="4Jq-Xx-2tY"/>
             </connections>
             <point key="canvasLocation" x="160.30534351145039" y="52.112676056338032"/>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="backgroundLabel" width="326" height="40"/>
+        <namedColor name="LabelLightGrey">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="tintColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

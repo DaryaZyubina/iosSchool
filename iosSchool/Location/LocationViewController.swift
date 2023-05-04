@@ -46,7 +46,14 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
     @objc
     private func reload() {
         DispatchQueue.main.async { [weak self] in
-            self?.rootView.updateTable()
+            self?.dataProvider.allLocations() { [weak self] result in
+                switch result {
+                case .success(let success):
+                    self?.rootView.update(data: LocationViewData(location: success))
+                case .failure(let failure):
+                    print(failure.rawValue)
+                }
+            }
         }
     }
 

@@ -25,7 +25,7 @@ class LocationViewImp: UIView, LocationView {
     private let tableView = UITableView()
 
     func makeView() {
-        imageView.image = UIImage(named: "background")
+        imageView.image = UIImage(named: "backgroundLocations")
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)

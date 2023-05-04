@@ -7,7 +7,13 @@
 
 import UIKit
 
+protocol LabelCellDelegate: AnyObject {
+    func getIndexOfRow(cell: UITableViewCell) -> Int
+}
+
 class LabelCell: UITableViewCell {
+
+    var isCellContainsDate: Bool = false
 
     var viewModel: ProfileCellData? {
         didSet {
@@ -15,38 +21,32 @@ class LabelCell: UITableViewCell {
         }
     }
 
-    weak var delegate: LabelCellDelegate?
-
     @IBOutlet private weak var maintextLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var colorLabel: UILabel!
+    @IBOutlet private weak var labelView: UIView!
 
     private func update(_ viewModel: ProfileCellData?) {
         guard let viewModel else {
             return
         }
 
-        guard let cell = delegate?.getIndexOfRow(cell: self) else {
-                return
-        }
-        print(cell)
+        labelView.layer.borderWidth = 1
+        labelView.layer.borderColor = UIColor(named: "LabelDarkGrey")?.withAlphaComponent(1).cgColor
+        labelView.layer.cornerRadius = 15
 
-        dateLabel.text = viewModel.lastTimeVisited
-        colorLabel.text = "Color!"
 
-        switch cell {
-        case 3:
+        switch isCellContainsDate {
+        case true:
             print("Im here")
             // maintextLabel.text = "Дата регистрации" -- по фигме, но суть другая
-            maintextLabel.text = "Время последнего входа"
+            maintextLabel.text = "Время входа"
             dateLabel.isHidden = false
             colorLabel.isHidden = true
-        case 4:
+        case false:
             maintextLabel.text = "Цвет профиля"
             dateLabel.isHidden = true
             colorLabel.isHidden = false
-        default:
-            print("Everything is bad")
         }
     }
 }
