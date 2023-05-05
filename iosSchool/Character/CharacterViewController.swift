@@ -51,7 +51,7 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                     ))
                 }
                 print(character.name)
-                self.imageService.getImage(url: character.url) { [weak self] image in
+                self.imageService.getImage(url: character.image) { [weak self] image in
                     guard let self else {
                         return
                     }
@@ -87,7 +87,6 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
             }
         }
     }
-
 
     func allCharacters() {
         dataProvider.allCharacters() { [weak self] result in
