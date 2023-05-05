@@ -17,8 +17,8 @@ class LabelCell: UITableViewCell {
 
     @IBOutlet private weak var maintextLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var colorLabel: UILabel!
     @IBOutlet private weak var labelView: UIView!
+    @IBOutlet private weak var colorView: UIColorWell!
 
     private func update(_ viewModel: ProfileCellData?) {
         guard let viewModel else {
@@ -33,11 +33,12 @@ class LabelCell: UITableViewCell {
             // maintextLabel.text = "Дата регистрации" -- по фигме, но суть другая
             maintextLabel.text = "Время входа"
             dateLabel.isHidden = false
-            colorLabel.isHidden = true
+            colorView.isHidden = true
         } else {
             maintextLabel.text = "Цвет профиля"
             dateLabel.isHidden = true
-            colorLabel.isHidden = false
+            colorView.isHidden = false
+            colorView.selectedColor = .blue
         }
     }
 }
