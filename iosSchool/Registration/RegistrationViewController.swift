@@ -48,42 +48,6 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
 extension RegistrationViewController: RegistrationViewDelegate {
     func doneButtonDidTap(login: String, passwordFirst: String, passwordSecond: String) {
 
-        //НЕ ЗАБЫТЬ ОШИБКИ ВЫВЕСТИ НА ЭКРАН ПРИ СЛИЯНИИ ЭТОЙ ДОМАШКИ
-        guard passwordFirst == passwordSecond else {
-            print("Пароли должны совпадать")
-            return
-        }
-
-        guard login.count >= 3, login.count <= 16 else {
-            print("Длина логина должна быть от 3 до 16 символов")
-            return
-        }
-
-        guard passwordFirst.count >= 8 else {
-            print("Длина пароля должна быть не менее 8 символов")
-            return
-        }
-
-        dataProvider.registration(username: login, password: passwordFirst) { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.onRegistrationSuccess?()
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
-    }
-
-    func cancelButtonDidTap() {
-        self.dismiss(animated: true)
-    }
-}
-
-// MARK: - RegistrationViewDelegate
-
-extension RegistrationViewController: RegistrationViewDelegate {
-
-    func doneButtonDidTap(login: String, passwordFirst: String, passwordSecond: String) {
         HUD.show(.progress)
 
         guard passwordFirst == passwordSecond else {
@@ -142,8 +106,7 @@ extension RegistrationViewController: RegistrationViewDelegate {
                 }
 
                 self?.storageManager.safeToken(token: token)
-                // TODO: раскомmентить при слиянии с 6ой домашкой
-                // self?.onRegistrationSuccess?()
+                self?.onRegistrationSuccess?()
             case .failure:
                 DispatchQueue.main.async {
                     SPIndicator.present(title: "Ошибка регистрации", preset: .error, haptic: .error)
