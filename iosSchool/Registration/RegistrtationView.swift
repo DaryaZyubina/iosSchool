@@ -33,13 +33,13 @@ class RegistrationViewImp: UIView, RegistrationView {
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
+    
     func update(with data: RegistrationViewData) {
         let recogniser = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         addGestureRecognizer(recogniser)
         
         registrationLabel.text = data.registrationTextFieldPlaceHolder
-
+        
         loginTextField.backgroundColor = .white.withAlphaComponent(0.6)
         loginTextField.layer.cornerRadius = 15
         loginTextField.layer.masksToBounds = true
@@ -113,9 +113,9 @@ class RegistrationViewImp: UIView, RegistrationView {
     private func keyboardWillHide(notification: Notification) {
         scrollView.contentInset = .zero
     }
-
+    
     // MARK: - Private methods
-
+    
     private func makeButton(button: CustomButton) {
         button.normalColor = UIColor(named: "VelvetBlue") ?? .white
         button.highlightColor = .white

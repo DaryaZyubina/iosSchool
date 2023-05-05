@@ -16,11 +16,19 @@ protocol AuthAssembly {
 extension Assembly: AuthAssembly {
 
     func authCoordinator(onLoginSuccess: (() -> Void)?) -> AuthCoordinator {
-        AuthCoordinator(assembly: self, context: .init(onLoginSuccess: onLoginSuccess)) 
+        AuthCoordinator(
+            assembly: self,
+            context: .init(onLoginSuccess: onLoginSuccess)
+        )
     }
 
     func authVC(onLoginSuccess: (() -> Void)?) -> AuthViewController<AuthViewImp> {
-        .init(dataProvider: authDataProvider(), storageManager: storageManager, onLoginSuccess: onLoginSuccess)
+        .init(
+            dataProvider: authDataProvider(),
+            profileDataProvider: profileDataProvider(),
+            storageManager: storageManager,
+            onLoginSuccess: onLoginSuccess
+        )
     }
 
     func authDataProvider() -> AuthDataProvider {

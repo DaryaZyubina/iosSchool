@@ -13,6 +13,10 @@ protocol StorageManager {
     func safeToken(token: TokenResponse?)
     func getToken() -> TokenResponse?
     func removeToken()
+    func setDateToProfile()
+    func setUsernameToProfileFromNano(profile: Profile)
+    func setUsernameToProfileByUser(userName: String)
+    func getUsername()
 }
 
 class StorageManagerImp: StorageManager {
@@ -31,7 +35,7 @@ class StorageManagerImp: StorageManager {
         }
     }
 
-    func safeToken(token: TokenResponse?){
+    func safeToken(token: TokenResponse?) {
         guard let token else {
             return
         }
@@ -60,9 +64,35 @@ class StorageManagerImp: StorageManager {
         do {
             try keychain.remove(StorageManagerKey.token.rawValue)
             try keychain.remove(StorageManagerKey.userId.rawValue)
+            UserDefaults.standard.removeObject(forKey: StorageManagerKey.userId.rawValue)
         } catch {
             print(error as Any)
         }
+    }
+
+    func setDateToProfile() {
+        UserDefaults.standard.set(
+            Date(),
+            forKey: "ProfileTime:\(StorageManagerKey.userId.rawValue)"
+        )
+    }
+
+    func setUsernameToProfileFromNano(profile: Profile) {
+        UserDefaults.standard.set(
+            profile.username,
+            forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
+        )
+    }
+
+    func setUsernameToProfileByUser(userName: String) {
+        UserDefaults.standard.set(
+            userName,
+            forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
+        )
+    }
+
+    func getUsername() {
+        UserDefaults.standard.string(forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)")
     }
 }
 
@@ -86,4 +116,3 @@ private extension StorageManagerImp {
         UserDefaults.standard.set(true, forKey: StorageManagerKey.notFirstLaunch.rawValue)
     }
 }
-

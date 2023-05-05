@@ -69,6 +69,10 @@
 		FCA10F5329D1C583000241C4 /* NetworkConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F5229D1C583000241C4 /* NetworkConstants.swift */; };
 		FCA10F5529D1CC32000241C4 /* AuthApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F5429D1CC32000241C4 /* AuthApiClient.swift */; };
 		FCA10F5729D1D3A2000241C4 /* ApiError.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCA10F5629D1D3A2000241C4 /* ApiError.swift */; };
+		FCAE44EA29FEBB920057BF16 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE44E929FEBB920057BF16 /* Profile.swift */; };
+		FCAE44EC29FEBC3B0057BF16 /* ProfileApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE44EB29FEBC3B0057BF16 /* ProfileApiClient.swift */; };
+		FCAE44EE29FEBEF10057BF16 /* ProfileDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE44ED29FEBEF10057BF16 /* ProfileDataProvider.swift */; };
+		FCAE44F029FEC90F0057BF16 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCAE44EF29FEC90F0057BF16 /* ProfileView.swift */; };
 		FCEFC06D29E980CB007091F2 /* LocationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC06C29E980CB007091F2 /* LocationView.swift */; };
 		FCEFC06F29E98A81007091F2 /* LocationViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC06E29E98A81007091F2 /* LocationViewData.swift */; };
 		FCEFC07329E98ADB007091F2 /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEFC07129E98ADB007091F2 /* LocationCell.swift */; };
@@ -148,6 +152,10 @@
 		FCA10F5229D1C583000241C4 /* NetworkConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkConstants.swift; sourceTree = "<group>"; };
 		FCA10F5429D1CC32000241C4 /* AuthApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthApiClient.swift; sourceTree = "<group>"; };
 		FCA10F5629D1D3A2000241C4 /* ApiError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiError.swift; sourceTree = "<group>"; };
+		FCAE44E929FEBB920057BF16 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		FCAE44EB29FEBC3B0057BF16 /* ProfileApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApiClient.swift; sourceTree = "<group>"; };
+		FCAE44ED29FEBEF10057BF16 /* ProfileDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataProvider.swift; sourceTree = "<group>"; };
+		FCAE44EF29FEC90F0057BF16 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		FCEFC06C29E980CB007091F2 /* LocationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationView.swift; sourceTree = "<group>"; };
 		FCEFC06E29E98A81007091F2 /* LocationViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewData.swift; sourceTree = "<group>"; };
 		FCEFC07129E98ADB007091F2 /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
@@ -208,10 +216,10 @@
 		FC58616229D718A8009177B5 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FC692AEF29E4410A0047D3E2 /* BaseNavigationController.swift */,
 				FC692AEB29DDC2290047D3E2 /* BaseCoordinator.swift */,
 				FC58616329D718CB009177B5 /* BaseViewController.swift */,
 				FC692AED29E440460047D3E2 /* TabBarController.swift */,
-				FC692AEF29E4410A0047D3E2 /* BaseNavigationController.swift */,
 				FC692AFA29E449950047D3E2 /* RootTab.swift */,
 			);
 			path = Common;
@@ -245,6 +253,8 @@
 				FC692AF229E446420047D3E2 /* ProfileViewController.swift */,
 				FC692AF429E446540047D3E2 /* ProfileCoordinator.swift */,
 				FC692AF829E446FA0047D3E2 /* ProfileAssembly.swift */,
+				FCAE44ED29FEBEF10057BF16 /* ProfileDataProvider.swift */,
+				FCAE44EF29FEC90F0057BF16 /* ProfileView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -315,6 +325,7 @@
 				FC0E794429D6EC8400293D66 /* Character.swift */,
 				FC692AD029D95AEA0047D3E2 /* LocationsList.swift */,
 				FC692ADC29D96E650047D3E2 /* CharactersList.swift */,
+				FCAE44E929FEBB920057BF16 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -329,6 +340,7 @@
 				FC692AD229D95C200047D3E2 /* LocationApiClient.swift */,
 				FC692ADA29D964000047D3E2 /* RegistrationApiClient.swift */,
 				FC692AE329D970050047D3E2 /* CharacterApiClient.swift */,
+				FCAE44EB29FEBC3B0057BF16 /* ProfileApiClient.swift */,
 			);
 			path = ApiClient;
 			sourceTree = "<group>";
@@ -403,9 +415,9 @@
 				FCFA83E729BF4D8B008D712C /* AppDelegate.swift */,
 				FCFA83E929BF4D8B008D712C /* SceneDelegate.swift */,
 				FCFA83EB29BF4D8B008D712C /* ViewController.swift */,
-				FCFA83F029BF4D8C008D712C /* Assets.xcassets */,
 				FCFA83F229BF4D8C008D712C /* LaunchScreen.storyboard */,
 				FCFA83F529BF4D8C008D712C /* Info.plist */,
+				FCFA83F029BF4D8C008D712C /* Assets.xcassets */,
 				FCA10F1029C1AA0F000241C4 /* Player.swift */,
 				FCA10F1229C1AB46000241C4 /* Health.swift */,
 				FCA10F1429C1BC55000241C4 /* Damage.swift */,
@@ -542,6 +554,7 @@
 				FC692AF329E446420047D3E2 /* ProfileViewController.swift in Sources */,
 				FCA10F1329C1AB46000241C4 /* Health.swift in Sources */,
 				FCEFC07929E98E80007091F2 /* NSObject+ClassName.swift in Sources */,
+				FCAE44F029FEC90F0057BF16 /* ProfileView.swift in Sources */,
 				FCA10F1B29C490DC000241C4 /* ColorGenerator.swift in Sources */,
 				FC0E794529D6EC8400293D66 /* Character.swift in Sources */,
 				FC692AE829D974E80047D3E2 /* CharacterAssembly.swift in Sources */,
@@ -560,6 +573,7 @@
 				FC692AE429D970050047D3E2 /* CharacterApiClient.swift in Sources */,
 				FC692AEC29DDC2290047D3E2 /* BaseCoordinator.swift in Sources */,
 				FC79C35929E6D70E0015E62F /* SplashViewData.swift in Sources */,
+				FCAE44EC29FEBC3B0057BF16 /* ProfileApiClient.swift in Sources */,
 				FCA10F3E29D08029000241C4 /* RegistrationDataProvider.swift in Sources */,
 				FCA10F5529D1CC32000241C4 /* AuthApiClient.swift in Sources */,
 				FCA10F3029C89C45000241C4 /* AuthView.swift in Sources */,
@@ -582,8 +596,10 @@
 				FC692AD329D95C200047D3E2 /* LocationApiClient.swift in Sources */,
 				FCEFC0A029F2C822007091F2 /* CharacterViewData.swift in Sources */,
 				FC692ADB29D964000047D3E2 /* RegistrationApiClient.swift in Sources */,
+				FCAE44EE29FEBEF10057BF16 /* ProfileDataProvider.swift in Sources */,
 				FC58616429D718CB009177B5 /* BaseViewController.swift in Sources */,
 				FCA10F3929C89F0D000241C4 /* SplashAssembly.swift in Sources */,
+				FCAE44EA29FEBB920057BF16 /* Profile.swift in Sources */,
 				FC692AE629D973FC0047D3E2 /* CharacterViewController.swift in Sources */,
 				FC692ADD29D96E650047D3E2 /* CharactersList.swift in Sources */,
 				FCA10F2A29C8983A000241C4 /* AuthViewController.swift in Sources */,

@@ -31,7 +31,6 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
         super.viewDidLoad()
 
         setupBar()
-        // view.backgroundColor = .blue
 
         rootView.makeView()
         rootView.selectLocation = selectLocation
@@ -42,22 +41,9 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
             else {
                 return
             }
-
             self.loadPage(self.page)
-
         }
-
         loadPage(page)
-
-//        dataProvider.allLocations() { [weak self] result in
-//            switch result {
-//            case .success(let success):
-//                self?.rootView.update(data: LocationViewData(location: success))
-//            case .failure(let failure):
-//                print(failure.rawValue)
-//            }
-//        }
-
     }
 
     // MARK: - Actions

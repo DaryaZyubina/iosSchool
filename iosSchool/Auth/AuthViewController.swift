@@ -15,10 +15,17 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     var onOpenRegistratioon: (() -> Void)?
 
     private let dataProvider: AuthDataProvider
+    private let profileDataProvider: ProfileDataProvider
     private let storageManager: StorageManager
 
-    init(dataProvider: AuthDataProvider, storageManager: StorageManager, onLoginSuccess: (() -> Void)?) {
+    init(
+        dataProvider: AuthDataProvider,
+        profileDataProvider: ProfileDataProvider,
+        storageManager: StorageManager,
+        onLoginSuccess: (() -> Void)?
+    ) {
         self.dataProvider = dataProvider
+        self.profileDataProvider = profileDataProvider
         self.storageManager = storageManager
         self.onLoginSucceess = onLoginSuccess
 
@@ -50,8 +57,21 @@ extension AuthViewController: AuthViewDelegate {
             }
             switch result {
             case .success(let token):
+                self?.storageManager.setDateToProfile()
+
+                self?.profileDataProvider.getProfile(profileId: token.userId) { [weak self] profileResult in
+                    switch profileResult {
+                    case .success(let profile):
+                        self?.storageManager.setUsernameToProfileFromNano(profile: profile)
+
+                    case .failure(let failure):
+                        print(failure.rawValue)
+                    }
+                }
+                
                 self?.storageManager.safeToken(token: token)
                 self?.onLoginSucceess?()
+
             case .failure:
                 DispatchQueue.main.async {
                     SPIndicator.present(title: "Ошибка авторизации", preset: .error, haptic: .error)
