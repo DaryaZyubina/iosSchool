@@ -23,7 +23,8 @@ extension Assembly: ProfileAssembly {
             username: nil,
             photoProfile: nil,
             photoHeader: nil,
-            lastTimeVisited: nil
+            lastTimeVisited: nil,
+            isCellContainsData: false
         )))
     }
 }

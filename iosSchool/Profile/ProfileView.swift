@@ -114,7 +114,7 @@ extension ProfileViewImp: UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(
                 withIdentifier: LabelCell.className, for: indexPath
             ) as? LabelCell, let profileData {
-                cell.isCellContainsDate = true
+                profileData.cell.isCellContainsData = true
                 cell.viewModel = profileData.cell
                 return cell
             }
@@ -122,7 +122,7 @@ extension ProfileViewImp: UITableViewDataSource {
             if let cell = tableView.dequeueReusableCell(
                 withIdentifier: LabelCell.className, for: indexPath
             ) as? LabelCell, let profileData {
-                cell.isCellContainsDate = false
+                profileData.cell.isCellContainsData = false
                 cell.viewModel = profileData.cell
                 return cell
             }

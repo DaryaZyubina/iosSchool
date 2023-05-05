@@ -9,7 +9,6 @@ import UIKit
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
-    //private var profile: ProfileCellData
     private var profile: ProfileViewData
 
     init(profile: ProfileViewData) {
