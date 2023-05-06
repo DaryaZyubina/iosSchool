@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import SPIndicator
+import PKHUD
 
 class AuthViewController<View: AuthView>: BaseViewController<View> {
 
@@ -13,9 +15,18 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
     var onOpenRegistratioon: (() -> Void)?
 
     private let dataProvider: AuthDataProvider
+    private let profileDataProvider: ProfileDataProvider
+    private let storageManager: StorageManager
 
-    init(dataProvider: AuthDataProvider, onLoginSuccess: (() -> Void)?) {
+    init(
+        dataProvider: AuthDataProvider,
+        profileDataProvider: ProfileDataProvider,
+        storageManager: StorageManager,
+        onLoginSuccess: (() -> Void)?
+    ) {
         self.dataProvider = dataProvider
+        self.profileDataProvider = profileDataProvider
+        self.storageManager = storageManager
         self.onLoginSucceess = onLoginSuccess
 
         super.init(nibName: nil, bundle: nil)
@@ -39,13 +50,32 @@ class AuthViewController<View: AuthView>: BaseViewController<View> {
 
 extension AuthViewController: AuthViewDelegate {
     func loginButtonDidTap(login: String, password: String) {
+        HUD.show(.progress)
         dataProvider.authorization(username: login, password: password) { [weak self] result in
+            DispatchQueue.main.async {
+                HUD.hide()
+            }
             switch result {
-            case .success(let success):
-                print("Success!")
+            case .success(let token):
+                self?.storageManager.setDateToProfile()
+
+                self?.profileDataProvider.getProfile(profileId: token.userId) { [weak self] profileResult in
+                    switch profileResult {
+                    case .success(let profile):
+                        self?.storageManager.setUsernameToProfileFromNano(profile: profile)
+
+                    case .failure(let failure):
+                        print(failure.rawValue)
+                    }
+                }
+                
+                self?.storageManager.safeToken(token: token)
                 self?.onLoginSucceess?()
-            case .failure(let failure):
-                print(failure.rawValue)
+
+            case .failure:
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: "Ошибка авторизации", preset: .error, haptic: .error)
+                }
             }
         }
     }

@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import SPIndicator
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
     private var profile: ProfileViewData
+    private let dataProvider: ProfileDataProvider
 
-    init(profile: ProfileViewData) {
+    init(dataProvider: ProfileDataProvider, profile: ProfileViewData) {
+        self.dataProvider = dataProvider
         self.profile = profile
+        
         super.init(nibName: nil, bundle: nil)
     }
 

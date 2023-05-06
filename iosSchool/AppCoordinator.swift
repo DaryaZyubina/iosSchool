@@ -22,6 +22,11 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     }
 
     private func startAuth() {
+        guard assembly.storageManager.getToken() == nil else {
+            setTabVC()
+            assembly.storageManager.setDateToProfile()
+            return
+        }
         let coordinator = assembly.authCoordinator { [weak self] in
             DispatchQueue.main.async {
                 self?.setTabVC()
@@ -46,11 +51,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
 
         tabVC.setViewControllers([navVC, profieVC], animated: false)
         setRoot(viewController: tabVC)
-    }
-
-    private func startRegistration() {
-        let coordinator = assembly.registrationCoordinator()
-        setRoot(viewController: coordinator.make())
     }
 
     private func startLocation() {

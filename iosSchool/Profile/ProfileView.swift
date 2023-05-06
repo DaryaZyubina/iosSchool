@@ -146,4 +146,8 @@ extension ProfileViewImp: UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
+
+    // TODO: здесь после добаления 8ой домашки в поле имя профиля буду устанавливать
+    // имя профиля из UserDefaults.standard.string(forKey: "NameWithProfile:\(profileId)")
+    // time is also gonna be added
 }

@@ -5,11 +5,12 @@
 //  Created by Student 1 on 10.04.2023.
 //
 
-import UIKit
+import Foundation
 
 protocol ProfileAssembly {
     func profileCoodrinator() -> ProfileCoordinator
     func profileVC() -> ProfileViewController<ProfileViewImp>
+    func profileDataProvider() -> ProfileDataProvider
 }
 
 extension Assembly: ProfileAssembly {
@@ -26,5 +27,9 @@ extension Assembly: ProfileAssembly {
             lastTimeVisited: nil,
             isCellContainsData: false
         )))
+    }
+
+    func profileDataProvider() -> ProfileDataProvider {
+        ProfileDataProviderImp(apiClient: apiClient)
     }
 }

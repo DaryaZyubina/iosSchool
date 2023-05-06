@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import PKHUD
+import SPIndicator
 
 class LocationViewController<View: LocationView>: BaseViewController<View> {
 
     var selectLocation: ((LocationCellData) -> Void)?
-
+    var page: Int = 1
+    var cellVM: [LocationCellData] = []
+    var pagesLimited: Bool = false
     private let dataProvider: LocationDataProvider
 
     init(dataProvider: LocationDataProvider) {
@@ -30,20 +34,64 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
 
         rootView.makeView()
         rootView.selectLocation = selectLocation
-
-        dataProviderAllLocations()
+        rootView.willDisplayCell = { [weak self] indexPath in
+            guard let self,
+                  self.cellVM.count > 0,
+                  self.cellVM.count / 2 == indexPath.row
+            else {
+                return
+            }
+            self.loadPage(self.page)
+        }
+        loadPage(page)
     }
 
     // MARK: - Actions
 
     @objc
     private func reload() {
-        DispatchQueue.main.async { [weak self] in
-            self?.dataProviderAllLocations()
-        }
+        page = 1
+        cellVM = []
+        pagesLimited = false
+        loadPage(page)
+        HUD.show(.progress)
     }
 
     // MARK: - Private
+
+    private func loadPage(_ page: Int) {
+        guard !pagesLimited else {
+            return
+        }
+        dataProvider.getLocations(page: page) { [weak self] result in
+            guard let self else {
+                return
+            }
+            DispatchQueue.main.async {
+                HUD.hide()
+            }
+            switch result {
+            case .success(let data):
+                DispatchQueue.main.async {
+                    let newCells = data.results.map { LocationCellData(
+                        location: $0,
+                        population: "Население \($0.residents.count)"
+                    )}
+                    self.cellVM.append(contentsOf: newCells)
+                    self.rootView.update(data: .init(cells: self.cellVM))
+                    self.pagesLimited = self.page == data.info.pages
+                    if self.page < data.info.pages {
+                        self.page += 1
+                    }
+                }
+            case .failure(let data):
+                DispatchQueue.main.async {
+                    SPIndicator.present(title: data.rawValue, preset: .error, haptic: .error)
+                }
+            }
+        }
+    }
+
     private func setupBar() {
             title = "Выбор планеты"
             navigationController?.navigationBar.titleTextAttributes = [
