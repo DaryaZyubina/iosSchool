@@ -20,7 +20,13 @@ extension Assembly: ProfileAssembly {
     }
 
     func profileVC() -> ProfileViewController<ProfileViewImp> {
-        .init(dataProvider: profileDataProvider())
+        .init(profile: ProfileViewData(cell: ProfileCellData(
+            username: nil,
+            photoProfile: nil,
+            photoHeader: nil,
+            lastTimeVisited: nil,
+            isCellContainsData: false
+        )))
     }
 
     func profileDataProvider() -> ProfileDataProvider {

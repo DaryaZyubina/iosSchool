@@ -10,11 +10,13 @@ import SPIndicator
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
+    private var profile: ProfileViewData
     private let dataProvider: ProfileDataProvider
 
-    init(dataProvider: ProfileDataProvider) {
+    init(dataProvider: ProfileDataProvider, profile: ProfileViewData) {
         self.dataProvider = dataProvider
-
+        self.profile = profile
+        
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -24,6 +26,8 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .lightGray
+
+        rootView.makeView()
+        rootView.update(data: profile)
     }
 }

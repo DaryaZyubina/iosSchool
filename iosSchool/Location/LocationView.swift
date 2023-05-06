@@ -13,6 +13,7 @@ protocol LocationView: UIView {
 
     func makeView()
     func update(data: LocationViewData)
+    func updateTable()
 }
 
 class LocationViewImp: UIView, LocationView {
@@ -27,7 +28,7 @@ class LocationViewImp: UIView, LocationView {
 
     func makeView() {
         imageView.image = UIImage(named: "backgroundLocations")
-        imageView.contentMode = .scaleAspectFill
+        imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(imageView)
         imageView.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
@@ -52,10 +53,15 @@ class LocationViewImp: UIView, LocationView {
     func update(data: LocationViewData) {
         locationData = data
 
+        updateTable()
+    }
+
+    func updateTable() {
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
         }
     }
+
 }
 
 extension LocationViewImp: UITableViewDataSource {
