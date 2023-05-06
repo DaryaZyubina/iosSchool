@@ -93,32 +93,21 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
     }
 
     private func setupBar() {
-            title = "Выбор планеты"
+        title = "Выбор планеты"
             navigationController?.navigationBar.titleTextAttributes = [
-                .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
-                .font: UIFont.systemFont(ofSize: 18)
-            ]
-            /* navigationItem.rightBarButtonItem = UIBarButtonItem(
-                barButtonSystemItem: .refresh,
-                target: self,
-                action: #selector(reload)
-            )*/
-            navigationItem.rightBarButtonItem = UIBarButtonItem(
-                image: UIImage(named: "refresh"),
-                style: .done,
-                target: self,
-                action: #selector(reload)
-            )
-        }
-
-    private func dataProviderAllLocations() {
-        self.dataProvider.allLocations() { [weak self] result in
-            switch result {
-            case .success(let success):
-                self?.rootView.update(data: LocationViewData(location: success))
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
+            .foregroundColor: UIColor(named: "DarkBlue") ?? .black,
+            .font: UIFont.systemFont(ofSize: 18)
+        ]
+        /* navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .refresh,
+            target: self,
+            action: #selector(reload)
+        )*/
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: UIImage(named: "refresh"),
+            style: .done,
+            target: self,
+            action: #selector(reload)
+        )
     }
 }
