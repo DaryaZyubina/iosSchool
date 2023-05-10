@@ -47,16 +47,11 @@ class RegistrationViewController<View: RegistrationView>: BaseViewController<Vie
 
 extension RegistrationViewController: RegistrationViewDelegate {
     func doneButtonDidTap(login: String, passwordFirst: String, passwordSecond: String) {
-
         HUD.show(.progress)
 
         guard passwordFirst == passwordSecond else {
             DispatchQueue.main.async {
-                SPIndicator.present(
-                    title: "Пароли должны совпадать",
-                    preset: .error,
-                    haptic: .error
-                )
+                SPIndicator.present(title: "Пароли должны совпадать", preset: .error, haptic: .error)
                 HUD.hide()
             }
             return
@@ -98,7 +93,7 @@ extension RegistrationViewController: RegistrationViewDelegate {
 
                     switch profileResult {
                     case .success(let profile):
-                        self?.storageManager.setUsernameToProfileFromNano(profile: profile)
+                        self?.storageManager.setUsernameToProfileByUsername(username: profile.username)
 
                     case .failure(let failure):
                         print(failure.rawValue)

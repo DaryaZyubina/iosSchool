@@ -46,7 +46,6 @@ class CharacterViewImp: UIView, CharacterView {
             return
         }
         self.data[index] = data
-        // collectionView.reloadData()
         guard let cell = collectionView.cellForItem(at: .init(row: index, section: 0)) as? CharacterCell else {
             return
         }
@@ -63,12 +62,12 @@ class CharacterViewImp: UIView, CharacterView {
         { _, _ in
             let itemSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(0.5),
-                heightDimension: .estimated(167)
+                heightDimension: .absolute(167)
             )
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             let groupSize = NSCollectionLayoutSize(
                 widthDimension: .fractionalWidth(1),
-                heightDimension: .estimated(167)
+                heightDimension: .absolute(167)
             )
             let group = NSCollectionLayoutGroup.horizontal(
                 layoutSize: groupSize,
@@ -107,10 +106,6 @@ extension CharacterViewImp: UICollectionViewDataSource {
         ) as? CharacterCell else {
             return UICollectionViewCell()
         }
-
-        cell.backgroundColor = .white.withAlphaComponent(0.5)
-        cell.layer.masksToBounds = true
-        cell.layer.cornerRadius = 15
 
         guard data.count > indexPath.row else {
             return cell

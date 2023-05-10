@@ -57,31 +57,33 @@
                                             </constraints>
                                         </view>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="1Sy-gX-Apw">
-                                            <rect key="frame" x="0.0" y="725.33333333333337" width="393" height="80.666666666666629"/>
+                                            <rect key="frame" x="0.0" y="714" width="393" height="92"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kOx-cc-YOx" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="34.333333333333336"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="393" height="40"/>
                                                     <color key="backgroundColor" name="VelvetBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="ZGj-hh-QXE"/>
+                                                    </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Войти">
-                                                        <backgroundConfiguration key="background">
-                                                            <color key="strokeColor" name="DarkBlue"/>
-                                                        </backgroundConfiguration>
+                                                        <backgroundConfiguration key="background"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="loginButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="OTf-Us-bWL"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmJ-Q3-ZKD" customClass="CustomButton" customModule="iosSchool" customModuleProvider="target">
-                                                    <rect key="frame" x="0.0" y="46.333333333333258" width="393" height="34.333333333333343"/>
+                                                    <rect key="frame" x="0.0" y="52" width="393" height="40"/>
                                                     <color key="backgroundColor" name="VelvetBlue"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Aqp-BS-C3h"/>
+                                                    </constraints>
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" title="Зарегистрироваться">
-                                                        <backgroundConfiguration key="background">
-                                                            <color key="strokeColor" name="DarkBlue"/>
-                                                        </backgroundConfiguration>
+                                                        <backgroundConfiguration key="background"/>
                                                     </buttonConfiguration>
                                                     <connections>
                                                         <action selector="registrationButtonDidTapWithSender:" destination="iN0-l3-epB" eventType="touchUpInside" id="5Sf-rk-xVz"/>
@@ -90,15 +92,21 @@
                                             </subviews>
                                         </stackView>
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="T1Z-C5-QvJ">
-                                            <rect key="frame" x="58" y="489.33333333333326" width="277" height="86"/>
+                                            <rect key="frame" x="58" y="466" width="277" height="98"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Логин" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAB-e6-jty">
-                                                    <rect key="frame" x="0.0" y="0.0" width="277" height="34"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="277" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="zJe-ZI-dhx"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Пароль" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2c4-Oc-eB4">
-                                                    <rect key="frame" x="0.0" y="52.000000000000057" width="277" height="34"/>
+                                                    <rect key="frame" x="0.0" y="58" width="277" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="Rgx-ES-9MF"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -165,10 +173,7 @@
         </view>
     </objects>
     <resources>
-        <image name="background" width="390" height="844"/>
-        <namedColor name="DarkBlue">
-            <color red="0.046999998390674591" green="0.28799998760223389" blue="0.46299999952316284" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <image name="background" width="1024" height="1024"/>
         <namedColor name="Lilac50">
             <color red="0.68235294117647061" green="0.55294117647058827" blue="0.72941176470588232" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

@@ -62,13 +62,13 @@ extension AuthViewController: AuthViewDelegate {
                 self?.profileDataProvider.getProfile(profileId: token.userId) { [weak self] profileResult in
                     switch profileResult {
                     case .success(let profile):
-                        self?.storageManager.setUsernameToProfileFromNano(profile: profile)
+                        self?.storageManager.setUsernameToProfileByUsername(username: profile.username)
 
                     case .failure(let failure):
                         print(failure.rawValue)
                     }
                 }
-                
+
                 self?.storageManager.safeToken(token: token)
                 self?.onLoginSucceess?()
 

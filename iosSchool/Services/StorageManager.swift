@@ -14,9 +14,9 @@ protocol StorageManager {
     func getToken() -> TokenResponse?
     func removeToken()
     func setDateToProfile()
-    func setUsernameToProfileFromNano(profile: Profile)
-    func setUsernameToProfileByUser(userName: String)
-    func getUsername()
+    func getProfilesDate() -> String?
+    func setUsernameToProfileByUsername(username: String)
+    func getUsername() -> String?
 }
 
 class StorageManagerImp: StorageManager {
@@ -71,27 +71,26 @@ class StorageManagerImp: StorageManager {
     }
 
     func setDateToProfile() {
+        let format = DateFormatter()
+        format.dateFormat = "dd MM YYYY"
         UserDefaults.standard.set(
-            Date(),
+            format.string(from: Date()),
             forKey: "ProfileTime:\(StorageManagerKey.userId.rawValue)"
         )
     }
 
-    func setUsernameToProfileFromNano(profile: Profile) {
+    func getProfilesDate() -> String? {
+        UserDefaults.standard.string(forKey: "ProfileTime:\(StorageManagerKey.userId.rawValue)")
+    }
+
+    func setUsernameToProfileByUsername(username: String) {
         UserDefaults.standard.set(
-            profile.username,
+            username,
             forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
         )
     }
 
-    func setUsernameToProfileByUser(userName: String) {
-        UserDefaults.standard.set(
-            userName,
-            forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)"
-        )
-    }
-
-    func getUsername() {
+    func getUsername() -> String? {
         UserDefaults.standard.string(forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)")
     }
 }

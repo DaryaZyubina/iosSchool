@@ -38,7 +38,12 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
     private func setTabVC() {
         let tabVC = assembly.rootTabBarController()
         let locationCoordinator = assembly.locationCoordinator()
-        let profileCoordinator = assembly.profileCoodrinator()
+        let profileCoordinator = assembly.profileCoodrinator { [weak self] in
+            self?.assembly.storageManager.removeToken()
+            DispatchQueue.main.async {
+                self?.startAuth()
+            }
+        }
 
         let locationVC = locationCoordinator.make()
         let profieVC = profileCoordinator.make()
@@ -53,21 +58,6 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         setRoot(viewController: tabVC)
     }
 
-    private func startLocation() {
-        let coordinator = assembly.locationCoordinator()
-        setRoot(viewController: coordinator.make())
-    }
-
-    private func startCharacter() {
-       // let coordinator = assembly.characterCoordinator()
-       // setRoot(viewController: coordinator.make())
-    }
-
-    private func startProfile() {
-        let coordinator = assembly.profileCoodrinator()
-        setRoot(viewController: coordinator.make())
-    }
-
     private func setRoot(viewController: UIViewController?) {
         guard let window, let viewController else {
             return
@@ -76,5 +66,4 @@ class AppCoordinator: BaseCoordinator<CoordinatorContext> {
         window.makeKeyAndVisible()
 
     }
-
 }

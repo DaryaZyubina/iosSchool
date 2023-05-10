@@ -23,6 +23,11 @@ class CharacterCell: UICollectionViewCell {
         guard let viewModel else {
             return
         }
+
+        self.backgroundColor = .white.withAlphaComponent(0.5)
+        self.layer.cornerRadius = 15
+        self.layer.masksToBounds = true
+
         imageView.image = viewModel.isLoading ? UIImage(named: "placeholderCharacter") : viewModel.image
         nameLabel.text = viewModel.name
         typeLabel.text = viewModel.type

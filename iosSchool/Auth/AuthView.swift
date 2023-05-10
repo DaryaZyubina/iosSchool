@@ -39,7 +39,6 @@ class AuthViewImp: UIView, AuthView {
     func update(with data: AuthViewData) {
         let recogniser = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         addGestureRecognizer(recogniser)
-        // scrollView.keyboardDismissMode = .onDrag
 
         helloLabel.text = data.loginTextFieldPlaceHolder
 
@@ -80,8 +79,6 @@ class AuthViewImp: UIView, AuthView {
     // MARK: - Actions
 
     @IBAction func loginButtonDidTap(sender: UIButton) {
-        // loginTextField.resignFirstResponder()
-        // passwordTextField.resignFirstResponder()
         endEditing(true)
 
         delegate?.loginButtonDidTap(

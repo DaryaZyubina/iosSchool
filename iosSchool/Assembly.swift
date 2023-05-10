@@ -16,10 +16,6 @@ class Assembly {
     lazy var imageService: ImageService = ImageServiceImp(apiClient: apiClient)
     lazy var storageManager: StorageManager = StorageManagerImp()
 
-    func colorGenerator(alpha: Double) -> ColorGenerator {
-        colorGenerator(alpha: alpha)        // если одна строчка - ретурн не нужен
-    }
-
     func appCoordinator() -> AppCoordinator {
         AppCoordinator(assembly: self, context: CoordinatorContext())
     }

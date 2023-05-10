@@ -8,11 +8,15 @@
 import UIKit
 
 protocol ProfileView: UIView {
+    var exitButtonAction: (() -> Void)? { get set }
+
     func makeView()
     func update(data: ProfileViewData)
 }
 
 class ProfileViewImp: UIView, ProfileView {
+
+    var exitButtonAction: (() -> Void)?
 
     private var profileData: ProfileViewData?
     private let tableView = UITableView()
@@ -70,6 +74,11 @@ class ProfileViewImp: UIView, ProfileView {
         button.layer.shadowRadius = 4
         button.setTitle("Выйти", for: .normal)
         button.backgroundColor = UIColor(named: "VelvetBlue")
+        button.addTarget(
+            self,
+            action: #selector(exitButtonDidTap(_ :)),
+            for: .touchUpInside
+        )
         addSubview(button)
 
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -80,6 +89,11 @@ class ProfileViewImp: UIView, ProfileView {
         button.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -46).isActive = true
         button.trailingAnchor.constraint(equalTo: trailingAnchor).isActive = true
         button.heightAnchor.constraint(equalToConstant: 40).isActive = true
+    }
+
+    @objc
+    func exitButtonDidTap(_ sender: CustomButton) {
+        exitButtonAction?()
     }
 }
 
@@ -116,6 +130,7 @@ extension ProfileViewImp: UITableViewDataSource {
             ) as? LabelCell, let profileData {
                 profileData.cell.isCellContainsData = true
                 cell.viewModel = profileData.cell
+
                 return cell
             }
         case 4:
@@ -146,8 +161,4 @@ extension ProfileViewImp: UITableViewDelegate {
             return UITableView.automaticDimension
         }
     }
-
-    // TODO: здесь после добаления 8ой домашки в поле имя профиля буду устанавливать
-    // имя профиля из UserDefaults.standard.string(forKey: "NameWithProfile:\(profileId)")
-    // time is also gonna be added
 }

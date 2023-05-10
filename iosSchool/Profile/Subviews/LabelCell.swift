@@ -30,15 +30,17 @@ class LabelCell: UITableViewCell {
         labelView.layer.cornerRadius = 15
 
         if viewModel.isCellContainsData {
-            // maintextLabel.text = "Дата регистрации" -- по фигме, но суть другая
             maintextLabel.text = "Время входа"
             dateLabel.isHidden = false
+            dateLabel.text = viewModel.lastTimeVisited
+            dateLabel.frame = CGRect(x: 100, y: 100, width: 41, height: 20)
             colorView.isHidden = true
         } else {
             maintextLabel.text = "Цвет профиля"
             dateLabel.isHidden = true
             colorView.isHidden = false
             colorView.selectedColor = .blue
+            colorView.frame = CGRect(x: 100, y: 100, width: 20, height: 20)
         }
     }
 }
