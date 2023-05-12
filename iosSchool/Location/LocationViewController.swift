@@ -43,6 +43,7 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
             }
             self.loadPage(self.page)
         }
+        HUD.show(.progress)
         loadPage(page)
     }
 

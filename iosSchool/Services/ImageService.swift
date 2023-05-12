@@ -37,24 +37,10 @@ class ImageServiceImp: ImageService {
         DispatchQueue.global().async {
             self.apiClient.requestImageData(url: url) { [weak self] result in
                 guard let result else {
-                    DispatchQueue.main.async {
-                        SPIndicator.present(
-                            title: "Image load fail",
-                            preset: .error,
-                            haptic: .error
-                        )
-                    }
                     return
                 }
 
                 guard let image = UIImage(data: result) else {
-                    DispatchQueue.main.async {
-                        SPIndicator.present(
-                            title: "Error while making UIImage from Data",
-                            preset: .error,
-                            haptic: .error
-                        )
-                    }
                     return
                 }
 
@@ -65,5 +51,4 @@ class ImageServiceImp: ImageService {
             }
         }
     }
-
 }

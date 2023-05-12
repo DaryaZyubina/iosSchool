@@ -72,7 +72,7 @@ class StorageManagerImp: StorageManager {
 
     func setDateToProfile() {
         let format = DateFormatter()
-        format.dateFormat = "dd MM YYYY"
+        format.dateFormat = "dd.MM.yy"
         UserDefaults.standard.set(
             format.string(from: Date()),
             forKey: "ProfileTime:\(StorageManagerKey.userId.rawValue)"

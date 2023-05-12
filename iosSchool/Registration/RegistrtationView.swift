@@ -133,10 +133,8 @@ class RegistrationViewImp: UIView, RegistrationView {
 extension RegistrationViewImp: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == loginTextField {
-            textField.resignFirstResponder()
             passwordFirstTextField.becomeFirstResponder()
         } else if textField == passwordFirstTextField {
-            textField.resignFirstResponder()
             passwordSecondTextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
