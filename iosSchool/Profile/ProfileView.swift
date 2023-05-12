@@ -14,6 +14,10 @@ protocol ProfileView: UIView {
     func update(data: ProfileViewData)
 }
 
+protocol ProfileViewDelegate: AnyObject {
+    func saveFavouriteColor(color: UIColor)
+}
+
 class ProfileViewImp: UIView, ProfileView {
 
     var exitButtonAction: (() -> Void)?
@@ -22,18 +26,22 @@ class ProfileViewImp: UIView, ProfileView {
     private let tableView = UITableView()
     private let exitButton = CustomButton()
 
+    weak var delegate: ProfileViewDelegate?
+
     func makeView() {
 
-        self.backgroundColor = UIColor(named: "Lilac50")?.withAlphaComponent(1)
-
+        // self.backgroundColor = UIColor(named: "Lilac50")?.withAlphaComponent(1)
         makeTable(table: tableView)
         makeButton(button: exitButton)
     }
 
     func update(data: ProfileViewData) {
         profileData = data
+        print(profileData?.cell.color)
 
         DispatchQueue.main.async { [weak self] in
+            print("Im here")
+            self?.backgroundColor = self?.profileData?.cell.color
             self?.tableView.reloadData()
         }
     }
@@ -121,7 +129,8 @@ extension ProfileViewImp: UITableViewDataSource {
         case 2:
             if let cell = tableView.dequeueReusableCell(
                 withIdentifier: ClearCell.className
-            ) as? ClearCell {
+            ) as? ClearCell, let profileData {
+                cell.viewModel = profileData.cell
                 return cell
             }
         case 3:
@@ -160,5 +169,21 @@ extension ProfileViewImp: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+}
+
+// MARK: - LabelCellDelegate
+
+extension ProfileViewImp: LabelCellDelegate {
+    func colorChanged(color: UIColor?) {
+        print(color)
+        print("colorChanged")
+        guard let color, let profileData else {
+            return
+        }
+        print("colorChanged")
+        delegate?.saveFavouriteColor(color: color)
+        profileData.cell.color = color
+        update(data: profileData)
     }
 }

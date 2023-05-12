@@ -7,6 +7,7 @@
 
 import Foundation
 import KeychainAccess
+import UIKit
 
 protocol StorageManager {
     func cleanKeychainIfNeeded()
@@ -17,6 +18,8 @@ protocol StorageManager {
     func getProfilesDate() -> String?
     func setUsernameToProfileByUsername(username: String)
     func getUsername() -> String?
+    func setFavouriteColor(color: UIColor)
+    func getFavouriteColor() -> UIColor?
 }
 
 class StorageManagerImp: StorageManager {
@@ -92,6 +95,19 @@ class StorageManagerImp: StorageManager {
 
     func getUsername() -> String? {
         UserDefaults.standard.string(forKey: "ProfileUsername:\(StorageManagerKey.userId.rawValue)")
+    }
+
+    func setFavouriteColor(color: UIColor) {
+        UserDefaults.standard.set(
+            color,
+            forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
+        )
+    }
+
+    func getFavouriteColor() -> UIColor? {
+        UserDefaults.standard.object(
+            forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
+        ) as? UIColor ?? UIColor(named: "Lilac50")
     }
 }
 
