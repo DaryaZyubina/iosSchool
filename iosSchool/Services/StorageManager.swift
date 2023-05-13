@@ -98,16 +98,32 @@ class StorageManagerImp: StorageManager {
     }
 
     func setFavouriteColor(color: UIColor) {
-        UserDefaults.standard.set(
-            color,
-            forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
-        )
+        do {
+            let encodedData =  try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false)
+            let userDefaults = UserDefaults.standard
+            userDefaults.set(
+                encodedData,
+                forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
+            )
+        } catch {
+            print(error as Any)
+        }
     }
 
     func getFavouriteColor() -> UIColor? {
-        UserDefaults.standard.object(
-            forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
-        ) as? UIColor ?? UIColor(named: "Lilac50")
+        do {
+            if let decoded  = UserDefaults.standard.object(
+                forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
+            ) as? Data {
+                return try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as? UIColor
+            } else {
+                return UIColor(named: "Lilac50")
+            }
+        } catch {
+            print(error as Any)
+        }
+
+        return nil
     }
 }
 

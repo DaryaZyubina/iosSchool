@@ -14,17 +14,16 @@ class ClearCell: UITableViewCell {
             update(viewModel)
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
-        // self.backgroundColor = UIColor(named: "Lilac50")?.withAlphaComponent(1)
     }
 
     private func update(_ viewModel: ProfileCellData?) {
         guard let viewModel else {
             return
         }
-        self.backgroundColor = viewModel.color
+        self.backgroundColor = viewModel.color?.withAlphaComponent(1)
     }
 
 }

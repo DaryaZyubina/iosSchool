@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ProfileViewController<View: ProfileViewImp>: BaseViewController<View> {
+class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
     private var storageManager: StorageManager
     private let dataProvider: ProfileDataProvider
@@ -54,7 +54,6 @@ class ProfileViewController<View: ProfileViewImp>: BaseViewController<View> {
 
 extension ProfileViewController: ProfileViewDelegate {
     func saveFavouriteColor(color: UIColor) {
-        print("saveFavouriteColor")
         storageManager.setFavouriteColor(color: color)
     }
 }

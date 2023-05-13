@@ -41,12 +41,7 @@ class LabelCell: UITableViewCell {
 
     @objc
     func colorWellChanged(_ sender: UIColorWell) {
-        // delegate?.colorChanged(color: sender.selectedColor)
         delegate?.colorChanged(color: colorView.selectedColor)
-        print("colorWellChanged")
-        self.backgroundColor = colorView.selectedColor
-        viewModel?.color = colorView.selectedColor
-
     }
 
     private func update(_ viewModel: ProfileCellData?) {
@@ -68,6 +63,6 @@ class LabelCell: UITableViewCell {
         }
 
         colorView.selectedColor = viewModel.color
-        // self.backgroundColor = viewModel.color
+        self.backgroundColor = viewModel.color?.withAlphaComponent(1)
     }
 }

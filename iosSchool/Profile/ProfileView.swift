@@ -9,6 +9,7 @@ import UIKit
 
 protocol ProfileView: UIView {
     var exitButtonAction: (() -> Void)? { get set }
+    var delegate: ProfileViewDelegate? { get set }
 
     func makeView()
     func update(data: ProfileViewData)
@@ -30,17 +31,15 @@ class ProfileViewImp: UIView, ProfileView {
 
     func makeView() {
 
-        // self.backgroundColor = UIColor(named: "Lilac50")?.withAlphaComponent(1)
+        self.backgroundColor = self.profileData?.cell.color?.withAlphaComponent(1)
         makeTable(table: tableView)
         makeButton(button: exitButton)
     }
 
     func update(data: ProfileViewData) {
         profileData = data
-        print(profileData?.cell.color)
 
         DispatchQueue.main.async { [weak self] in
-            print("Im here")
             self?.backgroundColor = self?.profileData?.cell.color
             self?.tableView.reloadData()
         }
@@ -124,6 +123,7 @@ extension ProfileViewImp: UITableViewDataSource {
                 withIdentifier: LoginLabelCell.className
             ) as? LoginLabelCell, let profileData {
                 cell.viewModel = profileData.cell
+
                 return cell
             }
         case 2:
@@ -139,7 +139,6 @@ extension ProfileViewImp: UITableViewDataSource {
             ) as? LabelCell, let profileData {
                 profileData.cell.isCellContainsData = true
                 cell.viewModel = profileData.cell
-
                 return cell
             }
         case 4:
@@ -148,6 +147,7 @@ extension ProfileViewImp: UITableViewDataSource {
             ) as? LabelCell, let profileData {
                 profileData.cell.isCellContainsData = false
                 cell.viewModel = profileData.cell
+                cell.delegate = self
                 return cell
             }
         default:
@@ -176,12 +176,9 @@ extension ProfileViewImp: UITableViewDelegate {
 
 extension ProfileViewImp: LabelCellDelegate {
     func colorChanged(color: UIColor?) {
-        print(color)
-        print("colorChanged")
         guard let color, let profileData else {
             return
         }
-        print("colorChanged")
         delegate?.saveFavouriteColor(color: color)
         profileData.cell.color = color
         update(data: profileData)
