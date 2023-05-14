@@ -63,6 +63,6 @@ class LabelCell: UITableViewCell {
         }
 
         colorView.selectedColor = viewModel.color
-        self.backgroundColor = viewModel.color?.withAlphaComponent(1)
+        self.backgroundColor = viewModel.color?.withAlphaComponent(0)
     }
 }

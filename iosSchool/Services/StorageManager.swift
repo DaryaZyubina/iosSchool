@@ -100,8 +100,7 @@ class StorageManagerImp: StorageManager {
     func setFavouriteColor(color: UIColor) {
         do {
             let encodedData =  try NSKeyedArchiver.archivedData(withRootObject: color, requiringSecureCoding: false)
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(
+            UserDefaults.standard.set(
                 encodedData,
                 forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
             )
@@ -115,7 +114,7 @@ class StorageManagerImp: StorageManager {
             if let decoded  = UserDefaults.standard.object(
                 forKey: "FavouriteColor:\(StorageManagerKey.userId.rawValue)"
             ) as? Data {
-                return try NSKeyedUnarchiver.unarchiveTopLevelObjectWithData(decoded) as? UIColor
+                return try NSKeyedUnarchiver.unarchivedObject(ofClass: UIColor.self, from: decoded)
             } else {
                 return UIColor(named: "Lilac50")
             }

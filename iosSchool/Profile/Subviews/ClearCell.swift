@@ -23,7 +23,7 @@ class ClearCell: UITableViewCell {
         guard let viewModel else {
             return
         }
-        self.backgroundColor = viewModel.color?.withAlphaComponent(1)
+        self.backgroundColor = viewModel.color?.withAlphaComponent(0)
     }
 
 }

@@ -22,6 +22,6 @@ class LoginLabelCell: UITableViewCell {
             return
         }
         loginLabel.text = viewModel.username
-        self.backgroundColor = viewModel.color?.withAlphaComponent(1)
+        self.backgroundColor = viewModel.color?.withAlphaComponent(0)
     }
 }

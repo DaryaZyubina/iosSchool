@@ -55,5 +55,6 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 extension ProfileViewController: ProfileViewDelegate {
     func saveFavouriteColor(color: UIColor) {
         storageManager.setFavouriteColor(color: color)
+        rootView.update(data: updateProfile())
     }
 }

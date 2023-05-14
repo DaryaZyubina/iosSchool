@@ -31,7 +31,7 @@ class ProfileViewImp: UIView, ProfileView {
 
     func makeView() {
 
-        self.backgroundColor = self.profileData?.cell.color?.withAlphaComponent(1)
+        self.backgroundColor = self.profileData?.cell.color?.withAlphaComponent(0)
         makeTable(table: tableView)
         makeButton(button: exitButton)
     }
@@ -179,8 +179,7 @@ extension ProfileViewImp: LabelCellDelegate {
         guard let color, let profileData else {
             return
         }
-        delegate?.saveFavouriteColor(color: color)
         profileData.cell.color = color
-        update(data: profileData)
+        delegate?.saveFavouriteColor(color: color)
     }
 }
