@@ -176,10 +176,9 @@ extension ProfileViewImp: UITableViewDelegate {
 
 extension ProfileViewImp: LabelCellDelegate {
     func colorChanged(color: UIColor?) {
-        guard let color, let profileData else {
+        guard let color else {
             return
         }
-        profileData.cell.color = color
         delegate?.saveFavouriteColor(color: color)
     }
 }
