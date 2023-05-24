@@ -12,9 +12,9 @@ import SPIndicator
 class LocationViewController<View: LocationView>: BaseViewController<View> {
 
     var selectLocation: ((LocationCellData) -> Void)?
-    var page: Int = 1
-    var cellVM: [LocationCellData] = []
-    var pagesLimited: Bool = false
+    private var page: Int = 1
+    private var cellVM: [LocationCellData] = []
+    private var pagesLimited: Bool = false
     private let dataProvider: LocationDataProvider
 
     init(dataProvider: LocationDataProvider) {
@@ -43,6 +43,7 @@ class LocationViewController<View: LocationView>: BaseViewController<View> {
             }
             self.loadPage(self.page)
         }
+        HUD.show(.progress)
         loadPage(page)
     }
 

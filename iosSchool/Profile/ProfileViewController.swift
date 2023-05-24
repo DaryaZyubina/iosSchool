@@ -6,17 +6,22 @@
 //
 
 import UIKit
-import SPIndicator
 
 class ProfileViewController<View: ProfileView>: BaseViewController<View> {
 
-    private var profile: ProfileViewData
+    private var storageManager: StorageManager
     private let dataProvider: ProfileDataProvider
+    var exitButtonDidTap: (() -> Void)?
 
-    init(dataProvider: ProfileDataProvider, profile: ProfileViewData) {
+    init(
+        dataProvider: ProfileDataProvider,
+        exitButtonDidTap: (() -> Void)?,
+        storageManager: StorageManager
+    ) {
         self.dataProvider = dataProvider
-        self.profile = profile
-        
+        self.exitButtonDidTap = exitButtonDidTap
+        self.storageManager = storageManager
+
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -28,6 +33,17 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         super.viewDidLoad()
 
         rootView.makeView()
-        rootView.update(data: profile)
+        rootView.update(data: updateProfile())
+        rootView.exitButtonAction = exitButtonDidTap
+    }
+
+    private func updateProfile() -> ProfileViewData {
+        ProfileViewData(cell: ProfileCellData(
+            username: storageManager.getUsername() == nil ? nil : storageManager.getUsername(),
+            photoProfile: nil,
+            photoHeader: nil,
+            lastTimeVisited: storageManager.getProfilesDate() == nil ? nil : storageManager.getProfilesDate(),
+            isCellContainsData: false
+        ))
     }
 }

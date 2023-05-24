@@ -50,7 +50,6 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
                         image: nil
                     ))
                 }
-                print(character.name)
                 self.imageService.getImage(url: character.image) { [weak self] image in
                     guard let self else {
                         return
@@ -87,37 +86,4 @@ class CharacterViewController<View: CharacterView>: BaseViewController<View> {
             }
         }
     }
-
-    func allCharacters() {
-        dataProvider.allCharacters() { [weak self] result in
-            switch result {
-            case .success(let success):
-                print(result)
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
-    }
-
-    func singleCharacter(url: String) {
-        dataProvider.singleCharacter(url: url) { [weak self] result in
-            switch result {
-            case .success(let success):
-                print(result)
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
-    }
-
-    func getCharacterFromLocation(url: String) {
-        dataProvider.getCharacterFromLocation(url: url) { [weak self] result in
-            switch result {
-            case .success(let success):
-                print(result)
-            case .failure(let failure):
-                print(failure.rawValue)
-            }
-        }
-    } 
 }

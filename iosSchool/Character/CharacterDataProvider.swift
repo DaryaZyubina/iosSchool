@@ -29,7 +29,7 @@ class CharacterDataProviderImp: CharacterDataProvider {
     }
 
     func allCharacters(completion: @escaping (Result<CharactersList, ApiError>) -> Void) {
-        apiClient.allCharacters() { result in
+        apiClient.allCharacters { result in
             switch result {
             case .success(let data):
                 completion(.success(data))

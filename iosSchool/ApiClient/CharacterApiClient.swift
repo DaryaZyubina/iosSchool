@@ -32,8 +32,6 @@ extension ApiClient: CharacterApiClient {
         url: String,
         onRequestCompleted: @escaping (Result<Character, ApiError>) -> Void
     ) {
-//        let link = NetworkConstants.URLStrings.characterURL + "/\(url)"
-//        performRequest(url: link, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }
 
@@ -43,5 +41,4 @@ extension ApiClient: CharacterApiClient {
     ) {
         performRequest(url: url, data: nil, method: .get, onRequestCompleted: onRequestCompleted)
     }
-
 }

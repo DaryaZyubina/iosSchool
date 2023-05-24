@@ -170,7 +170,7 @@
         </view>
     </objects>
     <resources>
-        <image name="background" width="390" height="844"/>
+        <image name="background" width="1024" height="1024"/>
         <image name="person.circle" catalog="system" width="128" height="123"/>
         <namedColor name="Lilac50">
             <color red="0.68235294117647061" green="0.55294117647058827" blue="0.72941176470588232" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>

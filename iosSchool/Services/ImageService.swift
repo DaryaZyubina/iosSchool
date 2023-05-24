@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SPIndicator
 
 protocol ImageService {
     func getImage(url: String, completion: @escaping (UIImage?) -> Void)
@@ -36,14 +37,13 @@ class ImageServiceImp: ImageService {
         DispatchQueue.global().async {
             self.apiClient.requestImageData(url: url) { [weak self] result in
                 guard let result else {
-                    print("image load fall")
                     return
                 }
 
                 guard let image = UIImage(data: result) else {
-                    print("Error while making UIImage from Data")
                     return
                 }
+
                 self?.updateQueue.async {
                     self?.imageDict.updateValue(image, forKey: url)
                     completion(image)
@@ -51,5 +51,4 @@ class ImageServiceImp: ImageService {
             }
         }
     }
-
 }

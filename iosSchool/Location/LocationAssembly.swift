@@ -16,7 +16,7 @@ protocol LocationAssembly {
 extension Assembly: LocationAssembly {
 
     func locationCoordinator() -> LocationCoordinator {
-        LocationCoordinator(assembly: self, context: .init()) 
+        LocationCoordinator(assembly: self, context: .init())
     }
 
     func locationVC() -> LocationViewController<LocationViewImp> {

@@ -10,13 +10,4 @@ import Foundation
 struct Profile: Decodable {
     let id: String
     let username: String
-    /*let displayName: String
-    let bio: String
-    let avatarId: String
-    let avatarSmall: String
-    let avatarLarge: String
-    let subscribed: Bool
-    let subscribersCount: Int
-    let postsCount: Int
-    let imagesCount: Int*/
 }
