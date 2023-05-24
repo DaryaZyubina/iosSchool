@@ -9,9 +9,14 @@ import UIKit
 
 protocol ProfileView: UIView {
     var exitButtonAction: (() -> Void)? { get set }
+    var delegate: ProfileViewDelegate? { get set }
 
     func makeView()
     func update(data: ProfileViewData)
+}
+
+protocol ProfileViewDelegate: AnyObject {
+    func saveFavouriteColor(color: UIColor)
 }
 
 class ProfileViewImp: UIView, ProfileView {
@@ -22,10 +27,11 @@ class ProfileViewImp: UIView, ProfileView {
     private let tableView = UITableView()
     private let exitButton = CustomButton()
 
+    weak var delegate: ProfileViewDelegate?
+
     func makeView() {
 
-        self.backgroundColor = UIColor(named: "Lilac50")?.withAlphaComponent(1)
-
+        self.backgroundColor = self.profileData?.cell.color?.withAlphaComponent(0)
         makeTable(table: tableView)
         makeButton(button: exitButton)
     }
@@ -34,6 +40,7 @@ class ProfileViewImp: UIView, ProfileView {
         profileData = data
 
         DispatchQueue.main.async { [weak self] in
+            self?.backgroundColor = self?.profileData?.cell.color
             self?.tableView.reloadData()
         }
     }
@@ -116,12 +123,14 @@ extension ProfileViewImp: UITableViewDataSource {
                 withIdentifier: LoginLabelCell.className
             ) as? LoginLabelCell, let profileData {
                 cell.viewModel = profileData.cell
+
                 return cell
             }
         case 2:
             if let cell = tableView.dequeueReusableCell(
                 withIdentifier: ClearCell.className
-            ) as? ClearCell {
+            ) as? ClearCell, let profileData {
+                cell.viewModel = profileData.cell
                 return cell
             }
         case 3:
@@ -130,7 +139,6 @@ extension ProfileViewImp: UITableViewDataSource {
             ) as? LabelCell, let profileData {
                 profileData.cell.isCellContainsData = true
                 cell.viewModel = profileData.cell
-
                 return cell
             }
         case 4:
@@ -139,6 +147,7 @@ extension ProfileViewImp: UITableViewDataSource {
             ) as? LabelCell, let profileData {
                 profileData.cell.isCellContainsData = false
                 cell.viewModel = profileData.cell
+                cell.delegate = self
                 return cell
             }
         default:
@@ -160,5 +169,16 @@ extension ProfileViewImp: UITableViewDelegate {
         default:
             return UITableView.automaticDimension
         }
+    }
+}
+
+// MARK: - LabelCellDelegate
+
+extension ProfileViewImp: LabelCellDelegate {
+    func colorChanged(color: UIColor?) {
+        guard let color else {
+            return
+        }
+        delegate?.saveFavouriteColor(color: color)
     }
 }

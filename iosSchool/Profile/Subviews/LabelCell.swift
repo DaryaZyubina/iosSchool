@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol LabelCellDelegate: AnyObject {
+    func colorChanged(color: UIColor?)
+}
+
 class LabelCell: UITableViewCell {
 
     var viewModel: ProfileCellData? {
@@ -14,6 +18,8 @@ class LabelCell: UITableViewCell {
             update(viewModel)
         }
     }
+
+    weak var delegate: LabelCellDelegate?
 
     @IBOutlet private weak var maintextLabel: UILabel!
     @IBOutlet private weak var dateLabel: UILabel!
@@ -25,9 +31,21 @@ class LabelCell: UITableViewCell {
         self.labelView.layer.borderWidth = 1
         self.labelView.layer.borderColor = UIColor(named: "LabelDarkGrey")?.withAlphaComponent(1).cgColor
         self.labelView.layer.cornerRadius = 15
+
+        colorView.addTarget(
+            self,
+            action: #selector(colorWellChanged(_ :)),
+            for: .valueChanged
+        )
+    }
+
+    @objc
+    func colorWellChanged(_ sender: UIColorWell) {
+        delegate?.colorChanged(color: colorView.selectedColor)
     }
 
     private func update(_ viewModel: ProfileCellData?) {
+
         guard let viewModel else {
             return
         }
@@ -43,5 +61,8 @@ class LabelCell: UITableViewCell {
             colorView.isHidden = false
             colorView.selectedColor = .blue
         }
+
+        colorView.selectedColor = viewModel.color
+        self.backgroundColor = viewModel.color?.withAlphaComponent(0)
     }
 }

@@ -35,6 +35,7 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
         rootView.makeView()
         rootView.update(data: updateProfile())
         rootView.exitButtonAction = exitButtonDidTap
+        rootView.delegate = self
     }
 
     private func updateProfile() -> ProfileViewData {
@@ -43,7 +44,17 @@ class ProfileViewController<View: ProfileView>: BaseViewController<View> {
             photoProfile: nil,
             photoHeader: nil,
             lastTimeVisited: storageManager.getProfilesDate() == nil ? nil : storageManager.getProfilesDate(),
+            color: storageManager.getFavouriteColor(),
             isCellContainsData: false
         ))
+    }
+}
+
+// MARK: - ProfileViewDelegate
+
+extension ProfileViewController: ProfileViewDelegate {
+    func saveFavouriteColor(color: UIColor) {
+        storageManager.setFavouriteColor(color: color)
+        rootView.update(data: updateProfile())
     }
 }

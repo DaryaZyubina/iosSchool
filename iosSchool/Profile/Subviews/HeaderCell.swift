@@ -24,5 +24,6 @@ class HeaderCell: UITableViewCell {
         }
         headerImage.image = viewModel.photoHeader
         profileImage.image = viewModel.photoProfile
+        self.backgroundColor = viewModel.color?.withAlphaComponent(0)
     }
 }
